@@ -63,8 +63,9 @@ public class Main {
         landgehege3.addTier(joffrey);
         landgehege3.addTier(jaime);
         //5. Lenny
+        Kugelfisch kugelfisch = null;
         for(int i = 1; i<=10;i++) {
-            Kugelfisch kugelfisch = new Kugelfisch("( ͡° ͜ʖ ͡°) " + i);
+            kugelfisch = new Kugelfisch("Lenny" + i);
             kugelfischtank.addTier(kugelfisch);
         }
         //6. Moby Dick
@@ -115,6 +116,8 @@ public class Main {
         sansa.setGehege(landgehege1);
         //13.
         adlergehege.addTier(cersei);
+        //crazy stuff
+        //adlergehege.addTier(kugelfisch);
         //out
         System.out.println(zoo);
         System.out.println(besucher);
