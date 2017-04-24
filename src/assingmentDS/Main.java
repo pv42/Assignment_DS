@@ -3,6 +3,8 @@ package assingmentDS;
 import assingmentDS.gehege.Aquarium;
 import assingmentDS.gehege.Landsäugetiergehege;
 import assingmentDS.gehege.Vogelgehege;
+import assingmentDS.person.Besucher;
+import assingmentDS.person.Personal;
 import assingmentDS.tier.*;
 
 /**
@@ -15,14 +17,14 @@ public class Main {
         Aquarium wahlhaibecken = new Aquarium("Wahlhaibecken");Aquarium kugelfischtank = new Aquarium("Kugelfischtank");
         zoo.addGehege(wahlhaibecken);
         zoo.addGehege(kugelfischtank);
-        Landsäugetiergehege landsäugetiergehege1 = new Landsäugetiergehege("Landsäugetiergehege1");
-        Landsäugetiergehege landsäugetiergehege2 = new Landsäugetiergehege("Landsäugetiergehege2");
-        Landsäugetiergehege landsäugetiergehege3 = new Landsäugetiergehege("Landsäugetiergehege3");
-        Landsäugetiergehege landsäugetiergehege4 = new Landsäugetiergehege("Landsäugetiergehege4");
-        zoo.addGehege(landsäugetiergehege1);
-        zoo.addGehege(landsäugetiergehege2);
-        zoo.addGehege(landsäugetiergehege3);
-        zoo.addGehege(landsäugetiergehege4);
+        Landsäugetiergehege landgehege1 = new Landsäugetiergehege("Landgehege1");
+        Landsäugetiergehege landgehege2 = new Landsäugetiergehege("Landgehege2");
+        Landsäugetiergehege landgehege3 = new Landsäugetiergehege("Landgehege3");
+        Landsäugetiergehege landgehege4 = new Landsäugetiergehege("Landgehege4");
+        zoo.addGehege(landgehege1);
+        zoo.addGehege(landgehege2);
+        zoo.addGehege(landgehege3);
+        zoo.addGehege(landgehege4);
         Vogelgehege adlerGehege = new Vogelgehege("Adlergehege");
         Vogelgehege papgeienGehege = new Vogelgehege("Papageiengehege");
         zoo.addGehege(papgeienGehege);
@@ -40,20 +42,20 @@ public class Main {
         Zebra bran = new Zebra( "Bran");
         Zebra robb = new Zebra("Robb");
         Zebra arya = new Zebra("arya");
-        landsäugetiergehege1.addTier(eddaed);
-        landsäugetiergehege1.addTier(robb);
-        landsäugetiergehege2.addTier(bran);
-        landsäugetiergehege2.addTier(arya);
-        landsäugetiergehege2.addTier(zalana);
+        landgehege1.addTier(eddaed);
+        landgehege1.addTier(robb);
+        landgehege2.addTier(bran);
+        landgehege2.addTier(arya);
+        landgehege2.addTier(zalana);
         //4.   Tywin, Jaime, Cersei, Joffrey
         Löwe tywin = new Löwe("Tywin");
         Löwe jaime = new Löwe("Jaime");
         Löwe cersei = new Löwe("Cersei");
         Löwe joffrey = new Löwe("Joffrey");
-        landsäugetiergehege3.addTier(tywin);
-        landsäugetiergehege3.addTier(cersei);
-        landsäugetiergehege3.addTier(joffrey);
-        landsäugetiergehege3.addTier(jaime);
+        landgehege3.addTier(tywin);
+        landgehege3.addTier(cersei);
+        landgehege3.addTier(joffrey);
+        landgehege3.addTier(jaime);
         //5. Lenny
         for(int i = 1; i<=10;i++) {
             Kugelfisch kugelfisch = new Kugelfisch("Lenny " + i);
@@ -64,7 +66,34 @@ public class Main {
         Walhai dick = new Walhai("Dick");
         wahlhaibecken.addTier(moby);
         wahlhaibecken.addTier(dick);
-        //
+        //7.
+        Adler american = new Adler("American");
+        Adler dream = new Adler("Dream");
+        adlerGehege.addTier(american);
+        adlerGehege.addTier(dream);
+        //8.
+        Personal ramsay = new Personal("Ramsay");
+        Personal sam = new Personal("Sam");
+        Personal daenerys = new Personal("Daenerys");
+        zoo.addAngestellter(ramsay);
+        zoo.addAngestellter(sam);
+        zoo.addAngestellter(daenerys);
+        //TODO
+        //9.
+        Besucher catelyn = new Besucher("Catelyn");
+        Besucher aerys = new Besucher("Aerys");
+        Besucher bronn = new Besucher("Bronn");
+        Besucher sansa = new Besucher("Sansa");
+        Besucher willy = new Besucher("Willy");
+        //TODO
+        //10.
+        wahlhaibecken.addTier(joffrey);
         System.out.print(zoo);
+        //11.
+        landgehege1.addTier(tywin);
+        //12.
+        sansa.setGehege(landgehege1);
+        //13.
+        adlerGehege.addTier(cersei);
     }
 }

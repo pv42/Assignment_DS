@@ -37,14 +37,18 @@ public abstract class Gehege {
         return tiere;
     }
     public void addTier(Tier tier) {
+        if(tier.getGehege() != null) tier.getGehege().removeTier(tier);
         tier.setGehege(this);
         tiere.add(tier);
+    }
+    public boolean removeTier(Tier tier) {
+        return tiere.remove(tier);
     }
 
     @Override
     public String toString() {
-        return "Gehege{" + ",\n" +
-                "name =" + name  + ",\n" +
+        return "Gehege{" +
+                "name=" + name  + ", " +
                 "tiere=" + tiere +
                 '}';
     }
