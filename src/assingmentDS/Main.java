@@ -12,10 +12,7 @@ public class Main {
     public static void main(String[] args) {
         Zoo zoo = new Zoo();
         // 1.
-        Aquarium wahlhaibecken = new Aquarium("Wahlhaibecken");
-
-        
-        Aquarium kugelfischtank = new Aquarium("Kugelfischtank");
+        Aquarium wahlhaibecken = new Aquarium("Wahlhaibecken");Aquarium kugelfischtank = new Aquarium("Kugelfischtank");
         zoo.addGehege(wahlhaibecken);
         zoo.addGehege(kugelfischtank);
         Landsäugetiergehege landsäugetiergehege1 = new Landsäugetiergehege("Landsäugetiergehege1");
