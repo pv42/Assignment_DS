@@ -8,7 +8,7 @@ import assingmentDS.Zoo;
  */
 public class Personal extends Personen {
     private Zoo arbeitsplatz;
-
+    //todo use interface itier
     public Personal(String name) {
         super(name);
         Log.created("Personal", this);
