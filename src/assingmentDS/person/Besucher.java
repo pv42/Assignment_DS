@@ -8,4 +8,12 @@ public class Besucher extends Personen {
     public Besucher(String name) {
         super(name);
     }
+
+    @Override
+    public String toString() {
+        return "Besucher{" +
+                "name='" + getName() + '\'' +
+                ", gehege=" + getGehege().getName() +
+                '}';
+    }
 }
