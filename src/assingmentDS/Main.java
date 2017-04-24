@@ -7,6 +7,7 @@ import assingmentDS.person.Besucher;
 import assingmentDS.person.Personal;
 import assingmentDS.tier.*;
 
+import javax.rmi.CORBA.Tie;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -82,6 +83,12 @@ public class Main {
         zoo.addAngestellter(ramsay);
         zoo.addAngestellter(sam);
         zoo.addAngestellter(daenerys);
+        for(Tier tier:zoo.getTiere()) { // checks if the animnal is land, water or air and asign personal
+            if(Landsäugetier.class.isInstance(tier)) tier.setPersonal(sam);
+            else if(Wassertier.class.isInstance(tier)) tier.setPersonal(sam);
+            else if(Vogel.class.isInstance(tier)) tier.setPersonal(sam);
+            else System.err.print("Error"); //todo remove!
+        }
         //TODO
         //9.
         Besucher catelyn = new Besucher("Catelyn");
@@ -108,7 +115,7 @@ public class Main {
         //13.
         adlergehege.addTier(cersei);
         //out
-        System.out.print(zoo);
-        System.out.print(besucher);
+        System.out.println(zoo);
+        System.out.println(besucher);
     }
 }

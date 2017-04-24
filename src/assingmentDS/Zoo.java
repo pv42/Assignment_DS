@@ -35,7 +35,15 @@ public class Zoo {
         angestellte.add(personal);
         personal.setArbeitsplatz(this);
     }
-
+    public List<Tier> getTiere() {
+        ArrayList<Tier> tiere = new ArrayList<>();
+        for(Gehege g:geheges) {
+            for(Tier t:g.getTiere()) {
+                tiere.add(t);
+            }
+        }
+        return tiere;
+    }
     @Override
     public String toString() {
         return "Zoo{" +
