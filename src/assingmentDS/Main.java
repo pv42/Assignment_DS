@@ -14,6 +14,7 @@ public class Main {
         // 1.
         Aquarium wahlhaibecken = new Aquarium("Wahlhaibecken");
 
+        
         Aquarium kugelfischtank = new Aquarium("Kugelfischtank");
         zoo.addGehege(wahlhaibecken);
         zoo.addGehege(kugelfischtank);
