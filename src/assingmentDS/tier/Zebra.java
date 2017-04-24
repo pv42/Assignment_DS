@@ -7,4 +7,10 @@ public class Zebra extends  Landsäugetier{
     public Zebra(String name) {
         super(name);
     }
+    @Override
+    public String toString() {
+        return "Zebra{" +
+                "name=" + getName() +
+                "}";
+    }
 }

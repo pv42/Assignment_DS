@@ -21,6 +21,10 @@ public abstract class Tier implements ITier{
         this.gehege = gehege;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return "Tier{" +

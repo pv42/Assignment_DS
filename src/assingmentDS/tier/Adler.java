@@ -7,4 +7,12 @@ public class Adler  extends Vogel{
     public Adler(String name) {
         super(name,true);
     }
+
+    @Override
+    public String toString() {
+        return "Adler{" +
+                "name=" + getName() + ", "+
+                "kannFiegen=" + isKannFliegen() +
+                "}";
+    }
 }
