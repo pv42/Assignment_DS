@@ -1,5 +1,6 @@
 package assingmentDS.gehege;
 
+import assingmentDS.Log;
 import assingmentDS.NamedObject;
 import assingmentDS.Zoo;
 import assingmentDS.tier.Tier;
@@ -41,9 +42,12 @@ public abstract class Gehege implements NamedObject {
         if(tier.getGehege() != null) tier.getGehege().removeTier(tier);
         tier.setGehege(this);
         tiere.add(tier);
+        Log.added(tier.getArt(),tier,this);
     }
     public boolean removeTier(Tier tier) {
-        return tiere.remove(tier);
+        boolean succses =  tiere.remove(tier);
+        Log.removed(tier.getArt(),tier,this,succses);
+        return succses;
     }
 
     public String getName() {

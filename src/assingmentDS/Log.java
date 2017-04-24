@@ -10,6 +10,10 @@ public class Log {
     public static void added(String type,NamedObject sub, NamedObject sup) {
         System.out.println(type  + " " + sub.getName() + " zu " + sup.getName() + " hinzugefügt");
     }
+    public static void removed(String type,NamedObject sub, NamedObject sup,boolean succses) {
+        if(succses) System.out.println(type  + " " + sub.getName() + " von " + sup.getName() + " entfernt");
+        else System.err.println(type  + " " + sub.getName() + " konnte nicht  von " + sup.getName() + " entfernt werden");
+    }
     public static void i(String s) {
         System.out.println(s);
     }
