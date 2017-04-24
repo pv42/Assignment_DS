@@ -45,6 +45,10 @@ public abstract class Gehege {
         return tiere.remove(tier);
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return "Gehege{" +

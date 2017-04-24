@@ -33,6 +33,7 @@ public class Zoo {
     }
     public void addAngestellter(Personal personal) {
         angestellte.add(personal);
+        personal.setArbeitsplatz(this);
     }
 
     @Override

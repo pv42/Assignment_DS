@@ -5,6 +5,6 @@ package assingmentDS.tier;
  */
 public class Adler  extends Vogel{
     public Adler(String name) {
-        super(name);
+        super(name,true);
     }
 }

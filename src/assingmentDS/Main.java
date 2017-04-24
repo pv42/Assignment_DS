@@ -7,12 +7,16 @@ import assingmentDS.person.Besucher;
 import assingmentDS.person.Personal;
 import assingmentDS.tier.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by pv42 on 24.04.2017.
  */
 public class Main {
     public static void main(String[] args) {
         Zoo zoo = new Zoo();
+        List<Besucher> besucher = new ArrayList<>();
         // 1.
         Aquarium wahlhaibecken = new Aquarium("Wahlhaibecken");Aquarium kugelfischtank = new Aquarium("Kugelfischtank");
         zoo.addGehege(wahlhaibecken);
@@ -25,10 +29,10 @@ public class Main {
         zoo.addGehege(landgehege2);
         zoo.addGehege(landgehege3);
         zoo.addGehege(landgehege4);
-        Vogelgehege adlerGehege = new Vogelgehege("Adlergehege");
+        Vogelgehege adlergehege = new Vogelgehege("Adlergehege");
         Vogelgehege papgeienGehege = new Vogelgehege("Papageiengehege");
         zoo.addGehege(papgeienGehege);
-        zoo.addGehege(adlerGehege);
+        zoo.addGehege(adlergehege);
         //2. Tick Trick Track
         Papagei tick = new Papagei("Tick");
         Papagei trick = new Papagei("Trick");
@@ -38,11 +42,11 @@ public class Main {
         papgeienGehege.addTier(track);
         //3.  Zalana, Eddard, Bran, Robb, Arya
         Zebra zalana = new Zebra("Zalana");
-        Zebra eddaed = new Zebra("Eddaed");
+        Zebra eddard = new Zebra("Eddard");
         Zebra bran = new Zebra( "Bran");
         Zebra robb = new Zebra("Robb");
         Zebra arya = new Zebra("arya");
-        landgehege1.addTier(eddaed);
+        landgehege1.addTier(eddard);
         landgehege1.addTier(robb);
         landgehege2.addTier(bran);
         landgehege2.addTier(arya);
@@ -69,8 +73,8 @@ public class Main {
         //7.
         Adler american = new Adler("American");
         Adler dream = new Adler("Dream");
-        adlerGehege.addTier(american);
-        adlerGehege.addTier(dream);
+        adlergehege.addTier(american);
+        adlergehege.addTier(dream);
         //8.
         Personal ramsay = new Personal("Ramsay");
         Personal sam = new Personal("Sam");
@@ -85,15 +89,26 @@ public class Main {
         Besucher bronn = new Besucher("Bronn");
         Besucher sansa = new Besucher("Sansa");
         Besucher willy = new Besucher("Willy");
-        //TODO
+        catelyn.setGehege(landgehege1);
+        aerys.setGehege(adlergehege);
+        bronn.setGehege(kugelfischtank);
+        sansa.setGehege(wahlhaibecken);
+        willy.setGehege(landgehege2);
+        besucher.add(catelyn);
+        besucher.add(aerys);
+        besucher.add(bronn);
+        besucher.add(sansa);
+        besucher.add(willy);
         //10.
         wahlhaibecken.addTier(joffrey);
-        System.out.print(zoo);
         //11.
         landgehege1.addTier(tywin);
         //12.
         sansa.setGehege(landgehege1);
         //13.
-        adlerGehege.addTier(cersei);
+        adlergehege.addTier(cersei);
+        //out
+        System.out.print(zoo);
+        System.out.print(besucher);
     }
 }

@@ -5,6 +5,6 @@ package assingmentDS.tier;
  */
 public class Papagei extends Vogel{
     public Papagei(String name) {
-        super(name);
+        super(name,true);
     }
 }
