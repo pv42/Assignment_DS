@@ -10,11 +10,13 @@ import java.util.List;
 /***
  * Created by pv42 on 24.04.2017.
  */
-public class Zoo {
+public class Zoo implements NamedObject{
     private List<Gehege> geheges;
     private List<Personal> angestellte;
+    private String name;
 
-    public Zoo() {
+    public Zoo(String name) {
+        this.name = name;
         geheges = new ArrayList<>();
         angestellte = new ArrayList<>();
     }
@@ -30,6 +32,7 @@ public class Zoo {
     public void addGehege(Gehege gehege) {
         gehege.setZoo(this);
         geheges.add(gehege);
+        Log.added("Gehege",gehege,this);
     }
     public void addAngestellter(Personal personal) {
         angestellte.add(personal);
@@ -44,6 +47,15 @@ public class Zoo {
         }
         return tiere;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return "Zoo{" +

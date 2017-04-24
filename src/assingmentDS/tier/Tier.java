@@ -1,18 +1,23 @@
 package assingmentDS.tier;
 
+import assingmentDS.Log;
+import assingmentDS.NamedObject;
 import assingmentDS.gehege.Gehege;
 import assingmentDS.person.Personal;
 
 /**
  * Created by pv42 on 24.04.2017.
  */
-public abstract class Tier implements ITier{
+public abstract class Tier implements ITier, NamedObject{
     private Gehege gehege;
     private String name;
     private Personal personal;
+    private String art;
 
-    public Tier(String name) {
+    public Tier(String name,String art) {
         this.name = name;
+        this.art = art;
+        Log.created(art,this);
     }
 
     public Gehege getGehege() {
@@ -31,6 +36,10 @@ public abstract class Tier implements ITier{
 
     public Personal getPersonal() {
         return personal;
+    }
+
+    public String getArt() {
+        return art;
     }
 
     @Override

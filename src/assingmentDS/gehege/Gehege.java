@@ -1,5 +1,6 @@
 package assingmentDS.gehege;
 
+import assingmentDS.NamedObject;
 import assingmentDS.Zoo;
 import assingmentDS.tier.Tier;
 
@@ -9,7 +10,7 @@ import java.util.List;
 /***
  * Created by pv42 on 24.04.2017.
  */
-public abstract class Gehege {
+public abstract class Gehege implements NamedObject {
     private Zoo zoo;
     private List<Tier> tiere;
     private String name;

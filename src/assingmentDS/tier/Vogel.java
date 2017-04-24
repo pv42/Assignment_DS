@@ -5,8 +5,8 @@ package assingmentDS.tier;
  */
 public abstract class Vogel extends Tier{
     private boolean kannFliegen;
-    public Vogel(String name, boolean kannFliegen) {
-        super(name);
+    public Vogel(String name, boolean kannFliegen, String art) {
+        super(name,art);
         this.kannFliegen = kannFliegen;
     }
 

@@ -1,11 +1,12 @@
 package assingmentDS.person;
 
+import assingmentDS.NamedObject;
 import assingmentDS.gehege.Gehege;
 
 /***
  * Created by pv42 on 24.04.2017.
  */
-public abstract class Personen {
+public abstract class Personen implements NamedObject {
     private String name;
     private Gehege gehege;
     public Personen(String name) {

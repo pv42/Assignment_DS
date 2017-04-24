@@ -5,7 +5,7 @@ package assingmentDS.tier;
  */
 public abstract class Wassertier extends Tier{
 
-    public Wassertier(String name) {
-        super(name);
+    public Wassertier(String name,String art) {
+        super(name,art);
     }
 }

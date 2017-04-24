@@ -16,10 +16,11 @@ import java.util.List;
  */
 public class Main {
     public static void main(String[] args) {
-        Zoo zoo = new Zoo();
+        Zoo zoo = new Zoo("Zoo");
         List<Besucher> besucher = new ArrayList<>();
         // 1.
-        Aquarium wahlhaibecken = new Aquarium("Wahlhaibecken");Aquarium kugelfischtank = new Aquarium("Kugelfischtank");
+        Aquarium wahlhaibecken = new Aquarium("Wahlhaibecken");
+        Aquarium kugelfischtank = new Aquarium("Kugelfischtank");
         zoo.addGehege(wahlhaibecken);
         zoo.addGehege(kugelfischtank);
         Landsäugetiergehege landgehege1 = new Landsäugetiergehege("Landgehege1");

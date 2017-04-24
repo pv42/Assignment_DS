@@ -1,5 +1,6 @@
 package assingmentDS.person;
 
+import assingmentDS.Log;
 import assingmentDS.Zoo;
 
 /***
@@ -10,6 +11,7 @@ public class Personal extends Personen {
 
     public Personal(String name) {
         super(name);
+        Log.created("Personal", this);
     }
 
     public Zoo getArbeitsplatz() {
