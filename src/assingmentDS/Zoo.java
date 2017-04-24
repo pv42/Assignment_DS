@@ -37,6 +37,7 @@ public class Zoo implements NamedObject{
     public void addAngestellter(Personal personal) {
         angestellte.add(personal);
         personal.setArbeitsplatz(this);
+        Log.added("Personal",personal,this);
     }
     public List<Tier> getTiere() {
         ArrayList<Tier> tiere = new ArrayList<>();

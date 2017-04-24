@@ -14,6 +14,9 @@ public class Log {
         if(succses) System.out.println(type  + " " + sub.getName() + " von " + sup.getName() + " entfernt");
         else System.err.println(type  + " " + sub.getName() + " konnte nicht  von " + sup.getName() + " entfernt werden");
     }
+    public static void watch(String type,NamedObject sub, NamedObject sup) {
+        System.out.println(type + " " + sub.getName() + " besucht " + sup.getName());
+    }
     public static void i(String s) {
         System.out.println(s);
     }

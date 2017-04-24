@@ -72,12 +72,12 @@ public class Main {
         Walhai dick = new Walhai("Dick");
         wahlhaibecken.addTier(moby);
         wahlhaibecken.addTier(dick);
-        //7.
+        //7. American Dream
         Adler american = new Adler("American");
         Adler dream = new Adler("Dream");
         adlergehege.addTier(american);
         adlergehege.addTier(dream);
-        //8.
+        //8. Ramsay Sam Daenerys
         Personal ramsay = new Personal("Ramsay");
         Personal sam = new Personal("Sam");
         Personal daenerys = new Personal("Daenerys");

@@ -13,6 +13,12 @@ public abstract class Tier implements ITier, NamedObject{
     private String name;
     private Personal personal;
     private String art;
+    //Arteigenschaften
+    private boolean istGiftig;
+    private boolean kannFliegen;
+    private boolean lebtSchwimmend; // if false dies in Aquaiums
+    private boolean istRaubtier; // if true eats non  or smaller predators
+    private double durchschnittlicheSize; // in m
 
     public Tier(String name,String art) {
         this.name = name;
@@ -42,10 +48,4 @@ public abstract class Tier implements ITier, NamedObject{
         return art;
     }
 
-    @Override
-    public String toString() {
-        return "Tier{" +
-                "name='" + name + '\'' +
-                '}';
-    }
 }

@@ -7,14 +7,13 @@ import assingmentDS.Log;
  */
 public final class Papagei extends Vogel{
     public Papagei(String name) {
-        super(name,true,"Papagei");
+        super(name,"Papagei");
     }
     @Override
     public String toString() {
         return "Papagei{" +
                 "name=" + getName() + ", " +
                 "personal=" + getPersonal() + ", " +
-                "kannFiegen=" + isKannFliegen() +
                 "}";
     }
 }

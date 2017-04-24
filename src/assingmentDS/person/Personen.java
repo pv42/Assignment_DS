@@ -1,5 +1,6 @@
 package assingmentDS.person;
 
+import assingmentDS.Log;
 import assingmentDS.NamedObject;
 import assingmentDS.gehege.Gehege;
 
@@ -19,6 +20,7 @@ public abstract class Personen implements NamedObject {
 
     public void setGehege(Gehege gehege) {
         this.gehege = gehege;
+        Log.watch("Besucher",this,gehege);
     }
 
     public Gehege getGehege() {
