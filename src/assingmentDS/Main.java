@@ -64,7 +64,7 @@ public class Main {
         landgehege3.addTier(jaime);
         //5. Lenny
         for(int i = 1; i<=10;i++) {
-            Kugelfisch kugelfisch = new Kugelfisch("Lenny " + i);
+            Kugelfisch kugelfisch = new Kugelfisch("( ͡° ͜ʖ ͡°) " + i);
             kugelfischtank.addTier(kugelfisch);
         }
         //6. Moby Dick

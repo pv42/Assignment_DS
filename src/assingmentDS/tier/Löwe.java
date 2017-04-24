@@ -7,7 +7,7 @@ import assingmentDS.Log;
  */
 public final class Löwe extends Landsäugetier{
     public Löwe(String name) {
-        super(name,"Löwe");
+        super(name,"Löwe",false,false,true,2.6,false);
     }
 
     @Override

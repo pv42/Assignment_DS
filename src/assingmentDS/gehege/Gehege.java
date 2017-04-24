@@ -39,10 +39,27 @@ public abstract class Gehege implements NamedObject {
         return tiere;
     }
     public void addTier(Tier tier) {
-        if(tier.getGehege() != null) tier.getGehege().removeTier(tier);
+        if(tier.getGehege() != null) tier.getGehege().removeTier(tier); // if animal is already in other enclosure remove it
         tier.setGehege(this);
         tiere.add(tier);
         Log.added(tier.getArt(),tier,this);
+        if(Aquarium.class.isInstance(this) ^  tier.isLebtUnterWasser())  { //check if fish out of water or not fish in water and probably kill it
+            tier.kill("Unpassendes Gehege"); // leaves corpses
+        }
+        for (Tier t : tiere) {//check for predator activities
+            performPreadtorAction(t,tier);
+            performPreadtorAction(tier,t);
+        }
+    }
+    private void performPreadtorAction(Tier t1, Tier t2) {
+        if(t1.istRaubtier() && t1.isAlive() && t1.getDurchschnittlicheSize() > t2.getDurchschnittlicheSize() && t2.isAlive()) { // predators kills the prey and eats it
+            t2.kill("Raubtier");
+            this.removeTier(t2);
+        }
+        if(t1.istIsstAas() && t1.isAlive() && !t2.isAlive()) { // scavenger eating carrion
+            this.removeTier(t2);
+            if(t2.istGiftig()) t1.kill("Gift in der Nahrung");
+        }
     }
     public boolean removeTier(Tier tier) {
         boolean succses =  tiere.remove(tier);

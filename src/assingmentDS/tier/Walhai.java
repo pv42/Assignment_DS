@@ -7,7 +7,7 @@ import assingmentDS.Log;
  */
 public final class Walhai extends Wassertier{
     public Walhai(String name) {
-        super(name,"Walhai");
+        super(name,"Walhai",false,false,false,10,false);
     }
     @Override
     public String toString() {

@@ -7,7 +7,7 @@ import assingmentDS.Log;
  */
 public final class Adler extends Vogel{
     public Adler(String name) {
-        super(name,"Adler");
+        super(name,"Adler",false,true,true,1,true);
     }
 
     @Override

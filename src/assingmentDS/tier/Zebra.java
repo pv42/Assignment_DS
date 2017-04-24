@@ -7,7 +7,7 @@ import assingmentDS.Log;
  */
 public final class Zebra extends  Landsäugetier{
     public Zebra(String name) {
-        super(name,"Zebra");
+        super(name,"Zebra",false,false,false,2.1,false);
     }
     @Override
     public String toString() {

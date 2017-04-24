@@ -7,7 +7,7 @@ import assingmentDS.Log;
  */
 public final class Kugelfisch extends Wassertier {
     public Kugelfisch(String name) {
-        super(name,"Kugelfisch");
+        super(name,"Kugelfisch",true,false, false,0.4f,false);
     }
 
     @Override
