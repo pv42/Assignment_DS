@@ -17,23 +17,23 @@ public abstract class Animal implements IAnimal, NamedObject{
     private boolean isAlive;
     //Arteigenschaften
     private boolean isPoisones;
-    private boolean kannFliegen;
+    private boolean mayFly;
     private boolean lebtUnterWasser; // if false dies in Aquaiums
-    private boolean istRaubtier; // if true eats non  or smaller predators
-    private double durchschnittlicheSize; // in m
+    private boolean isPredator; // if true eats non  or smaller predators
+    private double avgSize; // in m
 
 
 
     private boolean isstAas;
 
-    public Animal(String name, String art, boolean istGiftig, boolean kannFliegen, boolean lebtUnterWasser, boolean istRaubtier, double durchschnittlicheSize, boolean isstAas) {
+    public Animal(String name, String art, boolean istGiftig, boolean mayFly, boolean lebtUnterWasser, boolean isPredator, double avgSize, boolean isstAas) {
         this.name = name;
         this.art = art;
         this.isPoisones = istGiftig;
-        this.kannFliegen = kannFliegen;
+        this.mayFly = mayFly;
         this.lebtUnterWasser = lebtUnterWasser;
-        this.istRaubtier = istRaubtier;
-        this.durchschnittlicheSize = durchschnittlicheSize;
+        this.isPredator = isPredator;
+        this.avgSize = avgSize;
         this.isAlive = true;
         this.isstAas = isstAas;
         Log.created(art,this);
@@ -66,16 +66,16 @@ public abstract class Animal implements IAnimal, NamedObject{
         return isPoisones;
     }
 
-    public boolean kannFliegen() {
-        return kannFliegen;
+    public boolean mayFly() {
+        return mayFly;
     }
 
     public boolean isLebtUnterWasser() {
         return lebtUnterWasser;
     }
 
-    public boolean istRaubtier() {
-        return istRaubtier;
+    public boolean isPredator() {
+        return isPredator;
     }
     public boolean istIsstAas() {
         return isstAas;
@@ -89,7 +89,7 @@ public abstract class Animal implements IAnimal, NamedObject{
         return isAlive;
     }
 
-    public double getDurchschnittlicheSize() {
-        return durchschnittlicheSize;
+    public double getAvgSize() {
+        return avgSize;
     }
 }

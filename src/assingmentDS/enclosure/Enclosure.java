@@ -59,7 +59,7 @@ public abstract class Enclosure implements NamedObject {
     }
     // setzt fressen, gefressen werden, Aas fressen, giftige Beute um
     private boolean performEating(Animal t1, Animal t2) {
-        if(t1.istRaubtier() && t1.isAlive() && t1.getDurchschnittlicheSize() > t2.getDurchschnittlicheSize() && t2.isAlive() && (t1.kannFliegen() || !t2.kannFliegen())) { // predators kills the prey and eats it
+        if(t1.isPredator() && t1.isAlive() && t1.getAvgSize() > t2.getAvgSize() && t2.isAlive() && (t1.mayFly() || !t2.mayFly())) { // predators kills the prey and eats it
             t2.kill("Raubtier");
             this.removeTier(t2);
             return true;

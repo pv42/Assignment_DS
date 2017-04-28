@@ -107,8 +107,8 @@ public class Main {
             kugelfischtank.addTier(kugelfisch);
         }
         //6. Moby Dick
-        Walhai moby = new Walhai("Moby");
-        Walhai dick = new Walhai("Dick");
+        WhaleShark moby = new WhaleShark("Moby");
+        WhaleShark dick = new WhaleShark("Dick");
         wahlhaibecken.addTier(moby);
         wahlhaibecken.addTier(dick);
         //7. American Dream
@@ -124,8 +124,8 @@ public class Main {
         zoo.addStuff(sam);
         zoo.addStuff(daenerys);
         for(Animal tier:zoo.getTiere()) { // checks if the animnal is land, water or air and asign personal
-            if(Landsäugetier.class.isInstance(tier)) tier.setStuff(sam); // bad code
-            else if(Wassertier.class.isInstance(tier)) tier.setStuff(sam);
+            if(LandMammal.class.isInstance(tier)) tier.setStuff(sam); // bad code
+            else if(WaterAnimal.class.isInstance(tier)) tier.setStuff(sam);
             else if(Bird.class.isInstance(tier)) tier.setStuff(sam);
             else System.err.print("Error"); //todo remove!
         }
