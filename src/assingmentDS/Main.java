@@ -16,6 +16,7 @@ import java.util.Objects;
  * Hauptklasse, enthaelt den Startcode, Verarbeitung von Kommandozeilenargumenten
  * sowie das in der Aufgabenstellung geforderte Beispiel.
  */
+
 public class Main {
     // Startfunktion, behandelt Kommandozeilenargumente
     public static void main(String[] args) {
@@ -40,18 +41,21 @@ public class Main {
         }
         test();
     }
+
     //zeigt Kommandozeilehilfe
     private static void printHelp() {
         System.out.print("Argumente:\n" +
                 "   <keine Argument> führt Programm aus\n" +
-                "   -h          zeigt dies Hilfe\n" +
+                "   -h          zeigt diese Hilfe an\n" +
                 "   -v          zeigt Versionsinformationen\n" +
-                "   -f <datei>  leitet Ausgabe in Datei um\n");
+                "   -f <datei>  leitet Ausgabe in Datei um und führt Programm aus\n");
     }
-    //zeiget Version
+
+    //zeigt Version
     private static void printVersion() {
         System.out.println("Zoo Version: 1.0");
     }
+
     // Aufgabenstellung
     private static void test() {
         Zoo zoo = new Zoo("Zoo");
@@ -154,10 +158,8 @@ public class Main {
         sansa.setEnclosure(landgehege1);
         //13.
         adlergehege.addTier(cersei);
-        //crazy stuff
-        //adlergehege.addTier(kugelfisch);
         //out
-        System.out.println(zoo);
-        System.out.println(visiter);
+        Log.write(zoo.toString());
+        Log.write(visiter.toString());
     }
 }
