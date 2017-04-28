@@ -2,14 +2,14 @@ package assingmentDS.tier;
 
 import assingmentDS.Log;
 import assingmentDS.NamedObject;
-import assingmentDS.gehege.Gehege;
+import assingmentDS.enclosure.Enclosure;
 import assingmentDS.person.Personal;
 
 /***
  * Created by pv42 on 24.04.2017.
  */
 public abstract class Tier implements ITier, NamedObject{
-    private Gehege gehege;
+    private Enclosure enclosure;
     private String name;
     private Personal personal;
     private String art;
@@ -39,13 +39,13 @@ public abstract class Tier implements ITier, NamedObject{
     }
 
 
-    public Gehege getGehege() {
-        return gehege;
+    public Enclosure getEnclosure() {
+        return enclosure;
     }
 
-    public void setGehege(Gehege gehege) {
-        this.gehege = gehege;
-    } //todo possibis data confict with Gehege.java
+    public void setEnclosure(Enclosure enclosure) {
+        this.enclosure = enclosure;
+    } //todo possibis data confict with Enclosure.java
     public String getName() {
         return name;
     }
@@ -80,7 +80,7 @@ public abstract class Tier implements ITier, NamedObject{
         return isstAas;
     }
     public void kill(String reason) {
-        Log.i(getArt() + " " + getName() + " starb. Grund: " + reason);
+        Log.write(getArt() + " " + getName() + " starb. Grund: " + reason);
         isAlive = false;
     }
 

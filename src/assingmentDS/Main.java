@@ -1,21 +1,55 @@
 package assingmentDS;
 
-import assingmentDS.gehege.Aquarium;
-import assingmentDS.gehege.Landsäugetiergehege;
-import assingmentDS.gehege.Vogelgehege;
+import assingmentDS.enclosure.Aquarium;
+import assingmentDS.enclosure.LandMammalEnclosure;
+import assingmentDS.enclosure.Aviary;
 import assingmentDS.person.Besucher;
 import assingmentDS.person.Personal;
 import assingmentDS.tier.*;
 
-import javax.rmi.CORBA.Tie;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by pv42 on 24.04.2017.
+ * Hauptklasse, enthaelt den Startcode, Verarbeitung von Kommandozeilenargumenten
+ * sowie das in der Aufgabenstellung geforderte Beispiel.
  */
 public class Main {
     public static void main(String[] args) {
+        System.out.println(args.length);
+        if(args.length > 0) {
+            if(Objects.equals(args[0], "-h")) {
+                printHelp();
+                return;
+            } else if(Objects.equals(args[1], "-v")) {
+                printVersion();
+                return;
+            } else if(Objects.equals(args[1], "-f")) {
+                if( args.length < 2) {
+                    printHelp();
+                    return;
+                } else {
+                    Log.redirectToFile(args[1]);
+                }
+            } else {
+                printHelp();
+            }
+        }
+        test();
+    }
+    private static void printHelp() {
+        System.out.print("Argumente:\n" +
+                "   <keine Argument> führt Programm aus\n" +
+                "   -h          zeigt dies Hilfe\n" +
+                "   -v          zeigt Versionsinformationen\n" +
+                "   -f <datei>  leitet Ausgabe in Datei um\n");
+    }
+    private static void printVersion() {
+        System.out.println("Zoo Version: 1.0");
+    }
+    private static void test() {
         Zoo zoo = new Zoo("Zoo");
         List<Besucher> besucher = new ArrayList<>();
         // 1.
@@ -23,16 +57,16 @@ public class Main {
         Aquarium kugelfischtank = new Aquarium("Kugelfischtank");
         zoo.addGehege(wahlhaibecken);
         zoo.addGehege(kugelfischtank);
-        Landsäugetiergehege landgehege1 = new Landsäugetiergehege("Landgehege1");
-        Landsäugetiergehege landgehege2 = new Landsäugetiergehege("Landgehege2");
-        Landsäugetiergehege landgehege3 = new Landsäugetiergehege("Landgehege3");
-        Landsäugetiergehege landgehege4 = new Landsäugetiergehege("Landgehege4");
+        LandMammalEnclosure landgehege1 = new LandMammalEnclosure("Landgehege1");
+        LandMammalEnclosure landgehege2 = new LandMammalEnclosure("Landgehege2");
+        LandMammalEnclosure landgehege3 = new LandMammalEnclosure("Landgehege3");
+        LandMammalEnclosure landgehege4 = new LandMammalEnclosure("Landgehege4");
         zoo.addGehege(landgehege1);
         zoo.addGehege(landgehege2);
         zoo.addGehege(landgehege3);
         zoo.addGehege(landgehege4);
-        Vogelgehege adlergehege = new Vogelgehege("Adlergehege");
-        Vogelgehege papgeienGehege = new Vogelgehege("Papageiengehege");
+        Aviary adlergehege = new Aviary("Adlergehege");
+        Aviary papgeienGehege = new Aviary("Papageiengehege");
         zoo.addGehege(papgeienGehege);
         zoo.addGehege(adlergehege);
         //2. Tick Trick Track
@@ -63,7 +97,7 @@ public class Main {
         landgehege3.addTier(joffrey);
         landgehege3.addTier(jaime);
         //5. Lenny
-        Kugelfisch kugelfisch = null;
+        Kugelfisch kugelfisch;
         for(int i = 1; i<=10;i++) {
             kugelfisch = new Kugelfisch("Lenny" + i);
             kugelfischtank.addTier(kugelfisch);
@@ -98,11 +132,11 @@ public class Main {
         Besucher bronn = new Besucher("Bronn");
         Besucher sansa = new Besucher("Sansa");
         Besucher willy = new Besucher("Willy");
-        catelyn.setGehege(landgehege1);
-        aerys.setGehege(adlergehege);
-        bronn.setGehege(kugelfischtank);
-        sansa.setGehege(wahlhaibecken);
-        willy.setGehege(landgehege2);
+        catelyn.setEnclosure(landgehege1);
+        aerys.setEnclosure(adlergehege);
+        bronn.setEnclosure(kugelfischtank);
+        sansa.setEnclosure(wahlhaibecken);
+        willy.setEnclosure(landgehege2);
         besucher.add(catelyn);
         besucher.add(aerys);
         besucher.add(bronn);
@@ -113,7 +147,7 @@ public class Main {
         //11.
         landgehege1.addTier(tywin);
         //12.
-        sansa.setGehege(landgehege1);
+        sansa.setEnclosure(landgehege1);
         //13.
         adlergehege.addTier(cersei);
         //crazy stuff

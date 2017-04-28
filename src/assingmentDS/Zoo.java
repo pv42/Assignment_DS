@@ -1,6 +1,6 @@
 package assingmentDS;
 
-import assingmentDS.gehege.Gehege;
+import assingmentDS.enclosure.Enclosure;
 import assingmentDS.person.Personal;
 import assingmentDS.tier.Tier;
 
@@ -11,28 +11,28 @@ import java.util.List;
  * Created by pv42 on 24.04.2017.
  */
 public class Zoo implements NamedObject{
-    private List<Gehege> geheges;
+    private List<Enclosure> enclosures;
     private List<Personal> angestellte;
     private String name;
 
     public Zoo(String name) {
         this.name = name;
-        geheges = new ArrayList<>();
+        enclosures = new ArrayList<>();
         angestellte = new ArrayList<>();
     }
 
-    public List<Gehege> getGeheges() {
-        return new ArrayList<>(geheges);
+    public List<Enclosure> getEnclosures() {
+        return new ArrayList<>(enclosures);
     }
     public List<Personal> getAngestellte() {
         return new ArrayList<>(angestellte);
 
     }
 
-    public void addGehege(Gehege gehege) {
-        gehege.setZoo(this);
-        geheges.add(gehege);
-        Log.added("Gehege",gehege,this);
+    public void addGehege(Enclosure enclosure) {
+        enclosure.setZoo(this);
+        enclosures.add(enclosure);
+        Log.added("Enclosure", enclosure,this);
     }
     public void addAngestellter(Personal personal) {
         angestellte.add(personal);
@@ -41,7 +41,7 @@ public class Zoo implements NamedObject{
     }
     public List<Tier> getTiere() {
         ArrayList<Tier> tiere = new ArrayList<>();
-        for(Gehege g:geheges) {
+        for(Enclosure g: enclosures) {
             for(Tier t:g.getTiere()) {
                 tiere.add(t);
             }
@@ -60,7 +60,7 @@ public class Zoo implements NamedObject{
     @Override
     public String toString() {
         return "Zoo{" +
-                "geheges=" + geheges + ", " +
+                "enclosures=" + enclosures + ", " +
                 "angestellte=" + angestellte +
                 '}';
     }

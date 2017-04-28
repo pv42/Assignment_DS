@@ -1,6 +1,6 @@
 package assingmentDS.tier;
 
-import assingmentDS.gehege.Gehege;
+import assingmentDS.enclosure.Enclosure;
 import assingmentDS.person.Personal;
 
 /**
@@ -10,6 +10,6 @@ public interface ITier {
     public void setPersonal(Personal personal);
     public Personal getPersonal();
     public String getName();
-    public void setGehege(Gehege gehege);
-    public Gehege getGehege();
+    public void setEnclosure(Enclosure enclosure);
+    public Enclosure getEnclosure();
 }
