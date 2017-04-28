@@ -1,12 +1,10 @@
-package assingmentDS.tier;
-
-import assingmentDS.Log;
+package assingmentDS.animal;
 
 /***
  * Created by pv42 on 24.04.2017.
  */
-public final class Löwe extends Landsäugetier{
-    public Löwe(String name) {
+public final class Lion extends Landsäugetier{
+    public Lion(String name) {
         super(name,"Löwe",false,false,true,2.6,false);
     }
 
@@ -14,7 +12,7 @@ public final class Löwe extends Landsäugetier{
     public String toString() {
         return "Löwe{" +
                 "name=" + getName() +", " +
-                "personal=" + getPersonal() +
+                "personal=" + getStuff() +
                 "}";
     }
 }

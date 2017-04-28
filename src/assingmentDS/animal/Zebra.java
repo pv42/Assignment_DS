@@ -1,6 +1,4 @@
-package assingmentDS.tier;
-
-import assingmentDS.Log;
+package assingmentDS.animal;
 
 /**
  * Created by pv42 on 24.04.2017.
@@ -13,7 +11,7 @@ public final class Zebra extends  Landsäugetier{
     public String toString() {
         return "Zebra{" +
                 "name=" + getName() + ", " +
-                "personal=" + getPersonal() +
+                "personal=" + getStuff() +
                 "}";
     }
 }

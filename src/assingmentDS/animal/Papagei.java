@@ -1,11 +1,9 @@
-package assingmentDS.tier;
-
-import assingmentDS.Log;
+package assingmentDS.animal;
 
 /***
  * Created by pv42 on 24.04.2017.
  */
-public final class Papagei extends Vogel{
+public final class Papagei extends Bird {
     public Papagei(String name) {
         super(name,"Papagei",false,true,false,0.4,false);
     }
@@ -13,7 +11,7 @@ public final class Papagei extends Vogel{
     public String toString() {
         return "Papagei{" +
                 "name=" + getName() + ", " +
-                "personal=" + getPersonal() + ", " +
+                "personal=" + getStuff() + ", " +
                 "}";
     }
 }

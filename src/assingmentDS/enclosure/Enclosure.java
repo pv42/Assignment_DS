@@ -3,7 +3,7 @@ package assingmentDS.enclosure;
 import assingmentDS.Log;
 import assingmentDS.NamedObject;
 import assingmentDS.Zoo;
-import assingmentDS.tier.Tier;
+import assingmentDS.animal.Animal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.List;
  */
 public abstract class Enclosure implements NamedObject {
     private Zoo zoo;
-    private List<Tier> tiere;
+    private List<Animal> tiere;
     private String name;
 
     //erzeugt leeres Gehege mit Namen
@@ -34,14 +34,14 @@ public abstract class Enclosure implements NamedObject {
         this.zoo = zoo;
     }
 
-    // gibt eine Liste aller enthaltenen Tier zurück
-    public List<Tier> getTiere() {
+    // gibt eine Liste aller enthaltenen Animal zurück
+    public List<Animal> getTiere() {
         return tiere;
     }
 
-    // fügt dem Gehege ein Tier hinzu, falls nötig entfernt es das Tier aus dem vorherigen Gehege
+    // fügt dem Gehege ein Animal hinzu, falls nötig entfernt es das Animal aus dem vorherigen Gehege
     // tötet Tiere, die nicht im Gegehe überleben können, gefressen werden, oder giftiges Fressen hatten
-    public void addTier(Tier tier) {
+    public void addTier(Animal tier) {
         if(tier.getEnclosure() != null) tier.getEnclosure().removeTier(tier);
         tier.setEnclosure(this);
         Log.added(tier.getArt(),tier,this);
@@ -50,7 +50,7 @@ public abstract class Enclosure implements NamedObject {
         }
         tiere.add(tier);
         for (int i = 0 ; i < tiere.size()- 1; i++) {// überprüft Raubtieraktivitäten zwischen neuem und alten Tieren
-            Tier t = tiere.get(i);
+            Animal t = tiere.get(i);
             if(tiere.contains(tier)) { // may alreday been removed due to eating
                 if(performEating(t,tier)) i--; //todo think about is this code safe ??
                 if(performEating(tier,t)) i--;// if a animal got removed indexes are shifted
@@ -58,7 +58,7 @@ public abstract class Enclosure implements NamedObject {
         }
     }
     // setzt fressen, gefressen werden, Aas fressen, giftige Beute um
-    private boolean performEating(Tier t1, Tier t2) {
+    private boolean performEating(Animal t1, Animal t2) {
         if(t1.istRaubtier() && t1.isAlive() && t1.getDurchschnittlicheSize() > t2.getDurchschnittlicheSize() && t2.isAlive() && (t1.kannFliegen() || !t2.kannFliegen())) { // predators kills the prey and eats it
             t2.kill("Raubtier");
             this.removeTier(t2);
@@ -71,8 +71,8 @@ public abstract class Enclosure implements NamedObject {
         }
         return false;
     }
-    // entfernt Tier aus Gehege, gibt bei erfolg wahr zurück
-    public boolean removeTier(Tier tier) {
+    // entfernt Animal aus Gehege, gibt bei erfolg wahr zurück
+    public boolean removeTier(Animal tier) {
         boolean succses =  tiere.remove(tier);
         Log.removed(tier.getArt(),tier,this,succses);
         return succses;

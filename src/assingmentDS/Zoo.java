@@ -1,8 +1,8 @@
 package assingmentDS;
 
+import assingmentDS.animal.Animal;
 import assingmentDS.enclosure.Enclosure;
-import assingmentDS.person.Personal;
-import assingmentDS.tier.Tier;
+import assingmentDS.person.Stuff;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class Zoo implements NamedObject{
     private List<Enclosure> enclosures;
-    private List<Personal> angestellte;
+    private List<Stuff> angestellte;
     private String name;
 
     public Zoo(String name) {
@@ -24,7 +24,7 @@ public class Zoo implements NamedObject{
     public List<Enclosure> getEnclosures() {
         return new ArrayList<>(enclosures);
     }
-    public List<Personal> getAngestellte() {
+    public List<Stuff> getAngestellte() {
         return new ArrayList<>(angestellte);
 
     }
@@ -32,19 +32,17 @@ public class Zoo implements NamedObject{
     public void addGehege(Enclosure enclosure) {
         enclosure.setZoo(this);
         enclosures.add(enclosure);
-        Log.added("Enclosure", enclosure,this);
+        Log.added("Gehege", enclosure,this);
     }
-    public void addAngestellter(Personal personal) {
-        angestellte.add(personal);
-        personal.setArbeitsplatz(this);
-        Log.added("Personal",personal,this);
+    public void addStuff(Stuff stuff) {
+        angestellte.add(stuff);
+        stuff.setArbeitsplatz(this);
+        Log.added("Angestellter", stuff,this);
     }
-    public List<Tier> getTiere() {
-        ArrayList<Tier> tiere = new ArrayList<>();
+    public List<Animal> getTiere() {
+        ArrayList<Animal> tiere = new ArrayList<>();
         for(Enclosure g: enclosures) {
-            for(Tier t:g.getTiere()) {
-                tiere.add(t);
-            }
+            tiere.addAll(g.getTiere());
         }
         return tiere;
     }

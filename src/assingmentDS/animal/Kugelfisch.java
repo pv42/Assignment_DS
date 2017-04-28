@@ -1,6 +1,4 @@
-package assingmentDS.tier;
-
-import assingmentDS.Log;
+package assingmentDS.animal;
 
 /**
  * Created by pv42 on 24.04.2017.
@@ -14,7 +12,7 @@ public final class Kugelfisch extends Wassertier {
     public String toString() {
         return "Kugelfisch{" +
                 "name=" + getName() +", " +
-                "personal=" + getPersonal() +
+                "personal=" + getStuff() +
                 "}";
     }
 }

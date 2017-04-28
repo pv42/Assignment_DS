@@ -1,21 +1,22 @@
-package assingmentDS.tier;
+package assingmentDS.animal;
 
 import assingmentDS.Log;
 import assingmentDS.NamedObject;
 import assingmentDS.enclosure.Enclosure;
-import assingmentDS.person.Personal;
+import assingmentDS.person.Stuff;
 
 /***
  * Created by pv42 on 24.04.2017.
+ * Implementiert functionalität aller Tiere
  */
-public abstract class Tier implements ITier, NamedObject{
+public abstract class Animal implements IAnimal, NamedObject{
     private Enclosure enclosure;
     private String name;
-    private Personal personal;
+    private Stuff stuff; //TODO move to stuff class
     private String art;
     private boolean isAlive;
     //Arteigenschaften
-    private boolean istGiftig;
+    private boolean isPoisones;
     private boolean kannFliegen;
     private boolean lebtUnterWasser; // if false dies in Aquaiums
     private boolean istRaubtier; // if true eats non  or smaller predators
@@ -25,10 +26,10 @@ public abstract class Tier implements ITier, NamedObject{
 
     private boolean isstAas;
 
-    public Tier(String name, String art, boolean istGiftig, boolean kannFliegen, boolean lebtUnterWasser, boolean istRaubtier, double durchschnittlicheSize, boolean isstAas) {
+    public Animal(String name, String art, boolean istGiftig, boolean kannFliegen, boolean lebtUnterWasser, boolean istRaubtier, double durchschnittlicheSize, boolean isstAas) {
         this.name = name;
         this.art = art;
-        this.istGiftig = istGiftig;
+        this.isPoisones = istGiftig;
         this.kannFliegen = kannFliegen;
         this.lebtUnterWasser = lebtUnterWasser;
         this.istRaubtier = istRaubtier;
@@ -45,16 +46,16 @@ public abstract class Tier implements ITier, NamedObject{
 
     public void setEnclosure(Enclosure enclosure) {
         this.enclosure = enclosure;
-    } //todo possibis data confict with Enclosure.java
+    } //todo possibis data confict with Enclosure.java !!
     public String getName() {
         return name;
     }
-    public void setPersonal(Personal personal) {
-        this.personal = personal;
+    public void setStuff(Stuff stuff) {
+        this.stuff = stuff;
     }
 
-    public Personal getPersonal() {
-        return personal;
+    public Stuff getStuff() {
+        return stuff;
     }
 
     public String getArt() {
@@ -62,7 +63,7 @@ public abstract class Tier implements ITier, NamedObject{
     }
 
     public boolean istGiftig() {
-        return istGiftig;
+        return isPoisones;
     }
 
     public boolean kannFliegen() {

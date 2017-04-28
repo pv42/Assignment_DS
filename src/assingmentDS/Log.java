@@ -5,6 +5,7 @@ import java.io.PrintStream;
 
 /**
  * Created by pv42 on 24.04.2017.
+ * Ausgabeklasse, übernimmt alle Augabefunktionen außer Kommandzeilenhilfe/-version
  */
 public class Log {
     private static PrintStream out = System.out;
@@ -15,7 +16,7 @@ public class Log {
         write(type  + " " + sub.getName() + " zu " + sup.getName() + " hinzugefügt");
     }
     public static void removed(String type,NamedObject sub, NamedObject sup,boolean succses) {
-        if(succses) System.out.println(type  + " " + sub.getName() + " von " + sup.getName() + " entfernt");
+        if(succses) write(type  + " " + sub.getName() + " von " + sup.getName() + " entfernt");
         else write(type  + " " + sub.getName() + " konnte nicht  von " + sup.getName() + " entfernt werden");
     }
     public static void watch(String type,NamedObject sub, NamedObject sup) {
