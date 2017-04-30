@@ -1,8 +1,10 @@
 package assingmentDS;
 
 import assingmentDS.animal.Animal;
+import assingmentDS.animal.IAnimal;
 import assingmentDS.enclosure.Enclosure;
 import assingmentDS.person.Person;
+import assingmentDS.person.Stuff;
 
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
@@ -54,6 +56,11 @@ public class Log {
     //gibt aus, das etwas starb
     public static void died(String type, NamedObject namedObject, String reason) {
         write(type + " " + namedObject.getName() + " starb. Grund:" + reason);
+    }
+
+    //gibt aus das ein Pfeger sich um ein Tier kümmert
+    public static void animalsStuffSet(IAnimal animal, Stuff stuff) {
+        write(animal.getSpecies() + " " + animal.getName() + " wurde Pfleger " + stuff.getName() + " zugeordnet.");
     }
 
     //gibt etwas aus

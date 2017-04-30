@@ -74,6 +74,37 @@ Stuff Daenerys wurde erstellt.
 Angestellter Ramsay wurde zu Zoo hinzugefügt.
 Angestellter Sam wurde zu Zoo hinzugefügt.
 Angestellter Daenerys wurde zu Zoo hinzugefügt.
+Walhai Moby wurde Pfleger Sam zugeordnet.
+Walhai Dick wurde Pfleger Sam zugeordnet.
+Kugelfisch Lenny1 wurde Pfleger Sam zugeordnet.
+Kugelfisch Lenny2 wurde Pfleger Sam zugeordnet.
+Kugelfisch Lenny3 wurde Pfleger Sam zugeordnet.
+Kugelfisch Lenny4 wurde Pfleger Sam zugeordnet.
+Kugelfisch Lenny5 wurde Pfleger Sam zugeordnet.
+Kugelfisch Lenny6 wurde Pfleger Sam zugeordnet.
+Kugelfisch Lenny7 wurde Pfleger Sam zugeordnet.
+Kugelfisch Lenny8 wurde Pfleger Sam zugeordnet.
+Kugelfisch Lenny9 wurde Pfleger Sam zugeordnet.
+Kugelfisch Lenny10 wurde Pfleger Sam zugeordnet.
+Zebra Eddard wurde Pfleger Ramsay zugeordnet.
+Zebra Robb wurde Pfleger Ramsay zugeordnet.
+Zebra Bran wurde Pfleger Ramsay zugeordnet.
+Zebra Arya wurde Pfleger Ramsay zugeordnet.
+Zebra Zalana wurde Pfleger Ramsay zugeordnet.
+Löwe Tywin wurde Pfleger Ramsay zugeordnet.
+Löwe Cersei wurde Pfleger Ramsay zugeordnet.
+Löwe Joffrey wurde Pfleger Ramsay zugeordnet.
+Löwe Jaime wurde Pfleger Ramsay zugeordnet.
+Adler American wurde Pfleger Daenerys zugeordnet.
+Adler Dream wurde Pfleger Daenerys zugeordnet.
+Papagei Tick wurde Pfleger Daenerys zugeordnet.
+Papagei Trick wurde Pfleger Daenerys zugeordnet.
+Papagei Track wurde Pfleger Daenerys zugeordnet.
+Papagei Tick wurde Pfleger Daenerys zugeordnet.
+Papagei Trick wurde Pfleger Daenerys zugeordnet.
+Papagei Track wurde Pfleger Daenerys zugeordnet.
+Adler American wurde Pfleger Daenerys zugeordnet.
+Adler Dream wurde Pfleger Daenerys zugeordnet.
 Besucher Catelyn wurde erstellt.
 Besucher Aerys wurde erstellt.
 Besucher Bronn wurde erstellt.

@@ -30,6 +30,7 @@ public class Stuff extends Person {
 
     public void addAnimal(IAnimal animal) {
         animals.add(animal);
+        Log.animalsStuffSet(animal,this);
     }
 
     @Override
