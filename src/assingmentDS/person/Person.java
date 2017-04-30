@@ -10,7 +10,6 @@ import assingmentDS.enclosure.Enclosure;
  * In der Aufgabenstellung heißt diese Klasse Personen (plural), das wurde geändert,
  * da sie nur eine Person repräsentiert.
  */
-//TODO description -> ...
 public abstract class Person implements NamedObject {
     public static final int GENDER_MALE = 0;
     public static final int GENDER_FEMALE = 1;

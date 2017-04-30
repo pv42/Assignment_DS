@@ -10,4 +10,6 @@ public interface IAnimal {
     public String getName();
     public void setEnclosure(Enclosure enclosure);
     public Enclosure getEnclosure();
+    public String getSpecies();
+    public boolean isAlive();
 }

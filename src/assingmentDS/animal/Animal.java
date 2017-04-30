@@ -11,10 +11,10 @@ import assingmentDS.enclosure.Enclosure;
 public abstract class Animal implements IAnimal, NamedObject{
     private Enclosure enclosure;
     private String name;
-    private String species; //todo species
+    private String species;
     private boolean isAlive;
     //Arteigenschaften
-    private boolean isPoisones;
+    private boolean isPoisonous;
     private boolean mayFly;
     private boolean isLivingSubmerged; // legt Überleben an Land/im Wasser fest
     private boolean isPredator;
@@ -22,10 +22,10 @@ public abstract class Animal implements IAnimal, NamedObject{
     private boolean isScavenger;
 
     //Konstruktor
-    Animal(String name, String species, boolean isPoisones, boolean mayFly, boolean isLivingSubmerged, boolean isPredator, double avgSize, boolean isScavenger) {
+    Animal(String name, String species, boolean isPoisonous, boolean mayFly, boolean isLivingSubmerged, boolean isPredator, double avgSize, boolean isScavenger) {
         this.name = name;
         this.species = species;
-        this.isPoisones = isPoisones;
+        this.isPoisonous = isPoisonous;
         this.mayFly = mayFly;
         this.isLivingSubmerged = isLivingSubmerged;
         this.isPredator = isPredator;
@@ -36,6 +36,7 @@ public abstract class Animal implements IAnimal, NamedObject{
     }
 
     //getters
+
     public Enclosure getEnclosure() {
         return enclosure;
     }
@@ -52,8 +53,8 @@ public abstract class Animal implements IAnimal, NamedObject{
         return isAlive;
     }
 
-    public boolean isPoisones() {
-        return isPoisones;
+    public boolean isPoisonous() {
+        return isPoisonous;
     }
 
     public boolean mayFly() {
@@ -77,11 +78,14 @@ public abstract class Animal implements IAnimal, NamedObject{
     }
 
     //setters
-    public void setEnclosure(Enclosure enclosure) { // diese Funktion sollte nur aus der Klasse enclosure gerufen werden
+
+    // diese Funktion sollte nur aus der Klasse enclosure gerufen werden
+    public void setEnclosure(Enclosure enclosure) {
         this.enclosure = enclosure;
     }
 
-    // other methodes
+    // other methods
+
     public void kill(String reason) {
         isAlive = false;
         Log.died(getSpecies(), this, reason);

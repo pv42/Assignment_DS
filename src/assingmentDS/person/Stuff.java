@@ -13,7 +13,6 @@ import java.util.List;
 public class Stuff extends Person {
     private Zoo arbeitsplatz;
     private List<IAnimal> animals;
-    //todo use interface itier
     public Stuff(String name, int gender) {
         super(name, gender);
         animals = new ArrayList<>();
