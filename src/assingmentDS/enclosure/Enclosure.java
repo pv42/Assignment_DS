@@ -44,8 +44,8 @@ public abstract class Enclosure implements NamedObject {
     public void addTier(Animal tier) {
         if(tier.getEnclosure() != null) tier.getEnclosure().removeTier(tier);
         tier.setEnclosure(this);
-        Log.added(tier.getArt(),tier,this);
-        if(Aquarium.class.isInstance(this) ^  tier.isLebtUnterWasser())  {
+        Log.added(tier.getSpecies(),tier,this);
+        if(Aquarium.class.isInstance(this) ^  tier.isLivingSubmerged())  {
             tier.kill("Unpassendes Enclosure"); // lässt Leiche zurück
         }
         tiere.add(tier);
@@ -74,7 +74,7 @@ public abstract class Enclosure implements NamedObject {
     // entfernt Animal aus Gehege, gibt bei erfolg wahr zurück
     public boolean removeTier(Animal tier) {
         boolean succses =  tiere.remove(tier);
-        Log.removed(tier.getArt(),tier,this,succses);
+        Log.removed(tier.getSpecies(),tier,this,succses);
         return succses;
     }
 

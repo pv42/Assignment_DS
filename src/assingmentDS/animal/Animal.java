@@ -3,52 +3,53 @@ package assingmentDS.animal;
 import assingmentDS.Log;
 import assingmentDS.NamedObject;
 import assingmentDS.enclosure.Enclosure;
-import assingmentDS.person.Stuff;
 
 /***
- * Created by pv42 on 24.04.2017.
- * Implementiert functionalität aller Tiere
+ * Created on 24.04.2017.
+ * Implementiert Funktionalität aller Tiere
  */
 public abstract class Animal implements IAnimal, NamedObject{
     private Enclosure enclosure;
     private String name;
-    private String art;
+    private String species; //todo species
     private boolean isAlive;
     //Arteigenschaften
     private boolean isPoisones;
     private boolean mayFly;
-    private boolean lebtUnterWasser; // if false dies in Aquaiums
-    private boolean isPredator; // if true eats non  or smaller predators
-    private double avgSize; // in m
-    private boolean isstAas;
+    private boolean isLivingSubmerged; // legt Überleben an Land/im Wasser fest
+    private boolean isPredator;
+    private double avgSize; // in Meter
+    private boolean isScavenger;
 
-    public Animal(String name, String art, boolean istGiftig, boolean mayFly, boolean lebtUnterWasser, boolean isPredator, double avgSize, boolean isstAas) {
+    //Konstruktor
+    Animal(String name, String species, boolean isPoisones, boolean mayFly, boolean isLivingSubmerged, boolean isPredator, double avgSize, boolean isScavenger) {
         this.name = name;
-        this.art = art;
-        this.isPoisones = istGiftig;
+        this.species = species;
+        this.isPoisones = isPoisones;
         this.mayFly = mayFly;
-        this.lebtUnterWasser = lebtUnterWasser;
+        this.isLivingSubmerged = isLivingSubmerged;
         this.isPredator = isPredator;
         this.avgSize = avgSize;
         this.isAlive = true;
-        this.isstAas = isstAas;
-        Log.created(art,this);
+        this.isScavenger = isScavenger;
+        Log.created(species,this);
     }
 
-
+    //getters
     public Enclosure getEnclosure() {
         return enclosure;
     }
 
-    public void setEnclosure(Enclosure enclosure) {
-        this.enclosure = enclosure;
-    } //todo possibis data confict with Enclosure.java !!
     public String getName() {
         return name;
     }
 
-    public String getArt() {
-        return art;
+    public String getSpecies() {
+        return species;
+    }
+
+    public boolean isAlive() {
+        return isAlive;
     }
 
     public boolean isPoisones() {
@@ -59,26 +60,30 @@ public abstract class Animal implements IAnimal, NamedObject{
         return mayFly;
     }
 
-    public boolean isLebtUnterWasser() {
-        return lebtUnterWasser;
+    public boolean isLivingSubmerged() {
+        return isLivingSubmerged;
     }
 
     public boolean isPredator() {
         return isPredator;
     }
-    public boolean istIsstAas() {
-        return isstAas;
-    }
-    public void kill(String reason) {
-        Log.write(getArt() + " " + getName() + " starb. Grund: " + reason);
-        isAlive = false;
-    }
-
-    public boolean isAlive() {
-        return isAlive;
-    }
 
     public double getAvgSize() {
         return avgSize;
+    }
+
+    public boolean isScavenger() {
+        return isScavenger;
+    }
+
+    //setters
+    public void setEnclosure(Enclosure enclosure) { // diese Funktion sollte nur aus der Klasse enclosure gerufen werden
+        this.enclosure = enclosure;
+    }
+
+    // other methodes
+    public void kill(String reason) {
+        Log.write(getSpecies() + " " + getName() + " starb. Grund: " + reason);
+        isAlive = false;
     }
 }
