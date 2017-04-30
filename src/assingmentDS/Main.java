@@ -108,10 +108,10 @@ public class Main {
         landgehege3.addAnimal(joffrey);
         landgehege3.addAnimal(jaime);
         //5. Lenny
-        Kugelfisch kugelfisch;
+        PufferFish pufferFish;
         for(int i = 1; i<=10;i++) {
-            kugelfisch = new Kugelfisch("Lenny" + i); //Alle Kugelfische heißen Lenny #trueStory // TODO remove
-            kugelfischtank.addAnimal(kugelfisch);
+            pufferFish = new PufferFish("Lenny" + i); //Alle Kugelfische heißen Lenny #trueStory // TODO remove
+            kugelfischtank.addAnimal(pufferFish);
         }
         //6. Moby Dick
         WhaleShark moby = new WhaleShark("Moby");

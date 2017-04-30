@@ -4,11 +4,11 @@ import assingmentDS.enclosure.Enclosure;
 import assingmentDS.person.Stuff;
 
 /**
- * Created by pv42 on 24.04.2017.
+ * Created on 24.04.2017.
+ * Garantiert Funktionalitäten in der Animalsklasse
  */
 public interface IAnimal {
     public String getName();
-    public void setEnclosure(Enclosure enclosure);
     public Enclosure getEnclosure();
     public String getSpecies();
     public boolean isAlive();

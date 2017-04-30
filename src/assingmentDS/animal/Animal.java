@@ -79,7 +79,7 @@ public abstract class Animal implements IAnimal, NamedObject{
 
     //setters
 
-    // diese Funktion sollte nur aus der Klasse enclosure gerufen werden
+    // diese Funktion sollte nur aus der Klasse Enclosure gerufen werden
     public void setEnclosure(Enclosure enclosure) {
         this.enclosure = enclosure;
     }
@@ -89,5 +89,20 @@ public abstract class Animal implements IAnimal, NamedObject{
     public void kill(String reason) {
         isAlive = false;
         Log.died(getSpecies(), this, reason);
+    }
+
+    @Override
+    public String toString() {
+        return species + "{" +
+                "enclosure=" + enclosure.getName() +
+                ", name='" + name + '\'' +
+                ", isAlive=" + isAlive +
+                ", isPoisonous=" + isPoisonous +
+                ", mayFly=" + mayFly +
+                ", isLivingSubmerged=" + isLivingSubmerged +
+                ", isPredator=" + isPredator +
+                ", avgSize=" + avgSize +
+                ", isScavenger=" + isScavenger +
+                '}';
     }
 }

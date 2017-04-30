@@ -5,7 +5,7 @@ package assingmentDS.animal;
  * Wassertier (lebt im Wasser)
  */
 public abstract class WaterAnimal extends Animal {
-    WaterAnimal(String name, String art, boolean istGiftig, boolean mayFly, boolean isPredator, double avgSize, boolean isstAas) {
-        super(name, art, istGiftig, mayFly, true, isPredator, avgSize,isstAas);
+    WaterAnimal(String name, String art, boolean istGiftig, boolean mayFly, boolean isPredator, double avgSize, boolean isScavenger) {
+        super(name, art, istGiftig, mayFly, true, isPredator, avgSize,isScavenger);
     }
 }
