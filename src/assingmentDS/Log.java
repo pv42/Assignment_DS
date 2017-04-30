@@ -1,5 +1,6 @@
 package assingmentDS;
 
+import assingmentDS.animal.Animal;
 import assingmentDS.enclosure.Enclosure;
 import assingmentDS.person.Person;
 
@@ -7,7 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintStream;
 
 /**
- * Created by pv42 on 24.04.2017.
+ * Created on 24.04.2017.
  * Ausgabeklasse, übernimmt alle Augabefunktionen außer Kommandzeilenhilfe/-version
  */
 public class Log {
@@ -23,7 +24,18 @@ public class Log {
         else write(type  + " " + sub.getName() + " konnte nicht  von " + sup.getName() + " entfernt werden");
     }
     public static void watch(String type, Person person, Enclosure enclosure) {
-        write(type + " " + person.getName() + " besucht " + enclosure.getName() + "");
+        String thirdPersonArticle;
+        if(person.getGender() == Person.GENDER_MALE) {
+            thirdPersonArticle = "Er";
+        } else if (person.getGender() == Person.GENDER_FEMALE) {
+            thirdPersonArticle = "Sie";
+        } else {
+            thirdPersonArticle = "Es";
+        }
+        String animalsString = "";
+        for(Animal animal : enclosure.getAnimals())
+        write(type + " " + person.getName() + " besucht " + enclosure.getName() + ". "
+                + thirdPersonArticle + " könnte "  + enclosure.getAnimals().size() + " Tiere sehen :" );
     }
     public static void write(String s) {
         out.println(s);

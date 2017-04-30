@@ -14,12 +14,12 @@ import java.util.List;
  */
 public abstract class Enclosure implements NamedObject {
     private Zoo zoo;
-    private List<Animal> tiere;
+    private List<Animal> animals;
     private String name;
 
     //erzeugt leeres Gehege mit Namen
     public Enclosure(String name) {
-        tiere = new ArrayList<>();
+        animals = new ArrayList<>();
         this.name = name;
     }
 
@@ -34,26 +34,26 @@ public abstract class Enclosure implements NamedObject {
         this.zoo = zoo;
     }
 
-    // gibt eine Liste aller enthaltenen Animal zurück
-    public List<Animal> getTiere() {
-        return tiere;
+    // gibt eine Liste aller enthaltenen Tiere zurück
+    public List<Animal> getAnimals() {
+        return animals;
     }
 
-    // fügt dem Gehege ein Animal hinzu, falls nötig entfernt es das Animal aus dem vorherigen Gehege
+    // fügt dem Gehege ein Tier hinzu, falls nötig entfernt es das Tier aus dem vorherigen Gehege
     // tötet Tiere, die nicht im Gegehe überleben können, gefressen werden, oder giftiges Fressen hatten
-    public void addTier(Animal tier) {
-        if(tier.getEnclosure() != null) tier.getEnclosure().removeTier(tier);
-        tier.setEnclosure(this);
-        Log.added(tier.getSpecies(),tier,this);
-        if(Aquarium.class.isInstance(this) ^  tier.isLivingSubmerged())  {
-            tier.kill("Unpassendes Enclosure"); // lässt Leiche zurück
+    public void addAnimal(Animal animal) {
+        if(animal.getEnclosure() != null) animal.getEnclosure().removeTier(animal);
+        animal.setEnclosure(this);
+        Log.added(animal.getSpecies(),animal,this);
+        if(Aquarium.class.isInstance(this) ^  animal.isLivingSubmerged())  {
+            animal.kill("Unpassendes Enclosure"); // lässt Leiche zurück
         }
-        tiere.add(tier);
-        for (int i = 0 ; i < tiere.size()- 1; i++) {// überprüft Raubtieraktivitäten zwischen neuem und alten Tieren
-            Animal t = tiere.get(i);
-            if(tiere.contains(tier)) { // may alreday been removed due to eating
-                if(performEating(t,tier)) i--; //todo think about is this code safe ??
-                if(performEating(tier,t)) i--;// if a animal got removed indexes are shifted
+        animals.add(animal);
+        for (int i = 0; i < animals.size()- 1; i++) {// überprüft Raubtieraktivitäten zwischen neuem und alten Tieren
+            Animal t = animals.get(i);
+            if(animals.contains(animal)) { // may alreday been removed due to eating
+                if(performEating(t,animal)) i--; //todo think about is this code safe ??
+                if(performEating(animal,t)) i--;// if a animal got removed indexes are shifted
             }
         }
     }
@@ -73,7 +73,7 @@ public abstract class Enclosure implements NamedObject {
     }
     // entfernt Animal aus Gehege, gibt bei erfolg wahr zurück
     public boolean removeTier(Animal tier) {
-        boolean succses =  tiere.remove(tier);
+        boolean succses =  animals.remove(tier);
         Log.removed(tier.getSpecies(),tier,this,succses);
         return succses;
     }
@@ -88,7 +88,7 @@ public abstract class Enclosure implements NamedObject {
     public String toString() {
         return "Enclosure{" +
                 "name=" + name  + ", " +
-                "tiere=" + tiere +
+                "animals=" + animals +
                 '}';
     }
 }

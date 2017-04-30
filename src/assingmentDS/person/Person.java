@@ -40,6 +40,10 @@ public abstract class Person implements NamedObject {
         return enclosure;
     }
 
+    public int getGender() {
+        return gender;
+    }
+
     @Override
     public String toString() {
         if(enclosure != null) {

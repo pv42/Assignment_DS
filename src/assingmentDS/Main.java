@@ -3,7 +3,6 @@ package assingmentDS;
 import assingmentDS.enclosure.Aquarium;
 import assingmentDS.enclosure.LandMammalEnclosure;
 import assingmentDS.enclosure.Aviary;
-import assingmentDS.person.Person;
 import assingmentDS.person.Visiter;
 import assingmentDS.person.Stuff;
 import assingmentDS.animal.*;
@@ -86,45 +85,45 @@ public class Main {
         Papagei tick = new Papagei("Tick");
         Papagei trick = new Papagei("Trick");
         Papagei track = new Papagei("Track");
-        papgeienGehege.addTier(tick);
-        papgeienGehege.addTier(trick);
-        papgeienGehege.addTier(track);
+        papgeienGehege.addAnimal(tick);
+        papgeienGehege.addAnimal(trick);
+        papgeienGehege.addAnimal(track);
         //3.  Zalana, Eddard, Bran, Robb, Arya
         Zebra zalana = new Zebra("Zalana");
         Zebra eddard = new Zebra("Eddard");
         Zebra bran = new Zebra( "Bran");
         Zebra robb = new Zebra("Robb");
         Zebra arya = new Zebra("arya");
-        landgehege1.addTier(eddard);
-        landgehege1.addTier(robb);
-        landgehege2.addTier(bran);
-        landgehege2.addTier(arya);
-        landgehege2.addTier(zalana);
+        landgehege1.addAnimal(eddard);
+        landgehege1.addAnimal(robb);
+        landgehege2.addAnimal(bran);
+        landgehege2.addAnimal(arya);
+        landgehege2.addAnimal(zalana);
         //4.   Tywin, Jaime, Cersei, Joffrey
         Lion tywin = new Lion("Tywin");
         Lion jaime = new Lion("Jaime");
         Lion cersei = new Lion("Cersei");
         Lion joffrey = new Lion("Joffrey");
-        landgehege3.addTier(tywin);
-        landgehege3.addTier(cersei);
-        landgehege3.addTier(joffrey);
-        landgehege3.addTier(jaime);
+        landgehege3.addAnimal(tywin);
+        landgehege3.addAnimal(cersei);
+        landgehege3.addAnimal(joffrey);
+        landgehege3.addAnimal(jaime);
         //5. Lenny
         Kugelfisch kugelfisch;
         for(int i = 1; i<=10;i++) {
             kugelfisch = new Kugelfisch("Lenny" + i); //Alle Kugelfische heißen Lenny #trueStory // TODO remove
-            kugelfischtank.addTier(kugelfisch);
+            kugelfischtank.addAnimal(kugelfisch);
         }
         //6. Moby Dick
         WhaleShark moby = new WhaleShark("Moby");
         WhaleShark dick = new WhaleShark("Dick");
-        wahlhaibecken.addTier(moby);
-        wahlhaibecken.addTier(dick);
+        wahlhaibecken.addAnimal(moby);
+        wahlhaibecken.addAnimal(dick);
         //7. American Dream
         Eagle american = new Eagle("American");
         Eagle dream = new Eagle("Dream");
-        adlergehege.addTier(american);
-        adlergehege.addTier(dream);
+        adlergehege.addAnimal(american);
+        adlergehege.addAnimal(dream);
         //8. Ramsay Sam Daenerys
         Stuff ramsay = new Stuff("Ramsay", GENDER_MALE);
         Stuff sam = new Stuff("Sam", GENDER_MALE);
@@ -156,13 +155,13 @@ public class Main {
         visiter.add(sansa);
         visiter.add(willy);
         //10.
-        wahlhaibecken.addTier(joffrey);
+        wahlhaibecken.addAnimal(joffrey);
         //11.
-        landgehege1.addTier(tywin);
+        landgehege1.addAnimal(tywin);
         //12.
         sansa.setEnclosure(landgehege1);
         //13.
-        adlergehege.addTier(cersei);
+        adlergehege.addAnimal(cersei);
         //out
         Log.write(zoo.toString());
         Log.write(visiter.toString());

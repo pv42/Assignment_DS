@@ -42,7 +42,7 @@ public class Zoo implements NamedObject{
     public List<Animal> getTiere() {
         ArrayList<Animal> tiere = new ArrayList<>();
         for(Enclosure g: enclosures) {
-            tiere.addAll(g.getTiere());
+            tiere.addAll(g.getAnimals());
         }
         return tiere;
     }
