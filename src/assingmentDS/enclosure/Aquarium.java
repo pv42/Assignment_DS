@@ -2,8 +2,8 @@ package assingmentDS.enclosure;
 
 import assingmentDS.Log;
 
-/**
- * Created by pv42 on 24.04.2017.
+/***
+ * Created on 24.04.2017.
  * Repräsentiert die Umsetzung einse Aquariums
  */
 public class Aquarium extends Enclosure {

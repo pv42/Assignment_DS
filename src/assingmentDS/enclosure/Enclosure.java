@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /***
- * Created by pv42 on 24.04.2017.
+ * Created  on 24.04.2017.
  * Repräsentiert die Funktionalitäten aller Gehege
  */
 public abstract class Enclosure implements NamedObject {
