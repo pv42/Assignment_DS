@@ -73,7 +73,8 @@ public class Log {
         try {
             out = new PrintStream(filename);
         } catch (FileNotFoundException e) {
-            System.err.println("Ausgabe konnte nicht umgeleitet werden");
+            System.err.println("Ausgabe konnte nicht umgeleitet werden. StackTrace:");
+            e.printStackTrace();
         }
     }
 }
