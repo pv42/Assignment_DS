@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /***
- * Created  on 24.04.2017.
+ * Created on 24.04.2017.
  * Repräsentiert die Funktionalitäten aller Gehege
  */
 public abstract class Enclosure implements NamedObject {
@@ -38,7 +38,7 @@ public abstract class Enclosure implements NamedObject {
 
     // gibt eine Liste aller enthaltenen Tiere zurück
     public List<Animal> getAnimals() {
-        return animals;
+        return new ArrayList<>(animals);
     }
 
     // fügt dem Gehege ein Tier hinzu, falls nötig entfernt es das Tier aus dem vorherigen Gehege
