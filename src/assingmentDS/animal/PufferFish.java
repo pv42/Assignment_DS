@@ -1,7 +1,7 @@
 package assingmentDS.animal;
 
-/**
- * Created by pv42 on 24.04.2017.
+/***
+ * Created on 24.04.2017.
  * Ein Kugelfisch (giftig, nicht fliegen, Raubtier, kein Aasfresser)
  */
 public final class PufferFish extends WaterAnimal {

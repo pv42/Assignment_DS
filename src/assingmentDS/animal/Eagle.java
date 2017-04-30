@@ -1,7 +1,7 @@
 package assingmentDS.animal;
 
 /***
- * Created by pv42 on 24.04.2017.
+ * Created on 24.04.2017.
  * Ein Adler (nicht giftig, kann fliegen, Raubtier, Aasfresser)
  */
 public final class Eagle extends Bird {
