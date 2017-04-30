@@ -64,8 +64,8 @@ public abstract class Enclosure implements NamedObject {
             this.removeTier(t2);
             return true;
         }
-        if(t1.istIsstAas() && t1.isAlive() && !t2.isAlive()) { // scavenger eating carrion
-            if(t2.istGiftig()) t1.kill("Gift in der Nahrung");
+        if(t1.isScavenger() && t1.isAlive() && !t2.isAlive()) { // scavenger eating carrion
+            if(t2.isPoisones()) t1.kill("Gift in der Nahrung");
             this.removeTier(t2);
             return true;
         }

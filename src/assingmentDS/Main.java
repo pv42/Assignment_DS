@@ -132,10 +132,10 @@ public class Main {
         zoo.addStuff(ramsay);
         zoo.addStuff(sam);
         zoo.addStuff(daenerys);
-        for(Animal tier:zoo.getTiere()) { // checks if the animnal is land, water or air and asign personal
-            if(LandMammal.class.isInstance(tier)) tier.setStuff(sam);
-            else if(WaterAnimal.class.isInstance(tier)) tier.setStuff(sam);
-            else if(Bird.class.isInstance(tier)) tier.setStuff(sam);
+        for(Animal tier:zoo.getTiere()) { // überprüft Tier auf Klasse und weisst entsprechend Personal zu
+            if(LandMammal.class.isInstance(tier)) ramsay.addAnimal(tier);
+            else if(WaterAnimal.class.isInstance(tier)) sam.addAnimal(tier);
+            else if(Bird.class.isInstance(tier)) daenerys.addAnimal(tier);
             else throw new ConcurrentModificationException(); //animal should not be any other
         }
         //TODO
