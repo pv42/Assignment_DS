@@ -33,9 +33,14 @@ public class Log {
             thirdPersonArticle = "Es";
         }
         String animalsString = "";
-        for(Animal animal : enclosure.getAnimals())
+        for(Animal animal : enclosure.getAnimals()) {
+            animalsString += animal.getSpecies() + " " + animal.getName();
+            if(!animal.isAlive()) animalsString += " (Tot)";
+            animalsString += ", ";
+        }
+        animalsString = animalsString.substring(0,animalsString.length() - 3); // anfernt letzes Komma
         write(type + " " + person.getName() + " besucht " + enclosure.getName() + ". "
-                + thirdPersonArticle + " könnte "  + enclosure.getAnimals().size() + " Tiere sehen :" );
+                + thirdPersonArticle + " könnte "  + enclosure.getAnimals().size() + " Tiere sehen :" + animalsString);
     }
     public static void write(String s) {
         out.println(s);

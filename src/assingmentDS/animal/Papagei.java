@@ -10,8 +10,7 @@ public final class Papagei extends Bird {
     @Override
     public String toString() {
         return "Papagei{" +
-                "name=" + getName() + ", " +
-                "personal=" + getStuff() + ", " +
+                "name=" + getName() +
                 "}";
     }
 }

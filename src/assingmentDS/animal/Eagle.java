@@ -12,8 +12,7 @@ public final class Eagle extends Bird {
     @Override
     public String toString() {
         return "Adler{" +
-                "name=" + getName() +", " +
-                "personal=" + getStuff() +
+                "name=" + getName() +
                 "}";
     }
 }

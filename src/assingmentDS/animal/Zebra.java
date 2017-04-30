@@ -11,7 +11,6 @@ public final class Zebra extends LandMammal {
     public String toString() {
         return "Zebra{" +
                 "name=" + getName() + ", " +
-                "personal=" + getStuff() +
                 "}";
     }
 }

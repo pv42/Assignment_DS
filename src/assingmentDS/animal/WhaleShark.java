@@ -11,8 +11,7 @@ public final class WhaleShark extends WaterAnimal {
     @Override
     public String toString() {
         return "Walhai{" +
-                "name=" + getName() + ", " +
-                "personal=" + getStuff() +
+                "name=" + getName() +
                 "}";
     }
 }

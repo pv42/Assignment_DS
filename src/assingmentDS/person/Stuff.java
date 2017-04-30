@@ -4,6 +4,7 @@ import assingmentDS.Log;
 import assingmentDS.Zoo;
 import assingmentDS.animal.IAnimal;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /***
@@ -15,6 +16,7 @@ public class Stuff extends Person {
     //todo use interface itier
     public Stuff(String name, int gender) {
         super(name, gender);
+        animals = new ArrayList<>();
         Log.created("Stuff", this);
     }
 

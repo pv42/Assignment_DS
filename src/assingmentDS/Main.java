@@ -93,7 +93,7 @@ public class Main {
         Zebra eddard = new Zebra("Eddard");
         Zebra bran = new Zebra( "Bran");
         Zebra robb = new Zebra("Robb");
-        Zebra arya = new Zebra("arya");
+        Zebra arya = new Zebra("Arya");
         landgehege1.addAnimal(eddard);
         landgehege1.addAnimal(robb);
         landgehege2.addAnimal(bran);

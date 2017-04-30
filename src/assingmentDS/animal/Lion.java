@@ -11,8 +11,7 @@ public final class Lion extends LandMammal {
     @Override
     public String toString() {
         return "Löwe{" +
-                "name=" + getName() +", " +
-                "personal=" + getStuff() +
+                "name=" + getName() +
                 "}";
     }
 }

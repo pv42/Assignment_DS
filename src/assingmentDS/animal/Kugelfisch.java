@@ -12,7 +12,6 @@ public final class Kugelfisch extends WaterAnimal {
     public String toString() {
         return "Kugelfisch{" +
                 "name=" + getName() +", " +
-                "personal=" + getStuff() +
                 "}";
     }
 }
