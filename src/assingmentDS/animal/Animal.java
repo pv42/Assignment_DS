@@ -12,7 +12,6 @@ import assingmentDS.person.Stuff;
 public abstract class Animal implements IAnimal, NamedObject{
     private Enclosure enclosure;
     private String name;
-    private Stuff stuff; //TODO move to stuff class
     private String art;
     private boolean isAlive;
     //Arteigenschaften
@@ -21,9 +20,6 @@ public abstract class Animal implements IAnimal, NamedObject{
     private boolean lebtUnterWasser; // if false dies in Aquaiums
     private boolean isPredator; // if true eats non  or smaller predators
     private double avgSize; // in m
-
-
-
     private boolean isstAas;
 
     public Animal(String name, String art, boolean istGiftig, boolean mayFly, boolean lebtUnterWasser, boolean isPredator, double avgSize, boolean isstAas) {
@@ -50,19 +46,12 @@ public abstract class Animal implements IAnimal, NamedObject{
     public String getName() {
         return name;
     }
-    public void setStuff(Stuff stuff) {
-        this.stuff = stuff;
-    }
-
-    public Stuff getStuff() {
-        return stuff;
-    }
 
     public String getArt() {
         return art;
     }
 
-    public boolean istGiftig() {
+    public boolean isPoisones() {
         return isPoisones;
     }
 
