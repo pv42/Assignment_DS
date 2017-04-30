@@ -22,7 +22,7 @@ public abstract class Enclosure implements NamedObject {
         animals = new ArrayList<>();
         this.name = name;
         this.zoo = zoo;
-        zoo.addGehege(this);
+        zoo.addEnclosure(this);
     }
 
     // gibt dem Zoo, dem das Gehege zugeordnet ist zurück.

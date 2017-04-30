@@ -8,10 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /***
- * Created by pv42 on 24.04.2017.
+ * Created on 24.04.2017.
  */
 public class Stuff extends Person {
-    private Zoo arbeitsplatz;
+    private Zoo workPlace;
     private List<IAnimal> animals;
     public Stuff(String name, int gender) {
         super(name, gender);
@@ -19,15 +19,26 @@ public class Stuff extends Person {
         Log.created("Stuff", this);
     }
 
-    public Zoo getArbeitsplatz() {
-        return arbeitsplatz;
+    public Zoo getWorkplace() {
+        return workPlace;
     }
 
-    public void setArbeitsplatz(Zoo arbeitsplatz) {
-        this.arbeitsplatz = arbeitsplatz;
+    // sollte nur von Zoo.addStuff() gerufen werden
+    public void setWorkplace(Zoo workplace) {
+        this.workPlace = workplace;
     }
 
     public void addAnimal(IAnimal animal) {
         animals.add(animal);
+    }
+
+    @Override
+    public String toString() {
+        return "Stuff{" +
+                "name=" + getName() +
+                ", animals=" + animals +
+                ", gender=" + getGender() +
+                ", workPlace=" + workPlace.getName() +
+                '}';
     }
 }

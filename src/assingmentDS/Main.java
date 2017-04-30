@@ -15,7 +15,7 @@ import java.util.Objects;
 import static assingmentDS.person.Person.GENDER_MALE;
 import static assingmentDS.person.Person.GENDER_FEMALE;
 
-/**
+/***
  * Created on 24.04.2017.
  * Hauptklasse, enthaelt den Startcode, Verarbeitung von Kommandozeilenargumenten
  * sowie das in der Aufgabenstellung geforderte Beispiel.
@@ -72,8 +72,8 @@ public class Main {
         LandMammalEnclosure landgehege4 = new LandMammalEnclosure("Landgehege4", zoo);
         Aviary adlergehege = new Aviary("Adlergehege", zoo);
         Aviary papgeienGehege = new Aviary("Papageiengehege", zoo);
-        zoo.addGehege(papgeienGehege);
-        zoo.addGehege(adlergehege);
+        zoo.addEnclosure(papgeienGehege);
+        zoo.addEnclosure(adlergehege);
         //2. Tick Trick Track
         Papagei tick = new Papagei("Tick");
         Papagei trick = new Papagei("Trick");
@@ -124,7 +124,7 @@ public class Main {
         zoo.addStuff(ramsay);
         zoo.addStuff(sam);
         zoo.addStuff(daenerys);
-        for(Animal tier:zoo.getTiere()) { // überprüft Tier auf Klasse und weisst entsprechend Personal zu
+        for(Animal tier: zoo.getAnimals()) { // überprüft Tier auf Klasse und weisst entsprechend Personal zu
             if(LandMammal.class.isInstance(tier)) ramsay.addAnimal(tier);
             else if(WaterAnimal.class.isInstance(tier)) sam.addAnimal(tier);
             else if(Bird.class.isInstance(tier)) daenerys.addAnimal(tier);
