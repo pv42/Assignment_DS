@@ -18,9 +18,11 @@ public abstract class Enclosure implements NamedObject {
     private String name;
 
     //erzeugt leeres Gehege mit Namen
-    public Enclosure(String name) {
+    public Enclosure(String name,Zoo zoo) {
         animals = new ArrayList<>();
         this.name = name;
+        this.zoo = zoo;
+        zoo.addGehege(this);
     }
 
     // gibt dem Zoo, dem das Gehege zugeordnet ist zurück.

@@ -29,6 +29,7 @@ public class Zoo implements NamedObject{
 
     }
 
+    //ordnet gehege dem Zoo zu, sollte nicht Außerhalb des Gehehekonstuktors gerufen werden
     public void addGehege(Enclosure enclosure) {
         enclosure.setZoo(this);
         enclosures.add(enclosure);

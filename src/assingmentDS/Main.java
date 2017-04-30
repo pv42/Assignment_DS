@@ -64,20 +64,14 @@ public class Main {
         Zoo zoo = new Zoo("Zoo");
         List<Visiter> visiter = new ArrayList<>();
         // 1.
-        Aquarium wahlhaibecken = new Aquarium("Wahlhaibecken");
-        Aquarium kugelfischtank = new Aquarium("Kugelfischtank");
-        zoo.addGehege(wahlhaibecken);
-        zoo.addGehege(kugelfischtank);
-        LandMammalEnclosure landgehege1 = new LandMammalEnclosure("Landgehege1");
-        LandMammalEnclosure landgehege2 = new LandMammalEnclosure("Landgehege2");
-        LandMammalEnclosure landgehege3 = new LandMammalEnclosure("Landgehege3");
-        LandMammalEnclosure landgehege4 = new LandMammalEnclosure("Landgehege4");
-        zoo.addGehege(landgehege1);
-        zoo.addGehege(landgehege2);
-        zoo.addGehege(landgehege3);
-        zoo.addGehege(landgehege4);
-        Aviary adlergehege = new Aviary("Adlergehege");
-        Aviary papgeienGehege = new Aviary("Papageiengehege");
+        Aquarium wahlhaibecken = new Aquarium("Wahlhaibecken", zoo);
+        Aquarium kugelfischtank = new Aquarium("Kugelfischtank", zoo);
+        LandMammalEnclosure landgehege1 = new LandMammalEnclosure("Landgehege1", zoo);
+        LandMammalEnclosure landgehege2 = new LandMammalEnclosure("Landgehege2", zoo);
+        LandMammalEnclosure landgehege3 = new LandMammalEnclosure("Landgehege3", zoo);
+        LandMammalEnclosure landgehege4 = new LandMammalEnclosure("Landgehege4", zoo);
+        Aviary adlergehege = new Aviary("Adlergehege", zoo);
+        Aviary papgeienGehege = new Aviary("Papageiengehege", zoo);
         zoo.addGehege(papgeienGehege);
         zoo.addGehege(adlergehege);
         //2. Tick Trick Track

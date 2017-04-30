@@ -1,6 +1,7 @@
 package assingmentDS.enclosure;
 
 import assingmentDS.Log;
+import assingmentDS.Zoo;
 
 /***
  * Created on 24.04.2017.
@@ -8,8 +9,8 @@ import assingmentDS.Log;
  */
 public class Aquarium extends Enclosure {
     //erzeugt ein Aquarium
-    public Aquarium(String name) {
-        super(name);
+    public Aquarium(String name, Zoo zoo) {
+        super(name, zoo);
         Log.created("Aquarium",this); // gibt Erzeugen aus
     }
 }
