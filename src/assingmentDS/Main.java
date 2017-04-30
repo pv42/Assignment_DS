@@ -3,16 +3,21 @@ package assingmentDS;
 import assingmentDS.enclosure.Aquarium;
 import assingmentDS.enclosure.LandMammalEnclosure;
 import assingmentDS.enclosure.Aviary;
+import assingmentDS.person.Person;
 import assingmentDS.person.Visiter;
 import assingmentDS.person.Stuff;
 import assingmentDS.animal.*;
 
 import java.util.ArrayList;
+import java.util.ConcurrentModificationException;
 import java.util.List;
 import java.util.Objects;
 
+import static assingmentDS.person.Person.GENDER_MALE;
+import static assingmentDS.person.Person.GENDER_FEMALE;
+
 /**
- * Created by pv42 on 24.04.2017.
+ * Created on 24.04.2017.
  * Hauptklasse, enthaelt den Startcode, Verarbeitung von Kommandozeilenargumenten
  * sowie das in der Aufgabenstellung geforderte Beispiel.
  */
@@ -121,25 +126,25 @@ public class Main {
         adlergehege.addTier(american);
         adlergehege.addTier(dream);
         //8. Ramsay Sam Daenerys
-        Stuff ramsay = new Stuff("Ramsay");
-        Stuff sam = new Stuff("Sam");
-        Stuff daenerys = new Stuff("Daenerys");
+        Stuff ramsay = new Stuff("Ramsay", GENDER_MALE);
+        Stuff sam = new Stuff("Sam", GENDER_MALE);
+        Stuff daenerys = new Stuff("Daenerys", GENDER_FEMALE);
         zoo.addStuff(ramsay);
         zoo.addStuff(sam);
         zoo.addStuff(daenerys);
         for(Animal tier:zoo.getTiere()) { // checks if the animnal is land, water or air and asign personal
-            if(LandMammal.class.isInstance(tier)) tier.setStuff(sam); // bad code
+            if(LandMammal.class.isInstance(tier)) tier.setStuff(sam);
             else if(WaterAnimal.class.isInstance(tier)) tier.setStuff(sam);
             else if(Bird.class.isInstance(tier)) tier.setStuff(sam);
-            else System.err.print("Error"); //todo remove!
+            else throw new ConcurrentModificationException(); //animal should not be any other
         }
         //TODO
         //9.
-        Visiter catelyn = new Visiter("Catelyn");
-        Visiter aerys = new Visiter("Aerys");
-        Visiter bronn = new Visiter("Bronn");
-        Visiter sansa = new Visiter("Sansa");
-        Visiter willy = new Visiter("Willy");
+        Visiter catelyn = new Visiter("Catelyn", GENDER_FEMALE);
+        Visiter aerys = new Visiter("Aerys", GENDER_MALE);
+        Visiter bronn = new Visiter("Bronn", GENDER_MALE);
+        Visiter sansa = new Visiter("Sansa", GENDER_FEMALE);
+        Visiter willy = new Visiter("Willy", GENDER_MALE);
         catelyn.setEnclosure(landgehege1);
         aerys.setEnclosure(adlergehege);
         bronn.setEnclosure(kugelfischtank);

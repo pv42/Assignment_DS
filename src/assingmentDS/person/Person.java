@@ -12,21 +12,24 @@ import assingmentDS.enclosure.Enclosure;
  */
 //TODO description -> ...
 public abstract class Person implements NamedObject {
+    public static final int GENDER_MALE = 0;
+    public static final int GENDER_FEMALE = 1;
     private String name;
+    private int gender;
     private Enclosure enclosure; /* dieses Attribut ist eigenlich nur für Besucher wichtig, soll aber laut Klassendiagramm
-     in die abstrakte Klasse */
+     in die abstrakte Klasse, ist null bei Personal */
 
-    //erzeugt eine Person min Name
-    public Person(String name) {
+    //erzeugt eine Person mit Name
+    public Person(String name,int gender) {
         this.name = name;
     }
 
-    // gibt den Name der Person zuruck
+    // gibt den Name der Person zurück
     public String getName() {
         return name;
     }
 
-    // weisst der Person ein Gehege zu, welches sie beobachtet
+    // weist der Person ein Gehege zu, welches sie beobachtet
     public void setEnclosure(Enclosure enclosure) {
         this.enclosure = enclosure;
         Log.watch("Besucher",this, enclosure); // Ausgabe

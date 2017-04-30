@@ -1,5 +1,8 @@
 package assingmentDS;
 
+import assingmentDS.enclosure.Enclosure;
+import assingmentDS.person.Person;
+
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 
@@ -19,8 +22,8 @@ public class Log {
         if(succses) write(type  + " " + sub.getName() + " von " + sup.getName() + " entfernt");
         else write(type  + " " + sub.getName() + " konnte nicht  von " + sup.getName() + " entfernt werden");
     }
-    public static void watch(String type,NamedObject sub, NamedObject sup) {
-        write(type + " " + sub.getName() + " besucht " + sup.getName());
+    public static void watch(String type, Person person, Enclosure enclosure) {
+        write(type + " " + person.getName() + " besucht " + enclosure.getName() + "");
     }
     public static void write(String s) {
         out.println(s);
