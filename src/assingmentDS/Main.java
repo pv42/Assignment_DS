@@ -24,7 +24,6 @@ import static assingmentDS.person.Person.GENDER_FEMALE;
 public class Main {
     // Startfunktion, behandelt Kommandozeilenargumente
     public static void main(String[] args) {
-        System.out.println(args.length);
         if(args.length > 0) {
             if(Objects.equals(args[0], "-h")) {
                 printHelp();
@@ -137,7 +136,6 @@ public class Main {
             else if(Bird.class.isInstance(tier)) daenerys.addAnimal(tier);
             else throw new ConcurrentModificationException(); //animal should not be any other
         }
-        //TODO
         //9.
         Visiter catelyn = new Visiter("Catelyn", GENDER_FEMALE);
         Visiter aerys = new Visiter("Aerys", GENDER_MALE);

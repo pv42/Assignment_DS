@@ -9,6 +9,6 @@ import assingmentDS.Log;
 public class LandMammalEnclosure extends Enclosure {
     public LandMammalEnclosure(String name) {
         super(name);
-        Log.write("Landsäugetiergehege " + name + " erstellt");
+        Log.created("Landsäugetiergehege",this);
     }
 }

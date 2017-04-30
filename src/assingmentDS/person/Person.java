@@ -22,6 +22,7 @@ public abstract class Person implements NamedObject {
     //erzeugt eine Person mit Name
     public Person(String name,int gender) {
         this.name = name;
+        this.gender = gender;
     }
 
     // gibt den Name der Person zurück
@@ -44,17 +45,4 @@ public abstract class Person implements NamedObject {
         return gender;
     }
 
-    @Override
-    public String toString() {
-        if(enclosure != null) {
-            return "Person{" +
-                    "name='" + name + '\'' +
-                    ", enclosure=" + enclosure.getName() +
-                    '}';
-        } else {
-            return "Person{" +
-                    "name='" + name + '\'' +
-                    '}';
-        }
-    }
 }

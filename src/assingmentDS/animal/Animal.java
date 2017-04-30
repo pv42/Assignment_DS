@@ -83,7 +83,7 @@ public abstract class Animal implements IAnimal, NamedObject{
 
     // other methodes
     public void kill(String reason) {
-        Log.write(getSpecies() + " " + getName() + " starb. Grund: " + reason);
         isAlive = false;
+        Log.died(getSpecies(), this, reason);
     }
 }

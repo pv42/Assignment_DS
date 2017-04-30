@@ -46,7 +46,7 @@ public abstract class Enclosure implements NamedObject {
         animal.setEnclosure(this);
         Log.added(animal.getSpecies(),animal,this);
         if(Aquarium.class.isInstance(this) ^  animal.isLivingSubmerged())  {
-            animal.kill("Unpassendes Enclosure"); // lässt Leiche zurück
+            animal.kill("Unpassendes Gehege"); // lässt Leiche zurück
         }
         animals.add(animal);
         for (int i = 0; i < animals.size()- 1; i++) {// überprüft Raubtieraktivitäten zwischen neuem und alten Tieren
