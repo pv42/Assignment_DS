@@ -3,7 +3,7 @@ package assingmentDS;
 import assingmentDS.enclosure.Aquarium;
 import assingmentDS.enclosure.LandMammalEnclosure;
 import assingmentDS.enclosure.Aviary;
-import assingmentDS.person.Visiter;
+import assingmentDS.person.Visitor;
 import assingmentDS.person.Stuff;
 import assingmentDS.animal.*;
 
@@ -62,7 +62,7 @@ public class Main {
     // Aufgabenstellung
     private static void test() {
         Zoo zoo = new Zoo("Zoo");
-        List<Visiter> visiter = new ArrayList<>();
+        List<Visitor> visitor = new ArrayList<>();
         // 1.
         Aquarium wahlhaibecken = new Aquarium("Wahlhaibecken", zoo);
         Aquarium kugelfischtank = new Aquarium("Kugelfischtank", zoo);
@@ -104,7 +104,7 @@ public class Main {
         //5. Lenny
         PufferFish pufferFish;
         for(int i = 1; i<=10;i++) {
-            pufferFish = new PufferFish("Lenny" + i); //Alle Kugelfische heißen Lenny #trueStory // TODO remove
+            pufferFish = new PufferFish("Lenny" + i); //Alle Kugelfische heißen Lenny
             kugelfischtank.addAnimal(pufferFish);
         }
         //6. Moby Dick
@@ -131,21 +131,21 @@ public class Main {
             else throw new ConcurrentModificationException(); //animal should not be any other
         }
         //9.
-        Visiter catelyn = new Visiter("Catelyn", GENDER_FEMALE);
-        Visiter aerys = new Visiter("Aerys", GENDER_MALE);
-        Visiter bronn = new Visiter("Bronn", GENDER_MALE);
-        Visiter sansa = new Visiter("Sansa", GENDER_FEMALE);
-        Visiter willy = new Visiter("Willy", GENDER_MALE);
+        Visitor catelyn = new Visitor("Catelyn", GENDER_FEMALE);
+        Visitor aerys = new Visitor("Aerys", GENDER_MALE);
+        Visitor bronn = new Visitor("Bronn", GENDER_MALE);
+        Visitor sansa = new Visitor("Sansa", GENDER_FEMALE);
+        Visitor willy = new Visitor("Willy", GENDER_MALE);
         catelyn.setEnclosure(landgehege1);
         aerys.setEnclosure(adlergehege);
         bronn.setEnclosure(kugelfischtank);
         sansa.setEnclosure(wahlhaibecken);
         willy.setEnclosure(landgehege2);
-        visiter.add(catelyn);
-        visiter.add(aerys);
-        visiter.add(bronn);
-        visiter.add(sansa);
-        visiter.add(willy);
+        visitor.add(catelyn);
+        visitor.add(aerys);
+        visitor.add(bronn);
+        visitor.add(sansa);
+        visitor.add(willy);
         //10.
         wahlhaibecken.addAnimal(joffrey);
         //11.
@@ -156,6 +156,6 @@ public class Main {
         adlergehege.addAnimal(cersei);
         //out
         Log.write(zoo.toString());
-        Log.write(visiter.toString());
+        Log.write(visitor.toString());
     }
 }

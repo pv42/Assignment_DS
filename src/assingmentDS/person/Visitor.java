@@ -5,9 +5,9 @@ import assingmentDS.Log;
 /***
  * Created by pv42 on 24.04.2017.
  */
-public class Visiter extends Person {
+public class Visitor extends Person {
 
-    public Visiter(String name, int gender) {
+    public Visitor(String name, int gender) {
         super(name, gender);
         Log.created("Besucher", this);
     }
