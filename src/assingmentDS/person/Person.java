@@ -13,6 +13,7 @@ import assingmentDS.enclosure.Enclosure;
 public abstract class Person implements NamedObject {
     public static final int GENDER_MALE = 0;
     public static final int GENDER_FEMALE = 1;
+    public static final int GENDER_APACHE = 2;
     private String name;
     private int gender;
     private Enclosure enclosure; /* dieses Attribut ist eigenlich nur für Besucher wichtig, soll aber laut Klassendiagramm
