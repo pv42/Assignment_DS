@@ -6,6 +6,6 @@ package assingmentDS.animal;
  */
 public abstract class WaterAnimal extends Animal {
     WaterAnimal(String name, String species, boolean isPoisonous, boolean mayFly, boolean isPredator, double avgSize, boolean isScavenger) {
-        super(name, species, isPoisonous, mayFly, true, isPredator, avgSize,isScavenger);
+        super(name, species, isPoisonous, mayFly, true, isPredator, avgSize, isScavenger);
     }
 }
