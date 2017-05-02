@@ -62,7 +62,7 @@ public class Main {
     // Aufgabenstellung
     private static void test() {
         Zoo zoo = new Zoo("Zoo");
-        List<Visitor> visitor = new ArrayList<>();
+        List<Visitor> visitors = new ArrayList<>();
         // 1.
         Aquarium wahlhaibecken = new Aquarium("Wahlhaibecken", zoo);
         Aquarium kugelfischtank = new Aquarium("Kugelfischtank", zoo);
@@ -141,11 +141,11 @@ public class Main {
         bronn.setEnclosure(kugelfischtank);
         sansa.setEnclosure(wahlhaibecken);
         willy.setEnclosure(landgehege2);
-        visitor.add(catelyn);
-        visitor.add(aerys);
-        visitor.add(bronn);
-        visitor.add(sansa);
-        visitor.add(willy);
+        visitors.add(catelyn);
+        visitors.add(aerys);
+        visitors.add(bronn);
+        visitors.add(sansa);
+        visitors.add(willy);
         //10.
         wahlhaibecken.addAnimal(joffrey);
         //11.
@@ -156,6 +156,6 @@ public class Main {
         adlergehege.addAnimal(cersei);
         //out
         Log.write(zoo.toString());
-        Log.write(visitor.toString());
+        Log.write("Besucher" + visitors.toString());
     }
 }

@@ -14,8 +14,9 @@ public class Visitor extends Person {
 
     @Override
     public String toString() {
-        return "Besucher{" +
+        return "Visitor{" +
                 "name='" + getName() + '\'' +
+                ", gender=" + getGender() +
                 ", enclosure=" + getEnclosure().getName() +
                 '}';
     }
