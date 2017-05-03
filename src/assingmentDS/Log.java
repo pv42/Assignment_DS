@@ -3,6 +3,7 @@ package assingmentDS;
 import assingmentDS.animal.Animal;
 import assingmentDS.animal.IAnimal;
 import assingmentDS.enclosure.Enclosure;
+import assingmentDS.person.Gender;
 import assingmentDS.person.Person;
 import assingmentDS.person.Stuff;
 
@@ -35,9 +36,9 @@ public class Log {
     //gibt aus, dass Besucher Gehege beobachtet und was er/sie sieht
     public static void watch(String type, Person person, Enclosure enclosure) {
         String thirdPersonArticle;
-        if(person.getGender() == Person.GENDER_MALE) {
+        if(person.getGender() == Gender.MALE) {
             thirdPersonArticle = "Er";
-        } else if (person.getGender() == Person.GENDER_FEMALE) {
+        } else if (person.getGender() == Gender.FEMALE) {
             thirdPersonArticle = "Sie";
         } else {
             thirdPersonArticle = "Es";

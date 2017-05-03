@@ -11,15 +11,13 @@ import assingmentDS.enclosure.Enclosure;
  * da sie nur eine Person repräsentiert.
  */
 public abstract class Person implements NamedObject {
-    public static final int GENDER_MALE = 0;
-    public static final int GENDER_FEMALE = 1;
     private String name;
-    private int gender;
+    private Gender gender;
     private Enclosure enclosure; /* dieses Attribut ist eigenlich nur für Besucher wichtig, soll aber laut Klassendiagramm
      in die abstrakte Klasse, ist null bei Personal */
 
     //erzeugt eine Person mit Name
-    public Person(String name,int gender) {
+    public Person(String name,Gender gender) {
         this.name = name;
         this.gender = gender;
     }
@@ -40,7 +38,7 @@ public abstract class Person implements NamedObject {
         return enclosure;
     }
 
-    public int getGender() {
+    public Gender getGender() {
         return gender;
     }
 

@@ -13,7 +13,7 @@ import java.util.List;
 public class Stuff extends Person {
     private Zoo workPlace;
     private List<IAnimal> animals;
-    public Stuff(String name, int gender) {
+    public Stuff(String name, Gender gender) {
         super(name, gender);
         animals = new ArrayList<>();
         Log.created("Stuff", this);

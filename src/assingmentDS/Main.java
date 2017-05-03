@@ -12,8 +12,8 @@ import java.util.ConcurrentModificationException;
 import java.util.List;
 import java.util.Objects;
 
-import static assingmentDS.person.Person.GENDER_MALE;
-import static assingmentDS.person.Person.GENDER_FEMALE;
+import static assingmentDS.person.Gender.MALE;
+import static assingmentDS.person.Gender.FEMALE;
 
 /***
  * Created on 24.04.2017.
@@ -118,9 +118,9 @@ public class Main {
         adlergehege.addAnimal(american);
         adlergehege.addAnimal(dream);
         //8. Ramsay Sam Daenerys
-        Stuff ramsay = new Stuff("Ramsay", GENDER_MALE);
-        Stuff sam = new Stuff("Sam", GENDER_MALE);
-        Stuff daenerys = new Stuff("Daenerys", GENDER_FEMALE);
+        Stuff ramsay = new Stuff("Ramsay", MALE);
+        Stuff sam = new Stuff("Sam", MALE);
+        Stuff daenerys = new Stuff("Daenerys", FEMALE);
         zoo.addStuff(ramsay);
         zoo.addStuff(sam);
         zoo.addStuff(daenerys);
@@ -131,11 +131,11 @@ public class Main {
             else throw new ConcurrentModificationException(); //animal should not be any other
         }
         //9.
-        Visitor catelyn = new Visitor("Catelyn", GENDER_FEMALE);
-        Visitor aerys = new Visitor("Aerys", GENDER_MALE);
-        Visitor bronn = new Visitor("Bronn", GENDER_MALE);
-        Visitor sansa = new Visitor("Sansa", GENDER_FEMALE);
-        Visitor willy = new Visitor("Willy", GENDER_MALE);
+        Visitor catelyn = new Visitor("Catelyn", FEMALE);
+        Visitor aerys = new Visitor("Aerys", MALE);
+        Visitor bronn = new Visitor("Bronn", MALE);
+        Visitor sansa = new Visitor("Sansa", FEMALE);
+        Visitor willy = new Visitor("Willy", MALE);
         catelyn.setEnclosure(landgehege1);
         aerys.setEnclosure(adlergehege);
         bronn.setEnclosure(kugelfischtank);

@@ -7,7 +7,7 @@ import assingmentDS.Log;
  */
 public class Visitor extends Person {
 
-    public Visitor(String name, int gender) {
+    public Visitor(String name, Gender gender) {
         super(name, gender);
         Log.created("Besucher", this);
     }
