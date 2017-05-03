@@ -22,6 +22,7 @@ import static assingmentDS.person.Gender.FEMALE;
  */
 
 public class Main {
+    private static final String VERSION = "1.0.1";
     // Startfunktion, behandelt Kommandozeilenargumente
     public static void main(String[] args) {
         if(args.length > 0) {
@@ -56,7 +57,7 @@ public class Main {
 
     //zeigt Version
     private static void printVersion() {
-        System.out.println("Zoo Version: 1.0");
+        System.out.println("Zoo Version: " + VERSION);
     }
 
     // Aufgabenstellung
