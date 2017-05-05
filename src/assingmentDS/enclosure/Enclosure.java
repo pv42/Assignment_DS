@@ -53,9 +53,9 @@ public abstract class Enclosure implements NamedObject {
         animals.add(animal);
         for (int i = 0; i < animals.size()- 1; i++) {// überprüft Raubtieraktivitäten zwischen neuem und alten Tieren
             Animal t = animals.get(i);
-            if(animals.contains(animal)) { // may alreday been removed due to eating
-                if(performEating(t,animal)) i--; //todo think about is this code safe ??
-                if(performEating(animal,t)) i--;// if a animal got removed indexes are shifted
+            if(animals.contains(animal)) { // Tier könnte bereits gegessen worden sein
+                if(performEating(animal,t)) i--;// wenn Tier t gegessen wird wird index verschoben
+                performEating(t,animal); // Wenn Tier animal gegessen wird, wird dieser Code nicht mehr ausgeführt.
             }
         }
     }
