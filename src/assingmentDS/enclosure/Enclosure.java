@@ -13,27 +13,27 @@ import java.util.List;
  * Repräsentiert die Funktionalitäten aller Gehege
  */
 public abstract class Enclosure implements NamedObject {
-    private Zoo zoo;
+    private Zoo owner;
     private List<Animal> animals;
     private String name;
 
     //erzeugt leeres Gehege mit Namen
-    public Enclosure(String name,Zoo zoo) {
+    public Enclosure(String name,Zoo owner) {
         animals = new ArrayList<>();
         this.name = name;
-        this.zoo = zoo;
-        zoo.addEnclosure(this);
+        this.owner = owner;
+        owner.addEnclosure(this);
     }
 
     // gibt dem Zoo, dem das Gehege zugeordnet ist zurück.
-    public Zoo getZoo() {
-        return zoo;
+    public Zoo getOwner() {
+        return owner;
     }
 
     // Ordnet dem Enclosure eine Zoo zu
     // sollte nur von der Zooklasse aus gerufen werden, wenn das enclosure einem Zoo zugeordnet wird
-    public void setZoo(Zoo zoo) {
-        this.zoo = zoo;
+    public void setOwner(Zoo owner) {
+        this.owner = owner;
     }
 
     // gibt eine Liste aller enthaltenen Tiere zurück
@@ -93,7 +93,8 @@ public abstract class Enclosure implements NamedObject {
     public String toString() {
         return "Enclosure{" +
                 "name=" + name  + ", " +
-                "animals=" + animals +
+                "animals=" + animals + ", " +
+                "owner=" + owner.getName() +
                 '}';
     }
 }
