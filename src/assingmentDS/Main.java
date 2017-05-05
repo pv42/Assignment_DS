@@ -129,7 +129,6 @@ public class Main {
             if(LandMammal.class.isInstance(tier)) ramsay.addAnimal(tier);
             else if(WaterAnimal.class.isInstance(tier)) sam.addAnimal(tier);
             else if(Bird.class.isInstance(tier)) daenerys.addAnimal(tier);
-            else throw new IllegalStateException("Animal must be one of bird, wateranimal, landmammal"); //animal should not be any other
         }
         //9.
         Visitor catelyn = new Visitor("Catelyn", FEMALE);
