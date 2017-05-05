@@ -12,4 +12,5 @@ public interface IAnimal {
     Enclosure getEnclosure();
     String getSpecies();
     boolean isAlive();
+    void setStuff(Stuff stuff);
 }

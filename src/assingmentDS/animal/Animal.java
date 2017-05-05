@@ -3,6 +3,7 @@ package assingmentDS.animal;
 import assingmentDS.Log;
 import assingmentDS.NamedObject;
 import assingmentDS.enclosure.Enclosure;
+import assingmentDS.person.Stuff;
 
 /***
  * Created on 24.04.2017.
@@ -13,6 +14,7 @@ public abstract class Animal implements IAnimal, NamedObject{
     private String name;
     private String species;
     private boolean isAlive;
+    private Stuff stuff;
     //Arteigenschaften
     private boolean isPoisonous;
     private boolean mayFly;
@@ -53,6 +55,10 @@ public abstract class Animal implements IAnimal, NamedObject{
         return isAlive;
     }
 
+    public Stuff getStuff() {
+        return stuff;
+    }
+
     public boolean isPoisonous() {
         return isPoisonous;
     }
@@ -77,7 +83,13 @@ public abstract class Animal implements IAnimal, NamedObject{
         return isScavenger;
     }
 
+
     //setters
+
+    // sollte nur aus der Klasse Stuff gerufen werden
+    public void setStuff(Stuff stuff) {
+        this.stuff = stuff;
+    }
 
     // diese Funktion sollte nur aus der Klasse Enclosure gerufen werden
     public void setEnclosure(Enclosure enclosure) {
@@ -93,8 +105,11 @@ public abstract class Animal implements IAnimal, NamedObject{
 
     @Override
     public String toString() {
+        String enclosureName;
+        if(enclosure == null) enclosureName = "-";
+        else enclosureName = enclosure.getName();
         return species + "{" +
-                "enclosure=" + enclosure.getName() +
+                "enclosure=" + enclosureName +
                 ", name='" + name + '\'' +
                 ", isAlive=" + isAlive +
                 ", isPoisonous=" + isPoisonous +

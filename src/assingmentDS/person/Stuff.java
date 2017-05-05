@@ -30,7 +30,18 @@ public class Stuff extends Person {
 
     public void addAnimal(IAnimal animal) {
         animals.add(animal);
-        Log.animalsStuffSet(animal,this);
+        animal.setStuff(this);
+        Log.animalsStuffAdd(animal,this);
+    }
+
+    // entfernt Tier von der Tierliste des Personals
+    // gibt (Miss-)Erfolg zurück
+    // wird gerufen, wenn Tier gefressen wird, jedoch nicht wenn es 'nur' stirbt
+    public boolean removeAnimal(IAnimal animal) {
+        boolean success;
+        success = animals.remove(animal);
+        Log.animalsStuffRemove(animal,this, success);
+        return success;
     }
 
     @Override

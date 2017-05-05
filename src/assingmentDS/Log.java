@@ -60,8 +60,13 @@ public class Log {
     }
 
     //gibt aus das ein Pfeger sich um ein Tier kümmert
-    public static void animalsStuffSet(IAnimal animal, Stuff stuff) {
+    public static void animalsStuffAdd(IAnimal animal, Stuff stuff) {
         write(animal.getSpecies() + " " + animal.getName() + " wurde Pfleger " + stuff.getName() + " zugeordnet.");
+    }
+
+    public static void animalsStuffRemove(IAnimal animal, Stuff stuff, boolean sucsses) {
+        if(sucsses) write(animal.getSpecies() + " " + animal.getName() + " wurde  aus der Verantwortung von Pfleger " + stuff.getName() + " entfernt.");
+        else write("Entfernen von " + animal.getSpecies() + " " + animal.getName() + " aus der Verantwortung von Pfleger " + stuff.getName() + " fehlgeschlagen.");
     }
 
     //gibt etwas aus

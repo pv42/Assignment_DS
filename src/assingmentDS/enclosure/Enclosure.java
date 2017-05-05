@@ -64,19 +64,22 @@ public abstract class Enclosure implements NamedObject {
         if(t1.isPredator() && t1.isAlive() && t1.getAvgSize() > t2.getAvgSize() && t2.isAlive() && (t1.mayFly() || !t2.mayFly())) { // predators kills the prey and eats it
             t2.kill("Raubtier");
             this.removeTier(t2);
+            if(t2.getStuff() != null) t2.getStuff().removeAnimal(t2); // wenn Tier gefressen wird, muss sich niemand um es kümmern
             return true;
         }
-        if(t1.isScavenger() && t1.isAlive() && !t2.isAlive()) { // scavenger eating carrion
+        if(t1.isScavenger() && t1.isAlive() && !t2.isAlive()) { // Aasfresser
             if(t2.isPoisonous()) t1.kill("Gift in der Nahrung");
             this.removeTier(t2);
+            if(t2.getStuff() != null) t2.getStuff().removeAnimal(t2); // wenn Tier gefressen wird, muss sich niemand um es kümmern
             return true;
         }
         return false;
     }
     // entfernt Animal aus Gehege, gibt bei erfolg wahr zurück
-    public boolean removeTier(Animal tier) {
-        boolean succses =  animals.remove(tier);
-        Log.removed(tier.getSpecies(),tier,this,succses);
+    public boolean removeTier(Animal animal) {
+        boolean succses =  animals.remove(animal);
+        Log.removed(animal.getSpecies(),animal,this,succses);
+        animal.setEnclosure(null);
         return succses;
     }
 
