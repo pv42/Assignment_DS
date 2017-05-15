@@ -15,7 +15,7 @@ import java.util.Objects;
 import static assingmentDS.person.Gender.MALE;
 import static assingmentDS.person.Gender.FEMALE;
 
-/***
+/**
  * Created on 24.04.2017.
  * Hauptklasse, enthaelt den Startcode, Verarbeitung von Kommandozeilenargumenten
  * sowie das in der Aufgabenstellung geforderte Beispiel.
