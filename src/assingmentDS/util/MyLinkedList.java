@@ -3,10 +3,11 @@ package assingmentDS.util;
 //Hinweis: tabs sollten durch Leerzeichen ersetzt werden
 //todo Kommentare!!!!
 
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class MyLinkedList<T> {
+public class MyLinkedList<T> implements Collection<T>{
 	
 	private class Node {
 		private Node next = null;
@@ -59,8 +60,19 @@ public class MyLinkedList<T> {
 		}
 		return size;
 	}
-	
-	public boolean add(T data) {
+
+    @Override
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+    @Override
+    public boolean contains(Object o) {
+        //todo
+        return false;
+    }
+
+    public boolean add(T data) {
 		Node end = new Node(data);
         if(head == null) {
             head = end;
@@ -74,7 +86,8 @@ public class MyLinkedList<T> {
 		return true;
 	}
 
-	public boolean add(T data, int index) {
+
+    public boolean add(T data, int index) {
 		if (index < 0) return false;
 		Node node = new Node(data);
 		Node current = head;
@@ -93,10 +106,10 @@ public class MyLinkedList<T> {
         return true;
 	}
 
-	public boolean remove(T data) { //todo in public boolean remove(T data) ändern
+	public boolean remove(Object data) { //todo in public boolean remove(T data) ändern
 		Node current = head;
 		while (current.getNext() != null) {
-			if (current.getNext().getData() == data) {
+			if (current.getNext().getData().equals(data)) {
 				current.setNext(current.getNext().getNext());
 				return true;
 			}
@@ -155,6 +168,65 @@ public class MyLinkedList<T> {
 		return new MyListIterator();
 	}
 
-	//todo Eine get(int index) Methode ist dringend erforderlich
-	// wenn die Interface List (https://docs.oracle.com/javase/8/docs/api/java/util/List.html) erfüllt würde währe super aber nicht notwendig
+    @Override
+    public Object[] toArray() {
+        Object[] arr = new Object[size()];
+        Iterator iterator = iterator();
+        int index = 0;
+        while (iterator.hasNext()) {
+            arr[index] = iterator.next();
+            index ++;
+        }
+        return arr;
+    }
+
+    @Override
+    public boolean addAll(Collection c) {
+        boolean ret = true;
+        for(Object o:c) {
+            if (o != null) {
+                ret = ret && add((T)o);
+            } else {
+                ret = false;
+            }
+        }
+        return true;
+    }
+
+    @Override
+    public void clear() {
+        head = null;
+    }
+
+    @Override
+    public boolean retainAll(Collection c) {
+        //todo
+	    return false;
+    }
+
+    @Override
+    public boolean removeAll(Collection c) {
+        boolean ret = true;
+	    for(Object o:c) {
+            ret = ret && remove(o);
+        }
+        return true;
+    }
+
+    @Override
+    public boolean containsAll(Collection c) {
+        for(Object o:c) {
+            if(!contains(o)) return false;
+        }
+        return true;
+    }
+
+    @Override
+    public Object[] toArray(Object[] a) {
+        throw new UnsupportedOperationException();
+	    //return new Object[0];
+    }
+
+
+    // wenn die Interface List (https://docs.oracle.com/javase/8/docs/api/java/util/List.html) erfüllt würde währe super aber nicht notwendig
 }
