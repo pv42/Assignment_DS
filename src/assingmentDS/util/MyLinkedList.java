@@ -121,6 +121,35 @@ public class MyLinkedList<T> {
 			current = current.getNext();
 		}
 		return current.getData();
+
+	}
+
+	public Iterator<T> iterator(){
+		return new Iterator<T>(){
+			private int index = 0;
+			int listSize = size();
+
+			public boolean hasNext(){
+				return index < listSize;
+			}
+
+			public T next(){
+				if (!hasNext()) throw new NoSuchElementException();
+				index++;
+				return current();
+			}
+			public void remove(){
+				throw new UnsupportedOperationException():
+			}
+
+//			public T current(){
+//				return MyLinkedList<T>.get(index):
+//			}
+//
+//			public T get(int i){
+//				return MyLinkedList<T>.get(i);
+//			}
+		}
 	}
 	
 	//todo Eine get(int index) Methode ist dringend erforderlich
