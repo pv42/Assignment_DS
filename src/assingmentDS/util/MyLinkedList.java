@@ -5,7 +5,6 @@ package assingmentDS.util;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import java.util.function.Consumer;
 
 public class MyLinkedList<T> {
 	
@@ -63,8 +62,12 @@ public class MyLinkedList<T> {
 	
 	public boolean add(T data) {
 		Node end = new Node(data);
-		Node current = head;
-		while (current != null) {
+        if(head == null) {
+            head = end;
+            return true;
+        }
+        Node current = head;
+		while (current.getNext() != null) {
 			current = current.getNext();
 		}
 		current.setNext(end);
@@ -72,22 +75,22 @@ public class MyLinkedList<T> {
 	}
 
 	public boolean add(T data, int index) {
-		Node node = new Node(data); //todo end ist ein unpassender Name
+		if (index < 0) return false;
+		Node node = new Node(data);
 		Node current = head;
-		int jump;
-
-		if ((index > size()) || (index < 1)) { //todo indizierung bei Listen immer mit 0 beginnend!
-			return false;
-		} else {
-			jump = 0;
-			while (jump < index - 1) {
-				current = current.getNext();
-				jump++;
-			}
-			node.setNext(current.getNext());
-			current.setNext(node);
-			return true;
+		int jump = 0;
+        while (jump < index ) {
+            if(current == null) return false;
+            current = current.getNext();
+            jump++;
 		}
+		if (current == null) {
+		    head = node;
+        } else {
+            current.setNext(node);
+            node.setNext(current.getNext());
+        }
+        return true;
 	}
 
 	public boolean remove(T data) { //todo in public boolean remove(T data) ändern
@@ -127,34 +130,29 @@ public class MyLinkedList<T> {
 
 	}
 
-	public Iterator<T> iterator(){
-		return new Iterator<T>(){
-			private int index = 0;
-			int listSize = size();
+	private class MyListIterator implements Iterator{
+        private int index = 0;
+        int listSize = size();
 
-			public boolean hasNext(){
-				return index < listSize;
-			}
+        public boolean hasNext(){
+            return index < listSize;
+        }
 
-			public T next(){
-				if (!hasNext()) throw new NoSuchElementException();
-				index++;
-				return current();
-			}
-			public void remove(){
-				throw new UnsupportedOperationException();
-			}
+        public T next(){
+            if (!hasNext()) throw new NoSuchElementException();
+            index++;
+            return current();
+        }
+        public void remove(){
+            throw new UnsupportedOperationException();
+        }
 
-			public void forEachRemaining(Consumer<? super T> action){
-				while (hasNext()){
-					action.accept(next());
-				}
-			}
-
-			public T current() {
-				return get(index);
-			}
-		};
+        public T current() {
+            return get(index);
+        }
+    }
+	public MyListIterator iterator(){
+		return new MyListIterator();
 	}
 
 	//todo Eine get(int index) Methode ist dringend erforderlich
