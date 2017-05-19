@@ -116,8 +116,12 @@ public class MyLinkedList<T> {
 		}
 	}
 	
-	public Node get(int index){
-		
+	public T get(int index){
+		Node current = head;
+		for (int i = 0; i < index; i++){
+			current = current.getNext();
+		}
+		return current.getData();
 	}
 	
 	//todo Eine get(int index) Methode ist dringend erforderlich
