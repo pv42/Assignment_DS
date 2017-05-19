@@ -34,8 +34,18 @@ public class MyLinkedList<T> {
 		return listCount;
 	} //todo besser währe eine richtige Zählung der Elemente
 
-	public boolean add(T d) { //todo d ist nicht gerade aussagekräftig data währe besser
-		Node end = new Node(d);
+	public int size(){
+		Node current = head;
+		int size = 0;
+		while (current.next != null) {
+			size++;
+			current = current.next;
+		}
+		return size;
+	}
+	
+	public boolean add(T data) {
+		Node end = new Node(data);
 		Node current = head;
 
 		while (current.next != null) {
@@ -46,8 +56,8 @@ public class MyLinkedList<T> {
 		return true;
 	}
 
-	public boolean add(T d, int index) {
-		Node end = new Node(d); //todo end ist ein unpassender Name
+	public boolean add(T data, int index) {
+		Node node = new Node(data); //todo end ist ein unpassender Name
 		Node current = head;
 		int jump;
 
@@ -59,8 +69,8 @@ public class MyLinkedList<T> {
 				current = current.next;
 				jump++;
 			}
-			end.next = current.next;
-			current.next = end;
+			node.next = current.next;
+			current.next = node;
 			listCount++;
 			return true;
 		}
