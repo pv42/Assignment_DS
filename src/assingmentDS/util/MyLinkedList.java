@@ -3,15 +3,16 @@ package assingmentDS.util;
 //Hinweis: tabs sollten durch Leerzeichen ersetzt werden
 //todo Kommentare!!!!
 
-class Node<T> { //todo das sollte eine privarte Unterklasse von MyLinkedList sein, dann währe in dieser Klasse <T> auch unnötig
-	Node next = null; //todo das sollte privat sein und mit gettern und settern realisiert sein!
-	T data;
-	public Node(T d) {
-		data = d;
-	}
-}
-
 public class MyLinkedList<T> {
+	
+	private class Node<T> { //todo das sollte eine privarte Unterklasse von MyLinkedList sein, dann währe in dieser Klasse <T> auch unnötig
+		Node next = null; //todo das sollte privat sein und mit gettern und settern realisiert sein!
+		T data;
+		public Node(T d) {
+			data = d;
+		}
+	}
+	
 	private Node head;
 	private int listCount; //todo der counter ist buganfällig besser währe eine rekursive Längenzälung
 
