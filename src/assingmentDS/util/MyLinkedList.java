@@ -64,8 +64,7 @@ public class MyLinkedList<T> {
 	public boolean add(T data) {
 		Node end = new Node(data);
 		Node current = head;
-
-		while (current.getNext() != null) {
+		while (current != null) {
 			current = current.getNext();
 		}
 		current.setNext(end);
