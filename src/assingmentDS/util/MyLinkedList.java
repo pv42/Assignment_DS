@@ -1,59 +1,47 @@
 package assingmentDS.util;
 
-import java.util.AbstractList;
+//Hinweis: tabs sollten durch Leerzeichen ersetzt werden
+//todo Kommentare!!!!
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+import java.util.function.Consumer;
 
-public class MyLinkedList<T> extends AbstractList<T> {
+public class MyLinkedList<T> {
 	
 	private class Node {
 		private Node next = null;
 		private T data;
-		Node(T d) {
+		public Node(T d) {
 			data = d;
 		}
 		
-		void setNext(Node next){
+		public void setNext(Node next){
 			this.next = next;
 		}
 		
-		Node getNext(){
+		public Node getNext(){
 			return this.next;
 		}
-
-		T getData(){
+		
+		public void setData(T data){
+			this.data = data;
+		}
+		
+		public T getData(){
 			return this.data;
 		}
 	}
-
-    private class MyListIterator implements Iterator<T>{
-        private int index = 0;
-        int listSize = size();
-
-        public boolean hasNext(){
-            return index < listSize;
-        }
-
-        public T next(){
-            if (!hasNext()) throw new NoSuchElementException();
-            index++;
-            return current();
-        }
-
-        public T current() {
-            return get(index);
-        }
-    }
-
-    private Node head;
+	
+	private Node head;
 	
 	public MyLinkedList() {
 		head = null;
 	}
 
 	@Override
-	public String toString() {
-	    Node current = head;
+	public String toString() { //todo besser währe eine Methode, die eine String zurückgibt, der dann ausgegehen werden kann vgl. public String toString()
+		Node current = head;
 		String str = "";
 		while (current.getNext() != null) {
 			str = str + current.getData() + " -> ";
@@ -66,26 +54,17 @@ public class MyLinkedList<T> extends AbstractList<T> {
 	public int size(){
 		Node current = head;
 		int size = 0;
-		while (current != null) {
+		while (current.getNext() != null) {
 			size++;
 			current = current.getNext();
 		}
 		return size;
 	}
-
-	@Override
-    public boolean isEmpty() {
-        return head == null;
-    }
-
-    @Override
-    public boolean add(T data) {
+	
+	public boolean add(T data) {
 		Node end = new Node(data);
-        if(head == null) {
-            head = end;
-            return true;
-        }
-        Node current = head;
+		Node current = head;
+
 		while (current.getNext() != null) {
 			current = current.getNext();
 		}
@@ -93,30 +72,29 @@ public class MyLinkedList<T> extends AbstractList<T> {
 		return true;
 	}
 
-    public boolean add(T data, int index) {
-		if (index < 0) return false;
-		Node node = new Node(data);
+	public boolean add(T data, int index) {
+		Node node = new Node(data); //todo end ist ein unpassender Name
 		Node current = head;
-		int jump = 0;
-        while (jump < index ) {
-            if(current == null) return false;
-            current = current.getNext();
-            jump++;
+		int jump;
+
+		if ((index > size()) || (index < 1)) { //todo indizierung bei Listen immer mit 0 beginnend!
+			return false;
+		} else {
+			jump = 0;
+			while (jump < index - 1) {
+				current = current.getNext();
+				jump++;
+			}
+			node.setNext(current.getNext());
+			current.setNext(node);
+			return true;
 		}
-		if (current == null) {
-		    head = node;
-        } else {
-            current.setNext(node);
-            node.setNext(current.getNext());
-        }
-        return true;
 	}
 
-	@Override
-	public boolean remove(Object data) {
+	public boolean remove(T data) { //todo in public boolean remove(T data) ändern
 		Node current = head;
 		while (current.getNext() != null) {
-			if (current.getNext().getData().equals(data)) {
+			if (current.getNext().getData() == data) {
 				current.setNext(current.getNext().getNext());
 				return true;
 			}
@@ -125,28 +103,22 @@ public class MyLinkedList<T> extends AbstractList<T> {
 		return false;
 	}
 
-	@Override
-	public T remove(int index) {
+	public boolean remove(int index) { //todo in public boolean remove(int index) ändern
 		Node current = head;
 		int jump;
-		if ((index >= size()) || (index < 0)) {
-			return null;
+		if ((index > size()) || (index < 1)) { // index von 0 bis list.getSize() -1
+			return false;
 		} else {
 			jump = 0;
-			while (jump < index) {
+			while (jump < index - 1) {
 				current = current.getNext();
-				if(current == null) return null;
 				jump++;
 			}
-			if(current.getNext() != null) {
-			    current.setNext(current.getNext().getNext());
-			    return current.getNext().getData();
-            }
-            return null;
-
+			current.setNext(current.getNext().getNext());
+			return true;
 		}
 	}
-
+	
 	public T get(int index){
 		Node current = head;
 		for (int i = 0; i < index; i++){
@@ -156,16 +128,36 @@ public class MyLinkedList<T> extends AbstractList<T> {
 
 	}
 
-	@Override
-	public MyListIterator iterator(){
-		return new MyListIterator();
+	public Iterator<T> iterator(){
+		return new Iterator<T>(){
+			private int index = 0;
+			int listSize = size();
+
+			public boolean hasNext(){
+				return index < listSize;
+			}
+
+			public T next(){
+				if (!hasNext()) throw new NoSuchElementException();
+				index++;
+				return current();
+			}
+			public void remove(){
+				throw new UnsupportedOperationException();
+			}
+
+			void forEachRemaining (Consumer<T> action){
+				while (hasNext()){
+					action.accept(next());
+				}
+			}
+
+			public T current() {
+				return get(index);
+			}
+		};
 	}
-
-    @Override
-    public void clear() {
-        head = null;
-    }
-
-
-    // wenn die Interface List (https://docs.oracle.com/javase/8/docs/api/java/util/List.html) erfüllt würde währe super aber nicht notwendig
+	
+	//todo Eine get(int index) Methode ist dringend erforderlich
+	// wenn die Interface List (https://docs.oracle.com/javase/8/docs/api/java/util/List.html) erfüllt würde währe super aber nicht notwendig
 }
