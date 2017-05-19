@@ -3,6 +3,10 @@ package assingmentDS.util;
 //Hinweis: tabs sollten durch Leerzeichen ersetzt werden
 //todo Kommentare!!!!
 
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+import java.util.function.Consumer;
+
 public class MyLinkedList<T> {
 	
 	private class Node {
@@ -139,18 +143,19 @@ public class MyLinkedList<T> {
 				return current();
 			}
 			public void remove(){
-				throw new UnsupportedOperationException():
+				throw new UnsupportedOperationException();
 			}
 
+			void forEachRemaining (Consumer<T> action){
+				while (hasNext()){
+					action.accept(next());
+				}
+			}
 
-//			public T current(){
-//				return MyLinkedList<T>.get(index):
-//			}
-//
-//			public T get(int i){
-//				return MyLinkedList<T>.get(i);
-//			}
-		}
+			public T current() {
+				return get(index);
+			}
+		};
 	}
 	
 	//todo Eine get(int index) Methode ist dringend erforderlich
