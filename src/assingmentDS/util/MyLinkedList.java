@@ -52,8 +52,8 @@ public class MyLinkedList<T> extends AbstractList<T> {
 	}
 
 	@Override
-	public String toString() { //todo besser währe eine Methode, die eine String zurückgibt, der dann ausgegehen werden kann vgl. public String toString()
-		Node current = head;
+	public String toString() {
+	    Node current = head;
 		String str = "";
 		while (current.getNext() != null) {
 			str = str + current.getData() + " -> ";
