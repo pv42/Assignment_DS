@@ -142,6 +142,7 @@ public class MyLinkedList<T> {
 				throw new UnsupportedOperationException():
 			}
 
+
 //			public T current(){
 //				return MyLinkedList<T>.get(index):
 //			}
