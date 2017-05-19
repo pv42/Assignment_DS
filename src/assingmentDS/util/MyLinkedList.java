@@ -39,9 +39,6 @@ public class MyLinkedList<T> extends AbstractList<T> {
             index++;
             return current();
         }
-        public void remove(){
-            throw new UnsupportedOperationException();
-        }
 
         public T current() {
             return get(index);
@@ -132,19 +129,20 @@ public class MyLinkedList<T> extends AbstractList<T> {
 	public T remove(int index) {
 		Node current = head;
 		int jump;
-		if ((index > size()) || (index < 1)) { //todo  index von 0 bis list.getSize() -1
+		if ((index >= size()) || (index < 0)) { //todo  index von 0 bis list.getSize() -1
 			return null;
 		} else {
 			jump = 0;
 			while (jump < index - 1) {
 				current = current.getNext();
+				if(current == null) return null;
 				jump++;
 			}
 			current.setNext(current.getNext().getNext());
 			return current.getNext().getData();
 		}
 	}
-	
+
 	public T get(int index){
 		Node current = head;
 		for (int i = 0; i < index; i++){
