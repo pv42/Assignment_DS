@@ -54,7 +54,7 @@ public class MyLinkedList<T> {
 	public int size(){
 		Node current = head;
 		int size = 0;
-		while (current.getNext() != null) {
+		while (current != null) {
 			size++;
 			current = current.getNext();
 		}
@@ -146,7 +146,7 @@ public class MyLinkedList<T> {
 				throw new UnsupportedOperationException();
 			}
 
-			void forEachRemaining (Consumer<T> action){
+			public void forEachRemaining(Consumer<? super T> action){
 				while (hasNext()){
 					action.accept(next());
 				}
@@ -157,7 +157,7 @@ public class MyLinkedList<T> {
 			}
 		};
 	}
-	
+
 	//todo Eine get(int index) Methode ist dringend erforderlich
 	// wenn die Interface List (https://docs.oracle.com/javase/8/docs/api/java/util/List.html) erfüllt würde währe super aber nicht notwendig
 }
