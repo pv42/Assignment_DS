@@ -5,7 +5,7 @@ package assingmentDS.util;
 
 public class MyLinkedList<T> {
 	
-	private class Node<T> {
+	private class Node {
 		private Node next = null;
 		private T data;
 		public Node(T d) {
@@ -24,7 +24,7 @@ public class MyLinkedList<T> {
 			this.data = data;
 		}
 		
-		public Node getData(){
+		public T getData(){
 			return this.data;
 		}
 	}
@@ -33,7 +33,6 @@ public class MyLinkedList<T> {
 	
 	public MyLinkedList() {
 		head = null;
-		listCount = 0;
 	}
 
 	@Override
@@ -103,7 +102,7 @@ public class MyLinkedList<T> {
 	public boolean remove(int index) { //todo in public boolean remove(int index) ändern
 		Node current = head;
 		int jump;
-		if ((index > listCount) || (index < 1)) { // index von 0 bis list.getSize() -1
+		if ((index > size()) || (index < 1)) { // index von 0 bis list.getSize() -1
 			return false;
 		} else {
 			jump = 0;
