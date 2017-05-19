@@ -129,17 +129,21 @@ public class MyLinkedList<T> extends AbstractList<T> {
 	public T remove(int index) {
 		Node current = head;
 		int jump;
-		if ((index >= size()) || (index < 0)) { //todo  index von 0 bis list.getSize() -1
+		if ((index >= size()) || (index < 0)) {
 			return null;
 		} else {
 			jump = 0;
-			while (jump < index - 1) {
+			while (jump < index) {
 				current = current.getNext();
 				if(current == null) return null;
 				jump++;
 			}
-			current.setNext(current.getNext().getNext());
-			return current.getNext().getData();
+			if(current.getNext() != null) {
+			    current.setNext(current.getNext().getNext());
+			    return current.getNext().getData();
+            }
+            return null;
+
 		}
 	}
 
