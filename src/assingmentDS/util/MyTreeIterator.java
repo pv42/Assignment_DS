@@ -1,4 +1,4 @@
-     public class MyTreeIterator <T> {
+     public class MyTreeIterator <T> implements Iterator {
 
         private Node firstNode(Node root){
             if (root == null) return null;
@@ -80,7 +80,7 @@
 
         }
 
-        public remove(){
+        public void remove(){
 
         }
 
