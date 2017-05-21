@@ -1,4 +1,4 @@
-    public class MyTreeIterator {
+     public class MyTreeIterator <T> {
 
         private Node firstNode(Node root){
             if (root == null) return null;
@@ -41,33 +41,41 @@
         }
 
 
-        public boolean hasNext(Node iteration){
-            if (next(iteration) != null) return true;
+        public boolean hasNext(){
+            if (next() != null) return true;
             else return false;
         }
 
-        public Node next(Node iteration) {
-            if (iteration == null) return firstNode(root);
-            Node current = iteration;
+        public Node next() {
+            Node currentIterator = iterator;
+            if (currentIterator == null) {
+                iterator = firstNode(root);
+                return firstNode(root);}
+            Node current = currentIterator;
 
-            if ((iteration.left == null) && (iteration.right == null)) {
-                current = parent(iteration, root);
-                if (isLeftChild(iteration, current)) return current;
+            if ((currentIterator.left == null) && (currentIterator.right == null)) {
+                current = parent(currentIterator, root);
+                if (isLeftChild(currentIterator, current)) {
+                    iterator = current;
+                    return current;}
             }
 
-            while (isRightChild(iteration, current)) {
+            while (isRightChild(currentIterator, current)) {
                 current = parent(current, root);
             }
-            if ((!isRightChild(iteration, current)) && (iteration.left == null) && (iteration.right == null)) {
+            if ((!isRightChild(currentIterator, current)) && (currentIterator.left == null) && (currentIterator.right == null)) {
+                iterator = current;
                 return current;
             }
 
-            while (isRightChild(iteration, current)) {
+            while (isRightChild(currentIterator, current)) {
                 current = parent(current, root);
-                if (current == root) return null;
+                if (current == root) {
+                    iterator = null;
+                    return null;}
             }
-
-            return firstNode(iteration.right);
+            iterator = firstNode(currentIterator.right);
+            return firstNode(currentIterator.right);
 
 
         }
@@ -80,7 +88,3 @@
             while (hasNext()) action.accept(next());
         }
     }
-
-}
-
-
