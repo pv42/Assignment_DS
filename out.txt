@@ -1,79 +1,79 @@
-Gehege Wahlhaibecken wurde zu Zoo hinzugefügt.
+Gehege Wahlhaibecken wurde zu Zoo hinzugefï¿½gt.
 Aquarium Wahlhaibecken wurde erstellt.
-Gehege Kugelfischtank wurde zu Zoo hinzugefügt.
+Gehege Kugelfischtank wurde zu Zoo hinzugefï¿½gt.
 Aquarium Kugelfischtank wurde erstellt.
-Gehege Landgehege1 wurde zu Zoo hinzugefügt.
-Landsäugetiergehege Landgehege1 wurde erstellt.
-Gehege Landgehege2 wurde zu Zoo hinzugefügt.
-Landsäugetiergehege Landgehege2 wurde erstellt.
-Gehege Landgehege3 wurde zu Zoo hinzugefügt.
-Landsäugetiergehege Landgehege3 wurde erstellt.
-Gehege Landgehege4 wurde zu Zoo hinzugefügt.
-Landsäugetiergehege Landgehege4 wurde erstellt.
-Gehege Adlergehege wurde zu Zoo hinzugefügt.
+Gehege Landgehege1 wurde zu Zoo hinzugefï¿½gt.
+Landsï¿½ugetiergehege Landgehege1 wurde erstellt.
+Gehege Landgehege2 wurde zu Zoo hinzugefï¿½gt.
+Landsï¿½ugetiergehege Landgehege2 wurde erstellt.
+Gehege Landgehege3 wurde zu Zoo hinzugefï¿½gt.
+Landsï¿½ugetiergehege Landgehege3 wurde erstellt.
+Gehege Landgehege4 wurde zu Zoo hinzugefï¿½gt.
+Landsï¿½ugetiergehege Landgehege4 wurde erstellt.
+Gehege Adlergehege wurde zu Zoo hinzugefï¿½gt.
 Vogelgehege Adlergehege wurde erstellt.
-Gehege Papageiengehege wurde zu Zoo hinzugefügt.
+Gehege Papageiengehege wurde zu Zoo hinzugefï¿½gt.
 Vogelgehege Papageiengehege wurde erstellt.
-Gehege Papageiengehege wurde zu Zoo hinzugefügt.
-Gehege Adlergehege wurde zu Zoo hinzugefügt.
+Gehege Papageiengehege wurde zu Zoo hinzugefï¿½gt.
+Gehege Adlergehege wurde zu Zoo hinzugefï¿½gt.
 Papagei Tick wurde erstellt.
 Papagei Trick wurde erstellt.
 Papagei Track wurde erstellt.
-Papagei Tick wurde zu Papageiengehege hinzugefügt.
-Papagei Trick wurde zu Papageiengehege hinzugefügt.
-Papagei Track wurde zu Papageiengehege hinzugefügt.
+Papagei Tick wurde zu Papageiengehege hinzugefï¿½gt.
+Papagei Trick wurde zu Papageiengehege hinzugefï¿½gt.
+Papagei Track wurde zu Papageiengehege hinzugefï¿½gt.
 Zebra Zalana wurde erstellt.
 Zebra Eddard wurde erstellt.
 Zebra Bran wurde erstellt.
 Zebra Robb wurde erstellt.
 Zebra Arya wurde erstellt.
-Zebra Eddard wurde zu Landgehege1 hinzugefügt.
-Zebra Robb wurde zu Landgehege1 hinzugefügt.
-Zebra Bran wurde zu Landgehege2 hinzugefügt.
-Zebra Arya wurde zu Landgehege2 hinzugefügt.
-Zebra Zalana wurde zu Landgehege2 hinzugefügt.
-Löwe Tywin wurde erstellt.
-Löwe Jaime wurde erstellt.
-Löwe Cersei wurde erstellt.
-Löwe Joffrey wurde erstellt.
-Löwe Tywin wurde zu Landgehege3 hinzugefügt.
-Löwe Cersei wurde zu Landgehege3 hinzugefügt.
-Löwe Joffrey wurde zu Landgehege3 hinzugefügt.
-Löwe Jaime wurde zu Landgehege3 hinzugefügt.
+Zebra Eddard wurde zu Landgehege1 hinzugefï¿½gt.
+Zebra Robb wurde zu Landgehege1 hinzugefï¿½gt.
+Zebra Bran wurde zu Landgehege2 hinzugefï¿½gt.
+Zebra Arya wurde zu Landgehege2 hinzugefï¿½gt.
+Zebra Zalana wurde zu Landgehege2 hinzugefï¿½gt.
+Lï¿½we Tywin wurde erstellt.
+Lï¿½we Jaime wurde erstellt.
+Lï¿½we Cersei wurde erstellt.
+Lï¿½we Joffrey wurde erstellt.
+Lï¿½we Tywin wurde zu Landgehege3 hinzugefï¿½gt.
+Lï¿½we Cersei wurde zu Landgehege3 hinzugefï¿½gt.
+Lï¿½we Joffrey wurde zu Landgehege3 hinzugefï¿½gt.
+Lï¿½we Jaime wurde zu Landgehege3 hinzugefï¿½gt.
 Kugelfisch Lenny1 wurde erstellt.
-Kugelfisch Lenny1 wurde zu Kugelfischtank hinzugefügt.
+Kugelfisch Lenny1 wurde zu Kugelfischtank hinzugefï¿½gt.
 Kugelfisch Lenny2 wurde erstellt.
-Kugelfisch Lenny2 wurde zu Kugelfischtank hinzugefügt.
+Kugelfisch Lenny2 wurde zu Kugelfischtank hinzugefï¿½gt.
 Kugelfisch Lenny3 wurde erstellt.
-Kugelfisch Lenny3 wurde zu Kugelfischtank hinzugefügt.
+Kugelfisch Lenny3 wurde zu Kugelfischtank hinzugefï¿½gt.
 Kugelfisch Lenny4 wurde erstellt.
-Kugelfisch Lenny4 wurde zu Kugelfischtank hinzugefügt.
+Kugelfisch Lenny4 wurde zu Kugelfischtank hinzugefï¿½gt.
 Kugelfisch Lenny5 wurde erstellt.
-Kugelfisch Lenny5 wurde zu Kugelfischtank hinzugefügt.
+Kugelfisch Lenny5 wurde zu Kugelfischtank hinzugefï¿½gt.
 Kugelfisch Lenny6 wurde erstellt.
-Kugelfisch Lenny6 wurde zu Kugelfischtank hinzugefügt.
+Kugelfisch Lenny6 wurde zu Kugelfischtank hinzugefï¿½gt.
 Kugelfisch Lenny7 wurde erstellt.
-Kugelfisch Lenny7 wurde zu Kugelfischtank hinzugefügt.
+Kugelfisch Lenny7 wurde zu Kugelfischtank hinzugefï¿½gt.
 Kugelfisch Lenny8 wurde erstellt.
-Kugelfisch Lenny8 wurde zu Kugelfischtank hinzugefügt.
+Kugelfisch Lenny8 wurde zu Kugelfischtank hinzugefï¿½gt.
 Kugelfisch Lenny9 wurde erstellt.
-Kugelfisch Lenny9 wurde zu Kugelfischtank hinzugefügt.
+Kugelfisch Lenny9 wurde zu Kugelfischtank hinzugefï¿½gt.
 Kugelfisch Lenny10 wurde erstellt.
-Kugelfisch Lenny10 wurde zu Kugelfischtank hinzugefügt.
+Kugelfisch Lenny10 wurde zu Kugelfischtank hinzugefï¿½gt.
 Walhai Moby wurde erstellt.
 Walhai Dick wurde erstellt.
-Walhai Moby wurde zu Wahlhaibecken hinzugefügt.
-Walhai Dick wurde zu Wahlhaibecken hinzugefügt.
+Walhai Moby wurde zu Wahlhaibecken hinzugefï¿½gt.
+Walhai Dick wurde zu Wahlhaibecken hinzugefï¿½gt.
 Adler American wurde erstellt.
 Adler Dream wurde erstellt.
-Adler American wurde zu Adlergehege hinzugefügt.
-Adler Dream wurde zu Adlergehege hinzugefügt.
+Adler American wurde zu Adlergehege hinzugefï¿½gt.
+Adler Dream wurde zu Adlergehege hinzugefï¿½gt.
 Stuff Ramsay wurde erstellt.
 Stuff Sam wurde erstellt.
 Stuff Daenerys wurde erstellt.
-Angestellter Ramsay wurde zu Zoo hinzugefügt.
-Angestellter Sam wurde zu Zoo hinzugefügt.
-Angestellter Daenerys wurde zu Zoo hinzugefügt.
+Angestellter Ramsay wurde zu Zoo hinzugefï¿½gt.
+Angestellter Sam wurde zu Zoo hinzugefï¿½gt.
+Angestellter Daenerys wurde zu Zoo hinzugefï¿½gt.
 Walhai Moby wurde Pfleger Sam zugeordnet.
 Walhai Dick wurde Pfleger Sam zugeordnet.
 Kugelfisch Lenny1 wurde Pfleger Sam zugeordnet.
@@ -91,10 +91,10 @@ Zebra Robb wurde Pfleger Ramsay zugeordnet.
 Zebra Bran wurde Pfleger Ramsay zugeordnet.
 Zebra Arya wurde Pfleger Ramsay zugeordnet.
 Zebra Zalana wurde Pfleger Ramsay zugeordnet.
-Löwe Tywin wurde Pfleger Ramsay zugeordnet.
-Löwe Cersei wurde Pfleger Ramsay zugeordnet.
-Löwe Joffrey wurde Pfleger Ramsay zugeordnet.
-Löwe Jaime wurde Pfleger Ramsay zugeordnet.
+Lï¿½we Tywin wurde Pfleger Ramsay zugeordnet.
+Lï¿½we Cersei wurde Pfleger Ramsay zugeordnet.
+Lï¿½we Joffrey wurde Pfleger Ramsay zugeordnet.
+Lï¿½we Jaime wurde Pfleger Ramsay zugeordnet.
 Adler American wurde Pfleger Daenerys zugeordnet.
 Adler Dream wurde Pfleger Daenerys zugeordnet.
 Papagei Tick wurde Pfleger Daenerys zugeordnet.
@@ -110,24 +110,24 @@ Besucher Aerys wurde erstellt.
 Besucher Bronn wurde erstellt.
 Besucher Sansa wurde erstellt.
 Besucher Willy wurde erstellt.
-Besucher Catelyn besucht Landgehege1. Sie könnte 2 Tiere sehen: Zebra Eddard, Zebra Robb.
-Besucher Aerys besucht Adlergehege. Er könnte 2 Tiere sehen: Adler American, Adler Dream.
-Besucher Bronn besucht Kugelfischtank. Er könnte 10 Tiere sehen: Kugelfisch Lenny1, Kugelfisch Lenny2, Kugelfisch Lenny3, Kugelfisch Lenny4, Kugelfisch Lenny5, Kugelfisch Lenny6, Kugelfisch Lenny7, Kugelfisch Lenny8, Kugelfisch Lenny9, Kugelfisch Lenny10.
-Besucher Sansa besucht Wahlhaibecken. Sie könnte 2 Tiere sehen: Walhai Moby, Walhai Dick.
-Besucher Willy besucht Landgehege2. Er könnte 3 Tiere sehen: Zebra Bran, Zebra Arya, Zebra Zalana.
-Löwe Joffrey wurde von Landgehege3 entfernt.
-Löwe Joffrey wurde zu Wahlhaibecken hinzugefügt.
-Löwe Joffrey starb. Grund:Unpassendes Gehege
-Löwe Tywin wurde von Landgehege3 entfernt.
-Löwe Tywin wurde zu Landgehege1 hinzugefügt.
+Besucher Catelyn besucht Landgehege1. Sie kï¿½nnte 2 Tiere sehen: Zebra Eddard, Zebra Robb.
+Besucher Aerys besucht Adlergehege. Er kï¿½nnte 2 Tiere sehen: Adler American, Adler Dream.
+Besucher Bronn besucht Kugelfischtank. Er kï¿½nnte 10 Tiere sehen: Kugelfisch Lenny1, Kugelfisch Lenny2, Kugelfisch Lenny3, Kugelfisch Lenny4, Kugelfisch Lenny5, Kugelfisch Lenny6, Kugelfisch Lenny7, Kugelfisch Lenny8, Kugelfisch Lenny9, Kugelfisch Lenny10.
+Besucher Sansa besucht Wahlhaibecken. Sie kï¿½nnte 2 Tiere sehen: Walhai Moby, Walhai Dick.
+Besucher Willy besucht Landgehege2. Er kï¿½nnte 3 Tiere sehen: Zebra Bran, Zebra Arya, Zebra Zalana.
+Lï¿½we Joffrey wurde von Landgehege3 entfernt.
+Lï¿½we Joffrey wurde zu Wahlhaibecken hinzugefï¿½gt.
+Lï¿½we Joffrey starb. Grund:Unpassendes Gehege
+Lï¿½we Tywin wurde von Landgehege3 entfernt.
+Lï¿½we Tywin wurde zu Landgehege1 hinzugefï¿½gt.
 Zebra Eddard starb. Grund:Raubtier
 Zebra Eddard wurde von Landgehege1 entfernt.
 Zebra Eddard wurde  aus der Verantwortung von Pfleger Ramsay entfernt.
 Zebra Robb starb. Grund:Raubtier
 Zebra Robb wurde von Landgehege1 entfernt.
 Zebra Robb wurde  aus der Verantwortung von Pfleger Ramsay entfernt.
-Besucher Sansa besucht Landgehege1. Sie könnte 1 Tiere sehen: Löwe Tywin.
-Löwe Cersei wurde von Landgehege3 entfernt.
-Löwe Cersei wurde zu Adlergehege hinzugefügt.
-Zoo{enclosures=[Enclosure{name=Wahlhaibecken, animals=[Walhai{enclosure=Wahlhaibecken, name='Moby', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=true, isPredator=false, avgSize=10.0, isScavenger=false}, Walhai{enclosure=Wahlhaibecken, name='Dick', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=true, isPredator=false, avgSize=10.0, isScavenger=false}, Löwe{enclosure=Wahlhaibecken, name='Joffrey', isAlive=false, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=true, avgSize=2.6, isScavenger=false}], owner=Zoo}, Enclosure{name=Kugelfischtank, animals=[Kugelfisch{enclosure=Kugelfischtank, name='Lenny1', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny2', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny3', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny4', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny5', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny6', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny7', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny8', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny9', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny10', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}], owner=Zoo}, Enclosure{name=Landgehege1, animals=[Löwe{enclosure=Landgehege1, name='Tywin', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=true, avgSize=2.6, isScavenger=false}], owner=Zoo}, Enclosure{name=Landgehege2, animals=[Zebra{enclosure=Landgehege2, name='Bran', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=false, avgSize=2.1, isScavenger=false}, Zebra{enclosure=Landgehege2, name='Arya', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=false, avgSize=2.1, isScavenger=false}, Zebra{enclosure=Landgehege2, name='Zalana', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=false, avgSize=2.1, isScavenger=false}], owner=Zoo}, Enclosure{name=Landgehege3, animals=[Löwe{enclosure=Landgehege3, name='Jaime', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=true, avgSize=2.6, isScavenger=false}], owner=Zoo}, Enclosure{name=Landgehege4, animals=[], owner=Zoo}, Enclosure{name=Adlergehege, animals=[Adler{enclosure=Adlergehege, name='American', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=true, avgSize=1.0, isScavenger=true}, Adler{enclosure=Adlergehege, name='Dream', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=true, avgSize=1.0, isScavenger=true}, Löwe{enclosure=Adlergehege, name='Cersei', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=true, avgSize=2.6, isScavenger=false}], owner=Zoo}, Enclosure{name=Papageiengehege, animals=[Papagei{enclosure=Papageiengehege, name='Tick', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Papagei{enclosure=Papageiengehege, name='Trick', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Papagei{enclosure=Papageiengehege, name='Track', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}], owner=Zoo}, Enclosure{name=Papageiengehege, animals=[Papagei{enclosure=Papageiengehege, name='Tick', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Papagei{enclosure=Papageiengehege, name='Trick', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Papagei{enclosure=Papageiengehege, name='Track', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}], owner=Zoo}, Enclosure{name=Adlergehege, animals=[Adler{enclosure=Adlergehege, name='American', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=true, avgSize=1.0, isScavenger=true}, Adler{enclosure=Adlergehege, name='Dream', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=true, avgSize=1.0, isScavenger=true}, Löwe{enclosure=Adlergehege, name='Cersei', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=true, avgSize=2.6, isScavenger=false}], owner=Zoo}], stuffList=[Stuff{name=Ramsay, animals=[Zebra{enclosure=Landgehege2, name='Bran', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=false, avgSize=2.1, isScavenger=false}, Zebra{enclosure=Landgehege2, name='Arya', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=false, avgSize=2.1, isScavenger=false}, Zebra{enclosure=Landgehege2, name='Zalana', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=false, avgSize=2.1, isScavenger=false}, Löwe{enclosure=Landgehege1, name='Tywin', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=true, avgSize=2.6, isScavenger=false}, Löwe{enclosure=Adlergehege, name='Cersei', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=true, avgSize=2.6, isScavenger=false}, Löwe{enclosure=Wahlhaibecken, name='Joffrey', isAlive=false, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=true, avgSize=2.6, isScavenger=false}, Löwe{enclosure=Landgehege3, name='Jaime', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=true, avgSize=2.6, isScavenger=false}], gender=MALE, workPlace=Zoo}, Stuff{name=Sam, animals=[Walhai{enclosure=Wahlhaibecken, name='Moby', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=true, isPredator=false, avgSize=10.0, isScavenger=false}, Walhai{enclosure=Wahlhaibecken, name='Dick', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=true, isPredator=false, avgSize=10.0, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny1', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny2', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny3', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny4', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny5', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny6', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny7', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny8', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny9', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{enclosure=Kugelfischtank, name='Lenny10', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}], gender=MALE, workPlace=Zoo}, Stuff{name=Daenerys, animals=[Adler{enclosure=Adlergehege, name='American', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=true, avgSize=1.0, isScavenger=true}, Adler{enclosure=Adlergehege, name='Dream', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=true, avgSize=1.0, isScavenger=true}, Papagei{enclosure=Papageiengehege, name='Tick', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Papagei{enclosure=Papageiengehege, name='Trick', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Papagei{enclosure=Papageiengehege, name='Track', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Papagei{enclosure=Papageiengehege, name='Tick', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Papagei{enclosure=Papageiengehege, name='Trick', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Papagei{enclosure=Papageiengehege, name='Track', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Adler{enclosure=Adlergehege, name='American', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=true, avgSize=1.0, isScavenger=true}, Adler{enclosure=Adlergehege, name='Dream', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=true, avgSize=1.0, isScavenger=true}], gender=FEMALE, workPlace=Zoo}]}
-Besucher[Visitor{name='Catelyn', gender=FEMALE, enclosure=Landgehege1}, Visitor{name='Aerys', gender=MALE, enclosure=Adlergehege}, Visitor{name='Bronn', gender=MALE, enclosure=Kugelfischtank}, Visitor{name='Sansa', gender=FEMALE, enclosure=Landgehege1}, Visitor{name='Willy', gender=MALE, enclosure=Landgehege2}]
+Besucher Sansa besucht Landgehege1. Sie kï¿½nnte 1 Tiere sehen: Lï¿½we Tywin.
+Lï¿½we Cersei wurde von Landgehege3 entfernt.
+Lï¿½we Cersei wurde zu Adlergehege hinzugefï¿½gt.
+Zoo{enclosures=[Enclosure{name=Wahlhaibecken, animals=[Walhai{data=Wahlhaibecken, name='Moby', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=true, isPredator=false, avgSize=10.0, isScavenger=false}, Walhai{data=Wahlhaibecken, name='Dick', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=true, isPredator=false, avgSize=10.0, isScavenger=false}, Lï¿½we{data=Wahlhaibecken, name='Joffrey', isAlive=false, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=true, avgSize=2.6, isScavenger=false}], owner=Zoo}, Enclosure{name=Kugelfischtank, animals=[Kugelfisch{data=Kugelfischtank, name='Lenny1', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny2', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny3', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny4', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny5', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny6', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny7', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny8', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny9', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny10', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}], owner=Zoo}, Enclosure{name=Landgehege1, animals=[Lï¿½we{data=Landgehege1, name='Tywin', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=true, avgSize=2.6, isScavenger=false}], owner=Zoo}, Enclosure{name=Landgehege2, animals=[Zebra{data=Landgehege2, name='Bran', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=false, avgSize=2.1, isScavenger=false}, Zebra{data=Landgehege2, name='Arya', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=false, avgSize=2.1, isScavenger=false}, Zebra{data=Landgehege2, name='Zalana', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=false, avgSize=2.1, isScavenger=false}], owner=Zoo}, Enclosure{name=Landgehege3, animals=[Lï¿½we{data=Landgehege3, name='Jaime', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=true, avgSize=2.6, isScavenger=false}], owner=Zoo}, Enclosure{name=Landgehege4, animals=[], owner=Zoo}, Enclosure{name=Adlergehege, animals=[Adler{data=Adlergehege, name='American', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=true, avgSize=1.0, isScavenger=true}, Adler{data=Adlergehege, name='Dream', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=true, avgSize=1.0, isScavenger=true}, Lï¿½we{data=Adlergehege, name='Cersei', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=true, avgSize=2.6, isScavenger=false}], owner=Zoo}, Enclosure{name=Papageiengehege, animals=[Papagei{data=Papageiengehege, name='Tick', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Papagei{data=Papageiengehege, name='Trick', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Papagei{data=Papageiengehege, name='Track', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}], owner=Zoo}, Enclosure{name=Papageiengehege, animals=[Papagei{data=Papageiengehege, name='Tick', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Papagei{data=Papageiengehege, name='Trick', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Papagei{data=Papageiengehege, name='Track', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}], owner=Zoo}, Enclosure{name=Adlergehege, animals=[Adler{data=Adlergehege, name='American', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=true, avgSize=1.0, isScavenger=true}, Adler{data=Adlergehege, name='Dream', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=true, avgSize=1.0, isScavenger=true}, Lï¿½we{data=Adlergehege, name='Cersei', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=true, avgSize=2.6, isScavenger=false}], owner=Zoo}], stuffList=[Stuff{name=Ramsay, animals=[Zebra{data=Landgehege2, name='Bran', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=false, avgSize=2.1, isScavenger=false}, Zebra{data=Landgehege2, name='Arya', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=false, avgSize=2.1, isScavenger=false}, Zebra{data=Landgehege2, name='Zalana', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=false, avgSize=2.1, isScavenger=false}, Lï¿½we{data=Landgehege1, name='Tywin', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=true, avgSize=2.6, isScavenger=false}, Lï¿½we{data=Adlergehege, name='Cersei', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=true, avgSize=2.6, isScavenger=false}, Lï¿½we{data=Wahlhaibecken, name='Joffrey', isAlive=false, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=true, avgSize=2.6, isScavenger=false}, Lï¿½we{data=Landgehege3, name='Jaime', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=false, isPredator=true, avgSize=2.6, isScavenger=false}], gender=MALE, workPlace=Zoo}, Stuff{name=Sam, animals=[Walhai{data=Wahlhaibecken, name='Moby', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=true, isPredator=false, avgSize=10.0, isScavenger=false}, Walhai{data=Wahlhaibecken, name='Dick', isAlive=true, isPoisonous=false, mayFly=false, isLivingSubmerged=true, isPredator=false, avgSize=10.0, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny1', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny2', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny3', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny4', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny5', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny6', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny7', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny8', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny9', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}, Kugelfisch{data=Kugelfischtank, name='Lenny10', isAlive=true, isPoisonous=true, mayFly=false, isLivingSubmerged=true, isPredator=true, avgSize=0.4000000059604645, isScavenger=false}], gender=MALE, workPlace=Zoo}, Stuff{name=Daenerys, animals=[Adler{data=Adlergehege, name='American', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=true, avgSize=1.0, isScavenger=true}, Adler{data=Adlergehege, name='Dream', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=true, avgSize=1.0, isScavenger=true}, Papagei{data=Papageiengehege, name='Tick', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Papagei{data=Papageiengehege, name='Trick', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Papagei{data=Papageiengehege, name='Track', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Papagei{data=Papageiengehege, name='Tick', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Papagei{data=Papageiengehege, name='Trick', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Papagei{data=Papageiengehege, name='Track', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=false, avgSize=0.4, isScavenger=false}, Adler{data=Adlergehege, name='American', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=true, avgSize=1.0, isScavenger=true}, Adler{data=Adlergehege, name='Dream', isAlive=true, isPoisonous=false, mayFly=true, isLivingSubmerged=false, isPredator=true, avgSize=1.0, isScavenger=true}], gender=FEMALE, workPlace=Zoo}]}
+Besucher[Visitor{name='Catelyn', gender=FEMALE, data=Landgehege1}, Visitor{name='Aerys', gender=MALE, data=Adlergehege}, Visitor{name='Bronn', gender=MALE, data=Kugelfischtank}, Visitor{name='Sansa', gender=FEMALE, data=Landgehege1}, Visitor{name='Willy', gender=MALE, data=Landgehege2}]
