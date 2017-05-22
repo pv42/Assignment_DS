@@ -45,7 +45,7 @@ public class Main {
             }
         }
         //assignment1();
-        assignment2();
+        //assignment2();
         nameGT();
     }
 
@@ -109,7 +109,7 @@ public class Main {
         PufferFish pufferFish;
         for(int i = 1; i<=10;i++) {
             NameGenerator nameGenerator = new NameGenerator();
-            nameGenerator.cacheNames(10);
+            nameGenerator.cacheNames(9);
             pufferFish = new PufferFish(nameGenerator.getNextName()); //Alle Kugelfische heißen Lenny wenn kein Internet da ist
             kugelfischtank.addAnimal(pufferFish);
         }

@@ -1,10 +1,7 @@
 package assingmentDS.util;
 
 import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
+import java.net.*;
 import java.util.concurrent.SynchronousQueue;
 
 /**
@@ -12,7 +9,7 @@ import java.util.concurrent.SynchronousQueue;
  * Generiert Namen für die Tiere
  */
 public class NameGenerator {
-    private static final String NAME_URL = "https://www.behindthename.com/random/random.php?number=2&gender=both&surname=&all=yes";
+    private static final String NAME_URL = "https://www.behindthename.com/random/random.php?number=1&gender=both&surname=&all=no&usage_eng=1&usage_ger=1&usage_fntsy=1";
     private int lennyCount;
     private boolean tryOnline;
     private SynchronousQueue<String> nameCache = new SynchronousQueue<>();
@@ -44,9 +41,9 @@ public class NameGenerator {
             do {
                 name = nameCache.poll();
             } while (name == null && tryOnline);
-            if (name != null) try {
-                return URLDecoder.decode(name,"UTF-8");
-            } catch (UnsupportedEncodingException ignored){} // UTF-8 sollte unterstützt werden
+            if (name != null) {
+                return name;
+            }
         }
         //Wenn der Netzwerkabruf fehlgeschlagen ist oder online deaktiviert ist werden Tiere Lenny 1, Lenny 2 usw. gennant
         lennyCount ++;
@@ -54,6 +51,11 @@ public class NameGenerator {
     }
     public void setTryOnline(boolean tryOnline) {
         this.tryOnline = tryOnline;
+    }
+    private static String decode(String string) {
+        //return URLEncoder.encode("ü");
+        return HTMLDecoder.unescapeHtml(string);
+        //return null;
     }
     private class NameDownloader extends Thread {
         @Override
@@ -71,11 +73,9 @@ public class NameGenerator {
                     data += d;
                 }
                 String[] acenter = data.split("<center>")[1].split("<a class=\"plain");
-                String firstName = acenter[1].split(">")[1].split("<")[0];
-                String secondName = acenter[2].split(">")[1].split("<")[0];
-                firstName = java.net.URLDecoder.decode(firstName,"utf-8");
+                String firstName = decode(acenter[1].split(">")[1].split("<")[0]);
                 try {
-                    nameCache.put(firstName + " " +secondName);
+                    nameCache.put(firstName);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
