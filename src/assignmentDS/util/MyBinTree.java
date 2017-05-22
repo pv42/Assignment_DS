@@ -74,7 +74,7 @@ public class MyBinTree<T> {
     private String rekRunThrough(Node ast) { //Astausgabe
         String str = "";
         if (ast != null) {
-            str += ast.getData() + "/n";
+            str += ast.getData() + "\n";
             str += rekRunThrough(ast.left);
             str += rekRunThrough(ast.right);
 
@@ -86,7 +86,7 @@ public class MyBinTree<T> {
     public String toString() { //Ausgeben
         String str = "";
         if (root != null) {
-            str += root.getData() + "/n";
+            str += root.getData() + "\n";
             str += rekRunThrough(root.left);
             str += rekRunThrough(root.right);
         }
