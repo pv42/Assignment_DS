@@ -13,7 +13,7 @@ public class MyTreeIterator<T> implements Iterator {
         this.root = root;
     }
 
-    //gibt die am weitesten links liegende Node im subtree der übergebenen root zurück
+    //gibt die am weitesten links liegende Node im subtree der übergebenen node zurück
     private Node firstNode(Node node) {
         if (node == null) return null;
         if (node.getLeft() == null) {
@@ -25,32 +25,28 @@ public class MyTreeIterator<T> implements Iterator {
 
     //gibt den parent der übergebenen Node zurück
     private Node parent(Node node) {
-        Node parent;
+
         if ((node == null) || (root == null)) return null;
         if (root.getLeft() == node || root.getRight() == node) return root;
-        if (node == root) {
-            return null;
-        } else {
-            parent = leftParent(node, root.getLeft());
-            if (parent != null) return parent;
-            parent = rightParent(node, root.getRight());
-            return parent;
-        }
+        if (node == root) return null;
+        Node parent;
+        parent = leftParent(node, root.getLeft());
+        if (parent != null) return parent;
+        parent = rightParent(node, root.getRight());
+        return parent;
     }
 
     //sucht den parent im linken subtree
     private Node leftParent(Node node, Node root) {
-        Node parent;
+
         if ((node == null) || (root == null)) return null;
         if (root.getLeft() == node || root.getRight() == node) return root;
-        if (node == root) {
-            return null;
-        } else {
-            parent = leftParent(node, root.getLeft());
-            if (parent != null) return parent;
-            parent = rightParent(node, root.getRight());
-            return parent;
-        }
+        if (node == root) return null;
+        Node parent;
+        parent = leftParent(node, root.getLeft());
+        if (parent != null) return parent;
+        parent = rightParent(node, root.getRight());
+        return parent;
     }
 
     //sucht den parent im rechten subtree

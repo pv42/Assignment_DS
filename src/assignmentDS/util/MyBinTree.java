@@ -2,7 +2,7 @@ package assignmentDS.util;
 
 import java.util.Iterator;
 
-public class MyBinTree<T> {
+public class MyBinTree<T> implements Iterable<T> {
     class Node {
 
         //Knotenpunkte für BinBaum
@@ -56,7 +56,7 @@ public class MyBinTree<T> {
         } else if (ast.right == null) {
             ast.right = new Node(data);
         } else {
-            if (ast.left.getChildCount() < ast.right.getChildCount()) {
+            if (ast.left.getChildCount() <= ast.right.getChildCount()) {
                 rekInsert(ast.left, data);
             } else {
                 rekInsert(ast.right, data);
@@ -67,7 +67,9 @@ public class MyBinTree<T> {
     public void insert(T data) {
         if (root == null) {
             root = new Node(data);
-        } else rekInsert(root, data);
+        } else {
+            rekInsert(root, data);
+        }
     }
 
 
@@ -77,7 +79,6 @@ public class MyBinTree<T> {
             str += ast.getData() + "\n";
             str += rekRunThrough(ast.left);
             str += rekRunThrough(ast.right);
-
         }
         return str;
     }
@@ -93,6 +94,6 @@ public class MyBinTree<T> {
         return str;
     }
     public Iterator<T> iterator() {
-        return new MyTreeIterator<T>(root);
+        return new MyOwnTreeIterator<T>(root);
     }
 }

@@ -2,18 +2,20 @@ package assignmentDS.util;
 
 import java.io.*;
 import java.net.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.SynchronousQueue;
 
 /**
  * Created by pv42 on 22.05.2017.
  * Generiert Namen für die Tiere
  */
-public class NameGenerator {
+public class NameGenerator implements AutoCloseable{
     private static final String NAME_URL = "https://www.behindthename.com/random/random.php?number=1&gender=both&surname=&all=no&usage_eng=1&usage_ger=1&usage_fntsy=1";
     private int lennyCount;
     private boolean tryOnline;
     private SynchronousQueue<String> nameCache = new SynchronousQueue<>();
-
+    private List<NameDownloader> threads = new ArrayList<>();
     private int ordered = 0;
 
     public NameGenerator() {
@@ -57,6 +59,14 @@ public class NameGenerator {
         //return null;
     }
     private class NameDownloader extends Thread {
+        private boolean stop;
+        NameDownloader() {
+            threads.add(this);
+        }
+
+        public void terminate() {
+            stop = true;
+        }
         @Override
         public void run() {
             try {
@@ -64,15 +74,17 @@ public class NameGenerator {
                 url = new URL(NAME_URL);
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.connect();
-
                 BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
+
                 String d;
                 String data = "";
-                while ((d = br.readLine()) != null) {
+                while ((d = br.readLine()) != null && !stop) {
                     data += d;
                 }
+                if(stop) return;
                 String[] acenter = data.split("<center>")[1].split("<a class=\"plain");
                 String firstName = decode(acenter[1].split(">")[1].split("<")[0]);
+                if(stop) return;
                 try {
                     nameCache.put(firstName);
                 } catch (InterruptedException e) {
@@ -87,6 +99,19 @@ public class NameGenerator {
 
             }
 
+        }
+    }
+
+    public void close()  {
+        for(NameDownloader t: threads) {
+            t.terminate();
+        }
+        for(NameDownloader t: threads) {
+            try {
+                t.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

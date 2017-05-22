@@ -185,14 +185,16 @@ public class Main {
     }
     private static void treetest() {
         MyBinTree<String> tree = new MyBinTree<>();
-        tree.insert("Hello");
-        tree.insert("Wordl");
-        tree.insert("no World");
-        tree.insert("EOL");
+        NameGenerator nameGenerator = new NameGenerator();
+        nameGenerator.cacheNames(10);
+        for(int i = 0; i<= 10; i++) {
+            tree.insert(String.valueOf(i));
+        }
         Log.write(tree.toString());
         Iterator<String> iterator = tree.iterator();
         while (iterator.hasNext()) {
             Log.write(iterator.next());
         }
+        nameGenerator.close();
     }
 }
