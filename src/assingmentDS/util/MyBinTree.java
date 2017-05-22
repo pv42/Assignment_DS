@@ -1,7 +1,11 @@
-package assignmentDS.util;
+package assingmentDS.util;
+
+import assingmentDS.util.MyTreeIterator;
+
+import java.util.Iterator;
 
 public class MyBinTree<T> {
-    private class Node {
+    class Node {
 
         //Knotenpunkte für BinBaum
         private T data;
@@ -89,5 +93,8 @@ public class MyBinTree<T> {
             str += rekRunThrough(root.right);
         }
         return str;
+    }
+    public Iterator<T> iterator() {
+        return new MyTreeIterator<T>(root);
     }
 }
