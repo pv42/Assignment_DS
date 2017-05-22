@@ -43,7 +43,8 @@ public class Main {
                 printHelp();
             }
         }
-        test();
+        //assignment1();
+        assignment2();
     }
 
     //zeigt Kommandozeilehilfe
@@ -61,7 +62,7 @@ public class Main {
     }
 
     // Aufgabenstellung
-    private static void test() {
+    private static void assignment1() {
         Zoo zoo = new Zoo("Zoo");
         List<Visitor> visitors = new ArrayList<>();
         // 1.
@@ -157,5 +158,8 @@ public class Main {
         //out
         Log.write(zoo.toString());
         Log.write("Besucher" + visitors.toString());
+    }
+    private static void assignment2() {
+        //TODO -> Assigment2
     }
 }
