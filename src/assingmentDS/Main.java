@@ -6,9 +6,9 @@ import assingmentDS.enclosure.Aviary;
 import assingmentDS.person.Visitor;
 import assingmentDS.person.Stuff;
 import assingmentDS.animal.*;
+import assingmentDS.util.Log;
 
 import java.util.ArrayList;
-import java.util.ConcurrentModificationException;
 import java.util.List;
 import java.util.Objects;
 

@@ -3,6 +3,7 @@ package assingmentDS;
 import assingmentDS.animal.Animal;
 import assingmentDS.enclosure.Enclosure;
 import assingmentDS.person.Stuff;
+import assingmentDS.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;

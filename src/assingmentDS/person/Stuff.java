@@ -1,6 +1,6 @@
 package assingmentDS.person;
 
-import assingmentDS.Log;
+import assingmentDS.util.Log;
 import assingmentDS.Zoo;
 import assingmentDS.animal.IAnimal;
 

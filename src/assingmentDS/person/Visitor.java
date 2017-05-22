@@ -1,6 +1,6 @@
 package assingmentDS.person;
 
-import assingmentDS.Log;
+import assingmentDS.util.Log;
 
 /***
  * Created by pv42 on 24.04.2017.

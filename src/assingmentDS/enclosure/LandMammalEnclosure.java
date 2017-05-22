@@ -1,6 +1,6 @@
 package assingmentDS.enclosure;
 
-import assingmentDS.Log;
+import assingmentDS.util.Log;
 import assingmentDS.Zoo;
 
 /***

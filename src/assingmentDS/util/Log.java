@@ -1,5 +1,6 @@
-package assingmentDS;
+package assingmentDS.util;
 
+import assingmentDS.NamedObject;
 import assingmentDS.animal.Animal;
 import assingmentDS.animal.IAnimal;
 import assingmentDS.enclosure.Enclosure;
@@ -18,7 +19,7 @@ public class Log {
     private static PrintStream out = System.out; // Ausgabestream, standartmäßig die Standartausgabe(Konsole)
 
     //gibt aus, das etwas erzeugt wurde
-    public static void created(String type,NamedObject namedObject) {
+    public static void created(String type, NamedObject namedObject) {
         write(type + " " + namedObject .getName()+ " wurde erstellt.");
     }
 
