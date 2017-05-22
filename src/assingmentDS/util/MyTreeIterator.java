@@ -108,6 +108,7 @@ public class MyTreeIterator<T> implements Iterator {
           Fall ist die root des nächst höheren subtrees die nächste Iteration, gefolgt von der linkesten
           Node des rechten pfades dieser root.
           Wiederholt bis die tatsächliche root des vorliegenden Baumes erreicht ist.
+          Anliegend an de In-Order
         */
 
         //Suchen der anfangs Node
