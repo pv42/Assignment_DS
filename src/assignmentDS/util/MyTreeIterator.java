@@ -11,7 +11,6 @@ public class MyTreeIterator<T> implements Iterator {
 
     MyTreeIterator(Node root) {
         this.root = root;
-        iterator = root;
     }
 
     //gibt die am weitesten links liegende Node im subtree der übergebenen root zurück
@@ -70,31 +69,31 @@ public class MyTreeIterator<T> implements Iterator {
     }
 
     //gibt wahr zurück falls die übergebene Node im linken Subtree enthalten ist
-    private boolean isLeftChild(Node node, Node root) {
-        if (node == root) return false;
-        return isLeftChildCheck(node, root.getRight());
+    private boolean isLeftChild(Node node, Node parent) {
+        if (node == parent) return false;
+        return isLeftChildCheck(node, parent.getRight());
     }
 
     //sucht beide subtrees nach der übergebenen Node ab
-    private boolean isLeftChildCheck(Node node, Node root) {
-        if ((root.getLeft() == null) && (root.getRight() == null)) return false;
-        if (node == root.getLeft()) return true;
-        if (root.getLeft() != null) return isLeftChildCheck(node, root.getLeft());
-        return isLeftChildCheck(node, root.getRight());
+    private boolean isLeftChildCheck(Node node, Node parent) {
+        if ((parent.getLeft() == null) && (parent.getRight() == null)) return false;
+        if (node == parent.getLeft()) return true;
+        if (parent.getLeft() != null) return isLeftChildCheck(node, parent.getLeft());
+        return isLeftChildCheck(node, parent.getRight());
     }
 
     //gibt wahr zurück falls die übergebene Node im rechten Subtree enthalten ist
-    private boolean isRightChild(Node node, Node root) {
-        if (node == root) return false;
-        return isRightChildCheck(node, root.getRight());
+    private boolean isRightChild(Node node, Node parent) {
+        if (node == parent) return false;
+        return isRightChildCheck(node, parent.getRight());
     }
 
     //sucht beide subtrees nach der übergebenen Node ab
-    private boolean isRightChildCheck(Node node, Node root) {
-        if ((root.getLeft() == null) && (root.getRight() == null)) return false;
-        if (node == root.getRight()) return true;
-        if (root.getLeft() != null) return isRightChildCheck(node, root.getLeft());
-        return isRightChildCheck(node, root.getRight());
+    private boolean isRightChildCheck(Node node, Node parent) {
+        if ((parent.getLeft() == null) && (parent.getRight() == null)) return false;
+        if (node == parent.getRight()) return true;
+        if (parent.getLeft() != null) return isRightChildCheck(node, parent.getLeft());
+        return isRightChildCheck(node, parent.getRight());
     }
 
     //next() Funktion, aber ohne überschreiben der globalen Variable 'iterator'
@@ -160,8 +159,11 @@ public class MyTreeIterator<T> implements Iterator {
 
     //gibt wahr zurück falls eine nächste Node existiert
     public boolean hasNext() {
-        if (hasNextCheck() != null) return true;
-        else return false;
+        if (hasNextCheck() != null) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     //gibt die nächste Node in der Iteration zurück
