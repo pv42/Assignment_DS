@@ -7,9 +7,11 @@ import assignmentDS.person.Visitor;
 import assignmentDS.person.Stuff;
 import assignmentDS.animal.*;
 import assignmentDS.util.Log;
+import assignmentDS.util.MyBinTree;
 import assignmentDS.util.NameGenerator;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
@@ -46,7 +48,8 @@ public class Main {
         }
         //assignment1();
         //assignment2();
-        nameGT();
+        //nameGT();
+        treetest();
     }
 
     //zeigt Kommandozeilehilfe
@@ -178,6 +181,18 @@ public class Main {
         Log.write("----------------------------------------------------");
         for(int i = 0; i< 1; i++) {
             //Log.write(nameGenerator.getNextName());
+        }
+    }
+    private static void treetest() {
+        MyBinTree<String> tree = new MyBinTree<>();
+        tree.insert("Hello");
+        tree.insert("Wordl");
+        tree.insert("no World");
+        tree.insert("EOL");
+        Log.write(tree.toString());
+        Iterator<String> iterator = tree.iterator();
+        while (iterator.hasNext()) {
+            Log.write(iterator.next());
         }
     }
 }
