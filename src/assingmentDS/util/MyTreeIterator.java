@@ -127,6 +127,18 @@ public class MyTreeIterator<T> implements Iterator {
             }
         }
 
+        /*falls eine Lücke im Baum enthalten ist(ein nicht Blatt bestitzt kein rechtes child),
+         *dann wird das parent dieser Node zur nächsten Iteration
+         *falls es das rechteste element des Baumes ist, wird dieser Schritt übersprungen
+         * */
+        if ((currentIterator.left != null) && (currentIterator.right == null)){
+            current = parent(currentIterator);
+            if (isLeftChild(currentIterator, current)){
+                iterator = current;
+                return iterator;
+            }
+        }
+
         //Sprung zum nächst höheren Subtree
         while (isRightChild(currentIterator, current)) {
             current = parent(current);
