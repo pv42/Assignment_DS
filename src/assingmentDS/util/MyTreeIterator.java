@@ -28,30 +28,30 @@ public class MyTreeIterator<T> implements Iterator {
             return null;
         }
         else{
-            parent = leftParent(root.left);
+            parent = leftParent(node, root.left);
             if (parent != null) return parent;
-            parent = rightParent(root.right);
+            parent = rightParent(node, root.right);
             return parent;
         }
     }
 
     //sucht den parent im linken subtree
-    private Node leftParent(Node node) {
+    private Node leftParent(Node node, Node root) {
         Node parent;
         if ((node == null) || (root == null)) return null;
         if (root.left == node || root.right == node) return root;
         if (node == root) {
             return null;
         }else{
-            parent = leftParent(root.left);
+            parent = leftParent(node, root.left);
             if (parent != null) return parent;
-            parent = rightParent(root.right);
+            parent = rightParent(node, root.right);
             return parent;
         }
     }
 
     //sucht den parent im rechten subtree
-    private Node rightParent(Node node) {
+    private Node rightParent(Node node, Node root) {
         Node parent;
         if ((node == null) || (root == null)) return null;
         if (root.left == node || root.right == node) return root;
@@ -59,9 +59,9 @@ public class MyTreeIterator<T> implements Iterator {
             return null;
         }
         else{
-            parent = leftParent(root.left);
+            parent = leftParent(node, root.left);
             if (parent != null) return parent;
-            parent = rightParent(root.right);
+            parent = rightParent(node, root.right);
             return parent;
         }
     }
@@ -94,9 +94,70 @@ public class MyTreeIterator<T> implements Iterator {
         return isRightChildCheck(node, root.right);
     }
 
+    //next() Funktion, aber ohne überschreiben der globalen Variable 'iterator'
+    public Node hasNextCheck() {
+        Node currentIterator = iterator;
+        //am Anfang der Iteration, wird die am weitesten links liegende Node zurück gegeben
+        /*Es wird immer rechts gegangen, außer wenn es keine weiter rechts liegenden Nodes im subtree gibt. In dem
+          Fall ist die root des nächst höheren subtrees die nächste Iteration, gefolgt von der linkesten
+          Node des rechten pfades dieser root.
+          Wiederholt bis die tatsächliche root des vorliegenden Baumes erreicht ist.
+          Anliegend an de In-Order
+        */
+
+        //Suchen der anfangs Node
+        if (currentIterator == null) {
+            return firstNode(root);
+        }
+        Node current = currentIterator;
+
+        //Current wird auf das parent eines Blattes gesetzt
+        if ((currentIterator.left == null) && (currentIterator.right == null)) {
+            current = parent(currentIterator);
+            //falls das Blatt das linke child von current ist, wird es zur nächsten Iteration
+            if (isLeftChild(currentIterator, current)) {
+                return current;
+            }
+        }
+
+        /*falls eine Lücke im Baum enthalten ist(ein nicht Blatt bestitzt kein rechtes child),
+         *dann wird das parent dieser Node zur nächsten Iteration
+         *falls es das rechteste element des Baumes ist, wird dieser Schritt übersprungen
+         * */
+        if ((currentIterator.left != null) && (currentIterator.right == null)){
+            current = parent(currentIterator);
+            if (isLeftChild(currentIterator, current)){
+                return current;
+            }
+        }
+
+        //Sprung zum nächst höheren Subtree
+        while (isRightChild(currentIterator, current)) {
+            current = parent(current);
+        }
+        /*falls die vorhergehende Iteration im linken subtree des nächst höheren subtree
+        * enthalten war, wird die root dieses subtrees zur nächsten Iteration
+        * */
+        if ((!isRightChild(currentIterator, current)) && (currentIterator.left == null) && (currentIterator.right == null)) {
+            return current;
+        }
+
+        //Prüft mit der root des Baumes ob das Ende der Iteration erreicht ist
+        while (isRightChild(currentIterator, current)) {
+            current = parent(current);
+            if (current == root) {
+                return null;
+            }
+        }
+
+        //gibt die linkeste Node im rechten Subtree der derzeitigen Iteration zurück
+        return firstNode(currentIterator.right);
+    }
+
+
     //gibt wahr zurück falls eine nächste Node existiert
     public boolean hasNext() {
-        if (next() != null) return true;
+        if (hasNextCheck() != null) return true;
         else return false;
     }
 
