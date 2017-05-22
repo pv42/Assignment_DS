@@ -13,12 +13,13 @@ public class MyTreeIterator<T> implements Iterator {
         this.root = root;
         iterator = root;
     }
+
     //gibt die am weitesten links liegende Node im subtree der übergebenen root zurück
     private Node firstNode(Node node) {
         if (node == null) return null;
         if (node.getLeft() == null) {
             return node;
-        }else{
+        } else {
             return firstNode(node.getLeft());
         }
     }
@@ -30,8 +31,7 @@ public class MyTreeIterator<T> implements Iterator {
         if (root.getLeft() == node || root.getRight() == node) return root;
         if (node == root) {
             return null;
-        }
-        else{
+        } else {
             parent = leftParent(node, root.getLeft());
             if (parent != null) return parent;
             parent = rightParent(node, root.getRight());
@@ -46,7 +46,7 @@ public class MyTreeIterator<T> implements Iterator {
         if (root.getLeft() == node || root.getRight() == node) return root;
         if (node == root) {
             return null;
-        }else{
+        } else {
             parent = leftParent(node, root.getLeft());
             if (parent != null) return parent;
             parent = rightParent(node, root.getRight());
@@ -61,8 +61,7 @@ public class MyTreeIterator<T> implements Iterator {
         if (root.getLeft() == node || root.getRight() == node) return root;
         if (node == root) {
             return null;
-        }
-        else{
+        } else {
             parent = leftParent(node, root.getLeft());
             if (parent != null) return parent;
             parent = rightParent(node, root.getRight());
@@ -128,9 +127,9 @@ public class MyTreeIterator<T> implements Iterator {
          *dann wird das parent dieser Node zur nächsten Iteration
          *falls es das rechteste element des Baumes ist, wird dieser Schritt übersprungen
          * */
-        if ((currentIterator.getLeft() != null) && (currentIterator.getRight() == null)){
+        if ((currentIterator.getLeft() != null) && (currentIterator.getRight() == null)) {
             current = parent(currentIterator);
-            if (isLeftChild(currentIterator, current)){
+            if (isLeftChild(currentIterator, current)) {
                 return current;
             }
         }
@@ -197,9 +196,9 @@ public class MyTreeIterator<T> implements Iterator {
          *dann wird das parent dieser Node zur nächsten Iteration
          *falls es das rechteste element des Baumes ist, wird dieser Schritt übersprungen
          * */
-        if ((currentIterator.getLeft() != null) && (currentIterator.getRight() == null)){
+        if ((currentIterator.getLeft() != null) && (currentIterator.getRight() == null)) {
             current = parent(currentIterator);
-            if (isLeftChild(currentIterator, current)){
+            if (isLeftChild(currentIterator, current)) {
                 iterator = current;
                 return (T) iterator.getData();
             }
