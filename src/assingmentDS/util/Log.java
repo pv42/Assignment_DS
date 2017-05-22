@@ -84,4 +84,8 @@ public class Log {
             e.printStackTrace();
         }
     }
+
+    public static void networkError() {
+        System.err.println("A Network Error caused the online name generation to fail. Falling back to offline mode");
+    }
 }

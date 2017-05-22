@@ -46,7 +46,7 @@ public class Main {
         }
         //assignment1();
         assignment2();
-        NameGenerator.generateName();
+        nameGT();
     }
 
     //zeigt Kommandozeilehilfe
@@ -108,7 +108,9 @@ public class Main {
         //5. Lenny
         PufferFish pufferFish;
         for(int i = 1; i<=10;i++) {
-            pufferFish = new PufferFish("Lenny" + i); //Alle Kugelfische heißen Lenny
+            NameGenerator nameGenerator = new NameGenerator();
+            nameGenerator.cacheNames(10);
+            pufferFish = new PufferFish(nameGenerator.getNextName()); //Alle Kugelfische heißen Lenny wenn kein Internet da ist
             kugelfischtank.addAnimal(pufferFish);
         }
         //6. Moby Dick
@@ -163,5 +165,19 @@ public class Main {
     }
     private static void assignment2() {
         //TODO -> Assigment2
+    }
+
+    //Test für den Namegenerator
+    private static void nameGT() {
+
+        NameGenerator nameGenerator = new NameGenerator();
+        nameGenerator.cacheNames(50);
+        for(int i = 0; i< 50; i++) {
+            Log.write(nameGenerator.getNextName());
+        }
+        Log.write("----------------------------------------------------");
+        for(int i = 0; i< 1; i++) {
+            //Log.write(nameGenerator.getNextName());
+        }
     }
 }
