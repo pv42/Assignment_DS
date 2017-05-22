@@ -1,22 +1,27 @@
+package assingmentDS.util;
+
 import java.util.Iterator;
+import assingmentDS.util.MyBinTree.Node;
 
 public class MyTreeIterator<T> implements Iterator {
 
-    private Node iterator;
+    private Node iterator, root;
 
-    private Node firstNode(Node root) {
-        if (root == null) return null;
-        if (root.left == null) return root;
-        else firstNode(root.left);
+    private Node firstNode(Node node) {
+        if (node == null) return null;
+        if (node.left == null) return node;
+        else return firstNode(node.left);
     }
 
-    private Node parent(Node node, Node root) {
+    private Node parent(Node node) {
+        Node parent;
         if ((node == null) || (root == null)) return null;
         if (root.left == node || root.right == node) return root;
         if (node == root) return null;
         else {
-            return parent(root.left, root);
-            return parent(root.right),root;
+            parent = parent(root.left);
+            parent = parent(root.right);
+            return parent;
         }
     }
 

@@ -14,7 +14,7 @@ package assingmentDS.util;
 
 
 public class MyBinTree<T> {
-    private class Node {
+    class Node {
 
         //Knotenpunkte für BinBaum
         T data;
