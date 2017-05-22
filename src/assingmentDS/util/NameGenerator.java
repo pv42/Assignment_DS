@@ -18,12 +18,13 @@ public class NameGenerator {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.connect();
             InputStream in = conn.getInputStream();
-            int data;
-            String side = "";
-            while ((data = in.read())!= -1 ) {
-                side += (char)data;
+            int d;
+            String data = "";
+            while ((d = in.read())!= -1 ) {
+                data += (char)d;
             }
-            Log.write(side);
+            String firstName = data.split("<center>")[1].split("<a class \"plain")[1].split(">")[1].split("</a>")[0];
+            Log.write(firstName);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
