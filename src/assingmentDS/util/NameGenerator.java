@@ -25,7 +25,7 @@ public class NameGenerator {
         return getNextName(false);
     }
 
-    public void cacheNames(int amount) {
+    public void cacheNames(int amount) { //läd Namen in die Cache, jedoch nur über Netzwerk
         ordered += amount;
         NameDownloader[] nameDownloaders = new NameDownloader[amount];
         for (NameDownloader nameDownloader : nameDownloaders) {
@@ -34,7 +34,7 @@ public class NameGenerator {
         }
     }
 
-    public String getNextName(boolean forceOffline) {
+    public String getNextName(boolean forceOffline) { //
         if(!forceOffline && tryOnline) {
             if(ordered == 0) cacheNames(1);
             String name = null;
@@ -53,15 +53,14 @@ public class NameGenerator {
         this.tryOnline = tryOnline;
     }
     private static String decode(String string) {
-        //return URLEncoder.encode("ü");
         return HTMLDecoder.unescapeHtml(string);
         //return null;
     }
     private class NameDownloader extends Thread {
         @Override
         public void run() {
-            URL url = null;
             try {
+                URL url;
                 url = new URL(NAME_URL);
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.connect();
