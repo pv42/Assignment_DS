@@ -7,6 +7,7 @@ import assingmentDS.person.Visitor;
 import assingmentDS.person.Stuff;
 import assingmentDS.animal.*;
 import assingmentDS.util.Log;
+import assingmentDS.util.NameGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +46,7 @@ public class Main {
         }
         //assignment1();
         assignment2();
+        NameGenerator.generateName();
     }
 
     //zeigt Kommandozeilehilfe

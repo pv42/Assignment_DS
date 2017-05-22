@@ -32,7 +32,7 @@ public class MyBinTree<T> {
     // btw die  = null zuweisung ist nicht erforderlich, da das im automatischen Kontruktor enthalten ist
 
     private void rekInsert(Node ast, T nenclosure) { //todo this whole methode
-        if (nenclosure < ast.data) {
+        if (/*nenclosure < ast.data*/ true) {
             //left einfügen
             if (ast.left == null) {
                 ast.left = new Node(nenclosure);
