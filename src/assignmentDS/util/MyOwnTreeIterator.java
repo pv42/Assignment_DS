@@ -80,6 +80,7 @@ public class MyOwnTreeIterator<T> implements Iterator {
         }
         if (current.getRight() != null) return true;
         Node currentParent = parent(current);
+        if(currentParent == null) return false;
         while (!isLeftChild(current, currentParent)) {
             Node localcurrent = currentParent;
             currentParent = parent(localcurrent);
@@ -90,22 +91,21 @@ public class MyOwnTreeIterator<T> implements Iterator {
 
     //gibt die nächste Node in der Iteration zurück
     public T next() {
+        if(root == null) throw new IllegalStateException("Root can not be null");
         if (current == null) {
             current = firstNode(root);
             return (T) current.getData();
         }
-
-        // nach rechts runter
-        //wenn keine rechte Sub node go up -> nach links: ausgeb -> nach rechts weiter hoch
         if (current.getRight() != null) {
             current = firstNode(current.getRight());
             return (T) current.getData();
         }
         Node currentParent = parent(current);
+        if(currentParent == null) throw new NoSuchElementException("No Elements left");
         while (!isLeftChild(current, currentParent)) {
             current = currentParent;
             currentParent = parent(current);
-            if(currentParent == null) throw new NoSuchElementException();
+            if(currentParent == null) throw new NoSuchElementException("No Elements left");
         }
         current = currentParent;
         return (T) current.getData();

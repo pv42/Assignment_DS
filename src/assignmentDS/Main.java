@@ -187,8 +187,8 @@ public class Main {
         MyBinTree<String> tree = new MyBinTree<>();
         NameGenerator nameGenerator = new NameGenerator();
         nameGenerator.cacheNames(10);
-        for(int i = 0; i<= 10; i++) {
-            tree.insert(String.valueOf(i));
+        for(int i = 0; i<= 15; i++) {
+            tree.insert(nameGenerator.getNextName());
         }
         Log.write(tree.toString());
         Iterator<String> iterator = tree.iterator();
