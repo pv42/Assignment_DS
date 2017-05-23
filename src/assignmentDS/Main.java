@@ -48,8 +48,8 @@ public class Main {
         }
         //assignment1();
         //assignment2();
-        nameGT();
-        //treetest();
+        //nameGT();
+        treetest();
     }
 
     //zeigt Kommandozeilehilfe

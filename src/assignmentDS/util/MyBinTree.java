@@ -94,6 +94,6 @@ public class MyBinTree<T> implements Iterable<T> {
         return str;
     }
     public Iterator<T> iterator() {
-        return new MyOwnTreeIterator<T>(root);
+        return new MyTreeIterator<T>(root);
     }
 }
