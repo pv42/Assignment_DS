@@ -48,8 +48,8 @@ public class Main {
         }
         //assignment1();
         //assignment2();
-        //nameGT();
-        treetest();
+        nameGT();
+        //treetest();
     }
 
     //zeigt Kommandozeilehilfe
@@ -110,12 +110,13 @@ public class Main {
         landgehege3.addAnimal(jaime);
         //5. Lenny
         PufferFish pufferFish;
+        NameGenerator nameGenerator = new NameGenerator();
+        nameGenerator.cacheNames(10);
         for(int i = 1; i<=10;i++) {
-            NameGenerator nameGenerator = new NameGenerator();
-            nameGenerator.cacheNames(9);
             pufferFish = new PufferFish(nameGenerator.getNextName()); //Alle Kugelfische heißen Lenny wenn kein Internet da ist
             kugelfischtank.addAnimal(pufferFish);
         }
+        nameGenerator.close();
         //6. Moby Dick
         WhaleShark moby = new WhaleShark("Moby");
         WhaleShark dick = new WhaleShark("Dick");
@@ -174,20 +175,20 @@ public class Main {
     private static void nameGT() {
 
         NameGenerator nameGenerator = new NameGenerator();
-        nameGenerator.cacheNames(50);
-        for(int i = 0; i< 50; i++) {
+        nameGenerator.cacheNames(500);
+        for(int i = 0; i< 500; i++) {
             Log.write(nameGenerator.getNextName());
         }
         Log.write("----------------------------------------------------");
         for(int i = 0; i< 1; i++) {
             //Log.write(nameGenerator.getNextName());
         }
+        nameGenerator.close();
     }
     private static void treetest() {
         MyBinTree<String> tree = new MyBinTree<>();
         NameGenerator nameGenerator = new NameGenerator();
-        nameGenerator.cacheNames(10);
-        for(int i = 0; i<= 15; i++) {
+        for(int i = 0; i<= 14; i++) {
             tree.insert(nameGenerator.getNextName());
         }
         Log.write(tree.toString());
