@@ -12,7 +12,7 @@ import java.util.concurrent.SynchronousQueue;
  */
 public class NameGenerator implements Closeable {
     private static final String NAME_URL = "https://www.behindthename.com/random/random.php?number=1&gender=both&surname=&all=no&usage_eng=1&usage_ger=1&usage_fntsy=1";
-    private static final int MAX_RUNNING = 15;
+    private static final int MAX_RUNNING = 5;
     private int lennyCount;
     private boolean tryOnline;
     private SynchronousQueue<String> nameCache = new SynchronousQueue<>();
