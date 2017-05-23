@@ -1,6 +1,7 @@
 package assignmentDS;
 
 import assignmentDS.enclosure.Aquarium;
+import assignmentDS.enclosure.Enclosure;
 import assignmentDS.enclosure.LandMammalEnclosure;
 import assignmentDS.enclosure.Aviary;
 import assignmentDS.person.Visitor;
@@ -47,9 +48,9 @@ public class Main {
             }
         }
         //assignment1();
-        //assignment2();
+        assignment2();
         //nameGT();
-        treetest();
+        //treetest();
     }
 
     //zeigt Kommandozeilehilfe
@@ -168,7 +169,36 @@ public class Main {
         Log.write("Besucher" + visitors.toString());
     }
     private static void assignment2() {
-        //TODO -> Assigment2
+        Zoo zoo = new Zoo("zoo");
+        NameGenerator nameGenerator = new NameGenerator();
+        Aviary vogelgehege1 = new Aviary("vogelgehege1", zoo);
+        for(int i = 0; i<3; i++){
+            Papagei papagei = new Papagei(nameGenerator.getNextName());
+            vogelgehege1.addAnimal(papagei);
+        }
+        Aviary vogelgehege2 = new Aviary("Vogelgehege2", zoo);
+        for(int i = 0; i<2; i++){
+            Penguin penguin = new Penguin(nameGenerator.getNextName());
+            vogelgehege2.addAnimal(penguin);
+        }
+        Enclosure wüste = new Enclosure("Wüste", zoo);
+        for(int i = 0; i<17; i++){
+            Scorpion scorpion = new Scorpion(nameGenerator.getNextName());
+            wüste.addAnimal(scorpion);
+        }
+        Enclosure fluss = new Enclosure("Fluss", zoo);
+        for(int i = 0; i<2; i++){
+            Hippopotamus hippopotamus = new Hippopotamus(nameGenerator.getNextName());
+            fluss.addAnimal(hippopotamus);
+        }
+        Crocodile crocodile = new Crocodile(nameGenerator.getNextName());
+        fluss.addAnimal(crocodile);
+
+        Enclosure erde = new Enclosure("Erde", zoo);
+        for(int i = 0; i<212; i++) {
+            MoleRat moleRat = new MoleRat(nameGenerator.getNextName());
+            erde.addAnimal(moleRat);
+        }
     }
 
     //Test für den Namegenerator

@@ -4,6 +4,7 @@ import assignmentDS.util.Log;
 import assignmentDS.NamedObject;
 import assignmentDS.Zoo;
 import assignmentDS.animal.Animal;
+import assignmentDS.util.MyLinkedList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,14 +13,14 @@ import java.util.List;
  * Created on 24.04.2017.
  * Repräsentiert die Funktionalitäten aller Gehege
  */
-public abstract class Enclosure implements NamedObject {
+public class Enclosure implements NamedObject {
     private Zoo owner;
     private List<Animal> animals;
     private String name;
 
     //erzeugt leeres Gehege mit Namen
     public Enclosure(String name,Zoo owner) {
-        animals = new ArrayList<>();
+        animals = new MyLinkedList<>();
         this.name = name;
         this.owner = owner;
         owner.addEnclosure(this);
