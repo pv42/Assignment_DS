@@ -36,8 +36,9 @@ public class MyLinkedList<T> extends AbstractList<T> {
 
 		public T next(){
 			if (!hasNext()) throw new NoSuchElementException();
+			T ret = current();
 			index++;
-			return current();
+			return ret;
 		}
 
 		public T current() {

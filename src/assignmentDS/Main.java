@@ -171,6 +171,7 @@ public class Main {
     private static void assignment2() {
         Zoo zoo = new Zoo("zoo");
         NameGenerator nameGenerator = new NameGenerator();
+        nameGenerator.cacheNames(237);
         Aviary vogelgehege1 = new Aviary("vogelgehege1", zoo);
         for(int i = 0; i<3; i++){
             Papagei papagei = new Papagei(nameGenerator.getNextName());
@@ -198,6 +199,17 @@ public class Main {
         for(int i = 0; i<212; i++) {
             MoleRat moleRat = new MoleRat(nameGenerator.getNextName());
             erde.addAnimal(moleRat);
+        }
+        Iterator<Enclosure> iterator = zoo.getEnclosureIterator();
+        while (iterator.hasNext()) {
+            Enclosure enclosure = iterator.next();
+            System.out.println("Besucher besucht Gehege "+enclosure.getName()+".");
+            System.out.print("Er sieht:");
+            Iterator<Animal> animalIterator = enclosure.getAnimalIterator();
+            while (animalIterator.hasNext()){
+                Animal animal = animalIterator.next();
+                System.out.print(animal.getSpecies() + " " + animal.getName() +", ");
+            }
         }
     }
 

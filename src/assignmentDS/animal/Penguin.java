@@ -5,7 +5,7 @@ package assignmentDS.animal;
  * Ein Pinguin (nicht giftig, kann nicht fliegen, Raubtier, kein Aasfresser)
  */
 public class Penguin extends Bird{
-    Penguin(String name) {
-        super(name, "Penguin", false, false, true, 0.7, false);
+    public Penguin(String name) {
+        super(name, "Pinguin", false, false, true, 0.7, false);
     }
 }

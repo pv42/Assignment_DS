@@ -6,6 +6,6 @@ package assignmentDS.animal;
  */
 public final class MoleRat extends LandMammal{
     public MoleRat(String name) {
-        super(name, "MoleRat", false, false, false, 0.09, false);
+        super(name, "Mull", false, false, false, 0.09, false);
     }
 }

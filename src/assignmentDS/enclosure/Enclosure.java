@@ -7,6 +7,7 @@ import assignmentDS.animal.Animal;
 import assignmentDS.util.MyLinkedList;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /***
@@ -89,6 +90,9 @@ public class Enclosure implements NamedObject {
         return name;
     }
 
+    public Iterator<Animal> getAnimalIterator(){
+        return animals.iterator();
+    }
 
     @Override
     public String toString() {

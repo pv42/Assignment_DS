@@ -95,7 +95,12 @@ public class NameGenerator implements Closeable {
                 }
                 if (stop) return;
                 String[] acenter = data.split("<center>")[1].split("<a class=\"plain");
-                String firstName = decode(acenter[1].split(">")[1].split("<")[0]);
+                String firstName;
+                try{
+                    firstName = decode(acenter[1].split(">")[1].split("<")[0]);
+                }catch(ArrayIndexOutOfBoundsException e){
+                    firstName = getNextName(true);
+                }
                 try {
                     if (stop) return;
                     nameCache.put(firstName);

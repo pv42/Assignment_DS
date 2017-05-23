@@ -7,6 +7,7 @@ import assignmentDS.util.Log;
 import assignmentDS.util.MyLinkedList;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /***
@@ -62,6 +63,9 @@ public class Zoo implements NamedObject{
         this.name = name;
     }
 
+    public Iterator<Enclosure> getEnclosureIterator(){
+        return enclosures.iterator();
+    }
     @Override
     public String toString() {
         return "Zoo{" +
