@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 /**
  * Created by pv42 on 22.05.2017.
+ * Diese Klasse dient dazu mögliche HTML-Zeichecodes wie uuml für ü zu erstzen
  */
 public class HTMLDecoder {
     public static final String unescapeHtml(final String input) {
