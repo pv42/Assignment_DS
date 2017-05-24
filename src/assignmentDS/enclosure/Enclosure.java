@@ -7,6 +7,7 @@ import assignmentDS.animal.Animal;
 import assignmentDS.util.MyLinkedList;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
@@ -16,7 +17,7 @@ import java.util.List;
  */
 public class Enclosure implements NamedObject {
     private Zoo owner;
-    private List<Animal> animals;
+    private Collection<Animal> animals;
     private String name;
 
     //erzeugt leeres Gehege mit Namen
@@ -53,10 +54,11 @@ public class Enclosure implements NamedObject {
             animal.kill("Unpassendes Gehege"); // lässt Leiche zurück
         }
         animals.add(animal);
-        for (int i = 0; i < animals.size()- 1; i++) {// überprüft Raubtieraktivitäten zwischen neuem und alten Tieren
-            Animal t = animals.get(i);
+        Iterator<Animal> iterator = animals.iterator();
+        while (iterator.hasNext()) {// überprüft Raubtieraktivitäten zwischen neuem und alten Tieren
+            Animal t = iterator.next();
             if(animals.contains(animal)) { // Tier könnte bereits gegessen worden sein
-                if(performEating(animal,t)) i--;// wenn Tier t gegessen wird wird index verschoben
+                performEating(animal,t); // wenn Tier t gegessen wird wird index verschoben
                 performEating(t,animal); // Wenn Tier animal gegessen wird, wird dieser Code nicht mehr ausgeführt.
             }
         }

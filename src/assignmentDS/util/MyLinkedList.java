@@ -6,167 +6,178 @@ import java.util.NoSuchElementException;
 
 public class MyLinkedList<T> extends AbstractList<T> {
 
-	private class Node {
-		private Node next = null;
-		private T data;
-		Node(T d) {
-			data = d;
-		}
+    private class Node {
+        private Node next = null;
+        private T data;
 
-		void setNext(Node next){
-			this.next = next;
-		}
+        Node(T d) {
+            data = d;
+        }
 
-		Node getNext(){
-			return this.next;
-		}
+        void setNext(Node next) {
+            this.next = next;
+        }
 
-		T getData(){
-			return this.data;
-		}
-	}
+        Node getNext() {
+            return this.next;
+        }
 
-	private class MyListIterator implements Iterator<T>{
-		private int index = 0;
-		int listSize = size();
+        T getData() {
+            return this.data;
+        }
+    }
 
-		public boolean hasNext(){
-			return index < listSize;
-		}
+    private class MyListIterator implements Iterator<T> {
+        private int index = 0;
+        int listSize = size();
 
-		public T next(){
-			if (!hasNext()) throw new NoSuchElementException();
-			T ret = current();
-			index++;
-			return ret;
-		}
+        public boolean hasNext() {
+            return index < listSize;
+        }
 
-		public T current() {
-			return get(index);
-		}
-	}
+        public T next() {
+            if (!hasNext()) throw new NoSuchElementException();
+            T ret = current();
+            index++;
+            return ret;
+        }
 
-	private Node head;
+        private T current() {
+            return get(index);
+        }
 
-	public MyLinkedList() {
-		head = null;
-	}
+        @Override
+        public void remove() {
+            removeE(index);
+            index--;
+        }
+    }
 
-	@Override
-	public String toString() {
-		Node current = head;
-		String str = "";
-		while (current.getNext() != null) {
-			str = str + current.getData() + " -> ";
-			current = current.getNext();
-		}
-		str = str + current.getData();
-		return str;
-	}
+    private Node head;
 
-	public int size(){
-		Node current = head;
-		int size = 0;
-		while (current != null) {
-			size++;
-			current = current.getNext();
-		}
-		return size;
-	}
+    public MyLinkedList() {
+        head = null;
+    }
 
-	@Override
-	public boolean isEmpty() {
-		return head == null;
-	}
+    @Override
+    public String toString() {
+        Node current = head;
+        String str = "";
+        while (current.getNext() != null) {
+            str = str + current.getData() + " -> ";
+            current = current.getNext();
+        }
+        str = str + current.getData();
+        return str;
+    }
 
-	@Override
-	public boolean add(T data) {
-		Node end = new Node(data);
-		if(head == null) {
-			head = end;
-			return true;
-		}
-		Node current = head;
-		while (current.getNext() != null) {
-			current = current.getNext();
-		}
-		current.setNext(end);
-		return true;
-	}
+    public int size() {
+        Node current = head;
+        int size = 0;
+        while (current != null) {
+            size++;
+            current = current.getNext();
+        }
+        return size;
+    }
 
-	public boolean add(T data, int index) {
-		if (index < 0) return false;
-		Node node = new Node(data);
-		Node current = head;
-		int jump = 0;
-		while (jump < index ) {
-			if(current == null) return false;
-			current = current.getNext();
-			jump++;
-		}
-		if (current == null) {
-			head = node;
-		} else {
-			current.setNext(node);
-			node.setNext(current.getNext());
-		}
-		return true;
-	}
+    @Override
+    public boolean isEmpty() {
+        return head == null;
+    }
 
-	@Override
-	public boolean remove(Object data) {
-		Node current = head;
-		while (current.getNext() != null) {
-			if (current.getNext().getData().equals(data)) {
-				current.setNext(current.getNext().getNext());
-				return true;
-			}
-			current = current.getNext();
-		}
-		return false;
-	}
+    @Override
+    public boolean add(T data) {
+        Node end = new Node(data);
+        if (head == null) {
+            head = end;
+            return true;
+        }
+        Node current = head;
+        while (current.getNext() != null) {
+            current = current.getNext();
+        }
+        current.setNext(end);
+        return true;
+    }
 
-	@Override
-	public T remove(int index) {
-		Node current = head;
-		int jump;
-		if ((index >= size()) || (index < 0)) {
-			return null;
-		} else {
-			jump = 0;
-			while (jump < index) {
-				current = current.getNext();
-				if(current == null) return null;
-				jump++;
-			}
-			if(current.getNext() != null) {
-				current.setNext(current.getNext().getNext());
-				return current.getNext().getData();
-			}
-			return null;
+    public boolean add(T data, int index) {
+        if (index < 0) return false;
+        Node node = new Node(data);
+        Node current = head;
+        int jump = 0;
+        while (jump < index) {
+            if (current == null) return false;
+            current = current.getNext();
+            jump++;
+        }
+        if (current == null) {
+            head = node;
+        } else {
+            current.setNext(node);
+            node.setNext(current.getNext());
+        }
+        return true;
+    }
 
-		}
-	}
+    @Override
+    public boolean remove(Object data) {
+        Node current = head;
+        while (current.getNext() != null) {
+            if (current.getNext().getData().equals(data)) {
+                current.setNext(current.getNext().getNext());
+                return true;
+            }
+            current = current.getNext();
+        }
+        return false;
+    }
 
-	public T get(int index){
-		Node current = head;
-		for (int i = 0; i < index; i++){
-			current = current.getNext();
-		}
-		return current.getData();
+    @Override
+    public T remove(int index) {
+        Node current = head;
+        int jump;
+        if ((index >= size()) || (index < 0)) {
+            return null;
+        } else {
+            jump = 0;
+            while (jump < index) {
+                current = current.getNext();
+                if (current == null) return null;
+                jump++;
+            }
+            if (current.getNext() != null) {
+                current.setNext(current.getNext().getNext());
+                return current.getNext().getData();
+            }
+            return null;
 
-	}
+        }
+    }
 
-	@Override
-	public MyListIterator iterator(){
-		return new MyListIterator();
-	}
+    private T removeE(int index) {
+        return remove(index);
+    }
 
-	@Override
-	public void clear() {
-		head = null;
-	}
+    public T get(int index) {
+        Node current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.getNext();
+        }
+        return current.getData();
+
+    }
+
+    @Override
+    public MyListIterator iterator() {
+        return new MyListIterator();
+    }
+
+    @Override
+    public void clear() {
+        head = null;
+    }
 
 
-	// wenn die Interface List (https://docs.oracle.com/javase/8/docs/api/java/util/List.html) erfüllt würde währe super aber nicht notwendig
+    // wenn die Interface List (https://docs.oracle.com/javase/8/docs/api/java/util/List.html) erfüllt würde währe super aber nicht notwendig
 }
