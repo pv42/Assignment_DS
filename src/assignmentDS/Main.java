@@ -206,7 +206,7 @@ public class Main {
             Log.writeln("Besucher besucht Gehege "+enclosure.getName() + ".");
             Log.write("Er könnte sehen: ");
             Iterator<Animal> animalIterator = enclosure.getAnimalIterator();
-            if(animalIterator.hasNext()) { //wenn Gehege leer wird nicht ausgegeben, das Tiere zu sehen sind
+            if(animalIterator.hasNext()) { //wenn Gehege leer wird nicht ausgegeben, welche Tiere zu sehen sind
                 while (animalIterator.hasNext()){
                     Animal animal = animalIterator.next();
                     Log.write(animal.getSpecies() + " " + animal.getName());
@@ -231,6 +231,8 @@ public class Main {
         }
         nameGenerator.close();
     }
+
+    //Test für Bäume
     private static void treetest() {
         MyBinTree<String> tree = new MyBinTree<>();
         NameGenerator nameGenerator = new NameGenerator();

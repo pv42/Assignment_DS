@@ -11,6 +11,7 @@ import java.util.concurrent.SynchronousQueue;
  * Generiert Namen für die Tiere
  */
 public class NameGenerator implements Closeable {
+    private boolean isActive = true;
     private static final String NAME_URL = "https://www.behindthename.com/random/random.php?number=1&gender=both&surname=&all=no&usage_eng=1&usage_ger=1&usage_fntsy=1";
     private static final int MAX_RUNNING = 5;
     private int lennyCount;
@@ -25,21 +26,26 @@ public class NameGenerator implements Closeable {
         this.tryOnline = true;
     }
 
+    // gibt einen neuen Namen zuruck
     public String getNextName() {
+        if(!isActive) throw new IllegalStateException("NameGenerator is closed");
         return getNextName(false);
     }
 
-    public void cacheNames(int amount) { //läd Namen in die Cache, jedoch nur über Netzwerk
+    // 'bestellt' Name im vorraus, um die Zugriffszeit mit getNextName zu senken
+    public void cacheNames(int amount) {
+        if(!isActive) throw new IllegalStateException("NameGenerator is closed");
         if (amount < 0) throw new IllegalArgumentException("At least 0 expected");
-        NameDownloader[] nameDownloaders = new NameDownloader[amount];
-        for (NameDownloader nameDownloader : nameDownloaders) {
-            nameDownloader = new NameDownloader();
+        for (int i = 0; i < amount; i++) {
+            NameDownloader nameDownloader = new NameDownloader();
             ordered++;
             nameDownloader.start();
         }
     }
 
-    public String getNextName(boolean forceOffline) { //
+    //gibt einen neuen Namen zurück, ermöglicht die erzwungenen Offlineenerierung
+    public String getNextName(boolean forceOffline) {
+        if(!isActive) throw new IllegalStateException("NameGenerator is closed");
         if (!forceOffline && tryOnline) {
             if (ordered == 0) cacheNames(1);
             String name = null;
@@ -55,7 +61,9 @@ public class NameGenerator implements Closeable {
         return "Lenny " + lennyCount;
     }
 
+    //stellt den Namegenerator auf off-/online
     public void setTryOnline(boolean tryOnline) {
+        if(!isActive) throw new IllegalStateException("NameGenerator is closed");
         this.tryOnline = tryOnline;
     }
 
@@ -70,7 +78,7 @@ public class NameGenerator implements Closeable {
             threads.add(this);
         }
 
-        public void terminate() {
+        void terminate() {
             stop = true;
         }
 
@@ -89,12 +97,13 @@ public class NameGenerator implements Closeable {
                 conn.connect();
                 BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
                 String d;
-                String data = "";
+                StringBuilder data = new StringBuilder();
                 while ((d = br.readLine()) != null && !stop) {
-                    data += d;
+                    data.append(d);
                 }
+                conn.disconnect();
                 if (stop) return;
-                String[] acenter = data.split("<center>")[1].split("<a class=\"plain");
+                String[] acenter = data.toString().split("<center>")[1].split("<a class=\"plain");
                 String firstName;
                 try{
                     firstName = decode(acenter[1].split(">")[1].split("<")[0]);
@@ -112,6 +121,8 @@ public class NameGenerator implements Closeable {
                 if (tryOnline) {
                     Log.networkError();
                     setTryOnline(false);
+                    running--;
+                    ordered--;
                 }
 
             }
@@ -119,8 +130,9 @@ public class NameGenerator implements Closeable {
         }
     }
 
+    //Methode beendet den Namegenerator, trennt Netzwerkverbindungen und bricht alle 'Namenbestellungen' ab.
     public void close() {
-        int closed = 0;
+        if(!isActive) throw new IllegalStateException("NameGenerator is already closed");
         for (NameDownloader t : threads) {
             if (t.isAlive()) t.terminate();
         }
@@ -129,14 +141,16 @@ public class NameGenerator implements Closeable {
                 if (t.isAlive()) {
                     t.interrupt();
                     t.join();
-                    closed++;
-                    System.out.println(closed);
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
-
         }
+    }
+
+    //Wenn das nicht geschlossen wurde, wird das mit dem Aufruf des GarbageCollectors getan
+    @Override
+    protected void finalize() throws Throwable {
+        close();
     }
 }
