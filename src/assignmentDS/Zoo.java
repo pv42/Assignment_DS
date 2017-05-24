@@ -7,6 +7,7 @@ import assignmentDS.util.Log;
 import assignmentDS.util.MyLinkedList;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
@@ -14,7 +15,7 @@ import java.util.List;
  * Created on 24.04.2017.
  */
 public class Zoo implements NamedObject{
-    private List<Enclosure> enclosures;
+    private Collection<Enclosure> enclosures;
     private List<Stuff> stuffList;
     private String name;
 
@@ -22,6 +23,7 @@ public class Zoo implements NamedObject{
         this.name = name;
         enclosures = new MyLinkedList<>();
         stuffList = new ArrayList<>();
+        Log.created("Zoo", this);
     }
 
     public List<Enclosure> getEnclosures() {

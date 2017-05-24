@@ -165,19 +165,19 @@ public class Main {
         //13.
         adlergehege.addAnimal(cersei);
         //out
-        Log.write(zoo.toString());
-        Log.write("Besucher" + visitors.toString());
+        Log.writeln(zoo.toString());
+        Log.writeln("Besucher" + visitors.toString());
     }
     private static void assignment2() {
         Zoo zoo = new Zoo("zoo");
         NameGenerator nameGenerator = new NameGenerator();
         nameGenerator.cacheNames(237);
-        Aviary vogelgehege1 = new Aviary("vogelgehege1", zoo);
+        Aviary vogelgehege1 = new Aviary("Vogelgehege 1", zoo);
         for(int i = 0; i<3; i++){
             Papagei papagei = new Papagei(nameGenerator.getNextName());
             vogelgehege1.addAnimal(papagei);
         }
-        Aviary vogelgehege2 = new Aviary("Vogelgehege2", zoo);
+        Aviary vogelgehege2 = new Aviary("Vogelgehege 2", zoo);
         for(int i = 0; i<2; i++){
             Penguin penguin = new Penguin(nameGenerator.getNextName());
             vogelgehege2.addAnimal(penguin);
@@ -203,13 +203,17 @@ public class Main {
         Iterator<Enclosure> iterator = zoo.getEnclosureIterator();
         while (iterator.hasNext()) {
             Enclosure enclosure = iterator.next();
-            System.out.println("Besucher besucht Gehege "+enclosure.getName()+".");
-            System.out.print("Er sieht:");
+            Log.writeln("Besucher besucht Gehege "+enclosure.getName() + ".");
+            Log.write("Er könnte sehen: ");
             Iterator<Animal> animalIterator = enclosure.getAnimalIterator();
-            while (animalIterator.hasNext()){
-                Animal animal = animalIterator.next();
-                System.out.print(animal.getSpecies() + " " + animal.getName() +", ");
+            if(animalIterator.hasNext()) { //wenn Gehege leer wird nicht ausgegeben, das Tiere zu sehen sind
+                while (animalIterator.hasNext()){
+                    Animal animal = animalIterator.next();
+                    Log.write(animal.getSpecies() + " " + animal.getName());
+                    if(animalIterator.hasNext()) Log.write(", ");
+                }
             }
+            Log.writeln("");
         }
     }
 
@@ -218,12 +222,12 @@ public class Main {
 
         NameGenerator nameGenerator = new NameGenerator();
         nameGenerator.cacheNames(500);
-        for(int i = 0; i< 500; i++) {
-            Log.write(nameGenerator.getNextName());
+        for(int i = 0; i< 10000; i++) {
+            Log.writeln(nameGenerator.getNextName());
         }
-        Log.write("----------------------------------------------------");
+        Log.writeln("----------------------------------------------------");
         for(int i = 0; i< 1; i++) {
-            //Log.write(nameGenerator.getNextName());
+            //Log.writeln(nameGenerator.getNextName());
         }
         nameGenerator.close();
     }
@@ -233,10 +237,10 @@ public class Main {
         for(int i = 0; i<= 14; i++) {
             tree.insert(nameGenerator.getNextName());
         }
-        Log.write(tree.toString());
+        Log.writeln(tree.toString());
         Iterator<String> iterator = tree.iterator();
         while (iterator.hasNext()) {
-            Log.write(iterator.next());
+            Log.writeln(iterator.next());
         }
         nameGenerator.close();
     }

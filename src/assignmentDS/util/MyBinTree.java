@@ -1,8 +1,9 @@
 package assignmentDS.util;
 
+import java.util.AbstractCollection;
 import java.util.Iterator;
 
-public class MyBinTree<T> implements Iterable<T> {
+public class MyBinTree<T> extends AbstractCollection<T> {
     class Node {
 
         //Knotenpunkte für BinBaum
@@ -64,12 +65,14 @@ public class MyBinTree<T> implements Iterable<T> {
         }
     }
 
-    public void insert(T data) {
+    @Override
+    public boolean add(T data) {
         if (root == null) {
             root = new Node(data);
         } else {
             rekInsert(root, data);
         }
+        return true;
     }
 
 
@@ -95,5 +98,10 @@ public class MyBinTree<T> implements Iterable<T> {
     }
     public Iterator<T> iterator() {
         return new MyTreeIterator<T>(root);
+    }
+
+    @Override
+    public int size() {
+        return root.getChildCount()+1;
     }
 }

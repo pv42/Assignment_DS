@@ -5,6 +5,6 @@ package assignmentDS.animal;
  */
 public class Scorpion extends Animal {
     public Scorpion(String name) {
-        super(name, "Scorpion", true, false, false, true, 0.1, false);
+        super(name, "Skorpion", true, false, false, true, 0.1, false);
     }
 }

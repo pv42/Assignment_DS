@@ -20,18 +20,18 @@ public class Log {
 
     //gibt aus, das etwas erzeugt wurde
     public static void created(String type, NamedObject namedObject) {
-        write(type + " " + namedObject .getName()+ " wurde erstellt.");
+        writeln(type + " " + namedObject .getName()+ " wurde erstellt.");
     }
 
     //gibt aus, das etwas irgendwo hinzugefugt wurde
     public static void added(String type,NamedObject sub, NamedObject sup) {
-        write(type  + " " + sub.getName() + " wurde zu " + sup.getName() + " hinzugefügt.");
+        writeln(type  + " " + sub.getName() + " wurde zu " + sup.getName() + " hinzugefügt.");
     }
 
     //gibt aus, das etwas entfernt wurde
     public static void removed(String type,NamedObject sub, NamedObject sup,boolean succses) {
-        if(succses) write(type  + " " + sub.getName() + " wurde von " + sup.getName() + " entfernt.");
-        else write(type  + " " + sub.getName() + " konnte nicht  von " + sup.getName() + " entfernt werden.");
+        if(succses) writeln(type  + " " + sub.getName() + " wurde von " + sup.getName() + " entfernt.");
+        else writeln(type  + " " + sub.getName() + " konnte nicht  von " + sup.getName() + " entfernt werden.");
     }
 
     //gibt aus, dass Besucher Gehege beobachtet und was er/sie sieht
@@ -51,28 +51,31 @@ public class Log {
             animalsString += ", ";
         }
         animalsString = animalsString.substring(0,animalsString.length() - 2); // anfernt letzes Komma
-        write(type + " " + person.getName() + " besucht " + enclosure.getName() + ". "
+        writeln(type + " " + person.getName() + " besucht " + enclosure.getName() + ". "
                 + thirdPersonArticle + " könnte "  + enclosure.getAnimals().size() + " Tiere sehen: " + animalsString + ".");
     }
 
     //gibt aus, das etwas starb
     public static void died(String type, NamedObject namedObject, String reason) {
-        write(type + " " + namedObject.getName() + " starb. Grund:" + reason);
+        writeln(type + " " + namedObject.getName() + " starb. Grund:" + reason);
     }
 
     //gibt aus das ein Pfeger sich um ein Tier kümmert
     public static void animalsStuffAdd(IAnimal animal, Stuff stuff) {
-        write(animal.getSpecies() + " " + animal.getName() + " wurde Pfleger " + stuff.getName() + " zugeordnet.");
+        writeln(animal.getSpecies() + " " + animal.getName() + " wurde Pfleger " + stuff.getName() + " zugeordnet.");
     }
 
     public static void animalsStuffRemove(IAnimal animal, Stuff stuff, boolean sucsses) {
-        if(sucsses) write(animal.getSpecies() + " " + animal.getName() + " wurde  aus der Verantwortung von Pfleger " + stuff.getName() + " entfernt.");
-        else write("Entfernen von " + animal.getSpecies() + " " + animal.getName() + " aus der Verantwortung von Pfleger " + stuff.getName() + " fehlgeschlagen.");
+        if(sucsses) writeln(animal.getSpecies() + " " + animal.getName() + " wurde  aus der Verantwortung von Pfleger " + stuff.getName() + " entfernt.");
+        else writeln("Entfernen von " + animal.getSpecies() + " " + animal.getName() + " aus der Verantwortung von Pfleger " + stuff.getName() + " fehlgeschlagen.");
     }
 
     //gibt etwas aus
-    public static void write(String s) {
+    public static void writeln(String s) {
         out.println(s);
+    }
+    public static void write(String s) {
+        out.print(s);
     }
 
     //leited die Augabe in eine Datei um

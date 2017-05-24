@@ -60,19 +60,6 @@ public class MyTreeIterator<T> implements Iterator {
         return isChildNode(node, parent.getLeft()) || isChildNode(node, parent.getRight());
     }
 
-    //gibt wahr zurück falls die übergebene Node im rechten Subtree enthalten ist
-    private boolean isRightChild(Node node, Node parent) {
-        if (node == parent) return false;
-        return isRightChildCheck(node, parent.getRight());
-    }
-
-    //sucht beide subtrees nach der übergebenen Node ab
-    private boolean isRightChildCheck(Node node, Node parent) {
-        if ((parent.getLeft() == null) && (parent.getRight() == null)) return false;
-        if (node == parent.getRight()) return true;
-        return isChildNode(node, parent.getRight());
-    }
-
     //gibt wahr zurück falls eine nächste Node existiert
     public boolean hasNext() {
         if (current == null) {
@@ -110,8 +97,4 @@ public class MyTreeIterator<T> implements Iterator {
         current = currentParent;
         return (T) current.getData();
     }
-    public void remove() {
-        throw new UnsupportedOperationException();
-    }
-
 }

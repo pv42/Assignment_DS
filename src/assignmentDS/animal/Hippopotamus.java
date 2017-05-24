@@ -6,6 +6,6 @@ package assignmentDS.animal;
  */
 public class Hippopotamus extends Animal {
     public Hippopotamus(String name) {
-        super(name, "Hippopotamus", false, false, false, false, 4.0, false);
+        super(name, "Flusspferd", false, false, false, false, 4.0, false);
     }
 }
