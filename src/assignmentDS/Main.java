@@ -47,7 +47,7 @@ public class Main {
                 printHelp();
             }
         }
-        //assignment1();
+        assignment1();
         assignment2();
         //nameGT();
         //treetest();

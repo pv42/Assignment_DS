@@ -32,7 +32,11 @@ public class MyLinkedList<T> extends AbstractList<T> {
         int listSize = size();
 
         public boolean hasNext() {
-            return index < listSize;
+            try {
+                return current() != null;
+            } catch (NoSuchElementException e) {
+                return false;
+            }
         }
 
         public T next() {
@@ -163,6 +167,7 @@ public class MyLinkedList<T> extends AbstractList<T> {
         Node current = head;
         for (int i = 0; i < index; i++) {
             current = current.getNext();
+            if(current == null) throw new NoSuchElementException();
         }
         return current.getData();
 
