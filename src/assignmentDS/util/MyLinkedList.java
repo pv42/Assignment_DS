@@ -67,11 +67,11 @@ public class MyLinkedList<T> extends AbstractList<T> {
     public String toString() {
         Node current = head;
         String str = "";
-        while (current.getNext() != null) {
+        while (current != null && current.getNext() != null) {
             str = str + current.getData() + " -> ";
             current = current.getNext();
         }
-        str = str + current.getData();
+        if(current != null) str = str + current.getData();
         return str;
     }
 
@@ -169,6 +169,7 @@ public class MyLinkedList<T> extends AbstractList<T> {
             current = current.getNext();
             if(current == null) throw new NoSuchElementException();
         }
+        if(current == null) throw new NoSuchElementException();
         return current.getData();
 
     }

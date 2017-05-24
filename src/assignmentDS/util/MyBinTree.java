@@ -102,6 +102,7 @@ public class MyBinTree<T> extends AbstractCollection<T> {
 
     @Override
     public int size() {
+        if(root == null) return 0;
         return root.getChildCount()+1;
     }
 }

@@ -4,6 +4,7 @@ import assignmentDS.util.Log;
 import assignmentDS.NamedObject;
 import assignmentDS.Zoo;
 import assignmentDS.animal.Animal;
+import assignmentDS.util.MyBinTree;
 import assignmentDS.util.MyLinkedList;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class Enclosure implements NamedObject {
 
     //erzeugt leeres Gehege mit Namen
     public Enclosure(String name,Zoo owner) {
-        animals = new MyLinkedList<>();
+        animals = new MyBinTree<>();
         this.name = name;
         this.owner = owner;
         owner.addEnclosure(this);
