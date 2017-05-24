@@ -4,6 +4,7 @@ import assignmentDS.animal.Animal;
 import assignmentDS.enclosure.Enclosure;
 import assignmentDS.person.Stuff;
 import assignmentDS.util.Log;
+import assignmentDS.util.MyBinTree;
 import assignmentDS.util.MyLinkedList;
 
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ public class Zoo implements NamedObject{
 
     public Zoo(String name) {
         this.name = name;
-        enclosures = new MyLinkedList<>();
+        enclosures = new MyBinTree<>();
         stuffList = new ArrayList<>();
         Log.created("Zoo", this);
     }

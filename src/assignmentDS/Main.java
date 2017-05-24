@@ -235,7 +235,7 @@ public class Main {
         MyBinTree<String> tree = new MyBinTree<>();
         NameGenerator nameGenerator = new NameGenerator();
         for(int i = 0; i<= 14; i++) {
-            tree.insert(nameGenerator.getNextName());
+            tree.add(nameGenerator.getNextName());
         }
         Log.writeln(tree.toString());
         Iterator<String> iterator = tree.iterator();
