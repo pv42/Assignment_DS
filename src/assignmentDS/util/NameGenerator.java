@@ -11,15 +11,15 @@ import java.util.concurrent.SynchronousQueue;
  * Generiert Namen für die Tiere
  */
 public class NameGenerator implements Closeable {
-    private boolean isActive = true;
     private static final String NAME_URL = "https://www.behindthename.com/random/random.php?number=1&gender=both&surname=&all=no&usage_eng=1&usage_ger=1&usage_fntsy=1";
-    private static final int MAX_RUNNING = 5;
+    private static final int MAX_RUNNING = 5; //max amount of active network connections
     private int lennyCount;
     private boolean tryOnline;
     private SynchronousQueue<String> nameCache = new SynchronousQueue<>();
     private List<NameDownloader> threads = new ArrayList<>();
     private int ordered = 0;
     private int running = 0;
+    private boolean isActive = true;
 
     public NameGenerator() {
         this.lennyCount = 0;
