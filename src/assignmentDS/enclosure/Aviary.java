@@ -8,8 +8,8 @@ import assignmentDS.Zoo;
  * Repräsentiert die Umsetzung einse Vogelgeheges
  */
 public class Aviary extends Enclosure {
-    public Aviary(String name, Zoo zoo) {
-        super(name, zoo);
+    public Aviary(String name, Zoo zoo, boolean useTree) {
+        super(name, zoo, useTree);
         Log.created("Vogelgehege",this);
     }
 }

@@ -20,9 +20,13 @@ public class Zoo implements NamedObject{
     private List<Stuff> stuffList;
     private String name;
 
-    public Zoo(String name) {
+    public Zoo(String name, boolean useTree) {
         this.name = name;
-        enclosures = new MyBinTree<>();
+        if(!useTree) {
+            enclosures = new MyLinkedList<>();
+        } else {
+            enclosures = new MyBinTree<>();
+        }
         stuffList = new ArrayList<>();
         Log.created("Zoo", this);
     }

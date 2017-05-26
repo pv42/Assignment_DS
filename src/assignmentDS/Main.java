@@ -69,17 +69,17 @@ public class Main {
 
     // Aufgabenstellung
     private static void assignment1() {
-        Zoo zoo = new Zoo("Zoo");
+        Zoo zoo = new Zoo("Zoo",false);
         List<Visitor> visitors = new ArrayList<>();
         // 1.
-        Aquarium wahlhaibecken = new Aquarium("Wahlhaibecken", zoo);
-        Aquarium kugelfischtank = new Aquarium("Kugelfischtank", zoo);
-        LandMammalEnclosure landgehege1 = new LandMammalEnclosure("Landgehege1", zoo);
-        LandMammalEnclosure landgehege2 = new LandMammalEnclosure("Landgehege2", zoo);
-        LandMammalEnclosure landgehege3 = new LandMammalEnclosure("Landgehege3", zoo);
-        LandMammalEnclosure landgehege4 = new LandMammalEnclosure("Landgehege4", zoo);
-        Aviary adlergehege = new Aviary("Adlergehege", zoo);
-        Aviary papgeienGehege = new Aviary("Papageiengehege", zoo);
+        Aquarium wahlhaibecken = new Aquarium("Wahlhaibecken", zoo, false);
+        Aquarium kugelfischtank = new Aquarium("Kugelfischtank", zoo, false);
+        LandMammalEnclosure landgehege1 = new LandMammalEnclosure("Landgehege1", zoo, false);
+        LandMammalEnclosure landgehege2 = new LandMammalEnclosure("Landgehege2", zoo, false);
+        LandMammalEnclosure landgehege3 = new LandMammalEnclosure("Landgehege3", zoo, false);
+        LandMammalEnclosure landgehege4 = new LandMammalEnclosure("Landgehege4", zoo, false);
+        Aviary adlergehege = new Aviary("Adlergehege", zoo,false);
+        Aviary papgeienGehege = new Aviary("Papageiengehege", zoo,false);
         zoo.addEnclosure(papgeienGehege);
         zoo.addEnclosure(adlergehege);
         //2. Tick Trick Track
@@ -169,51 +169,54 @@ public class Main {
         Log.writeln("Besucher" + visitors.toString());
     }
     private static void assignment2() {
-        Zoo zoo = new Zoo("zoo");
-        NameGenerator nameGenerator = new NameGenerator();
-        nameGenerator.cacheNames(237);
-        Aviary vogelgehege1 = new Aviary("Vogelgehege 1", zoo);
-        for(int i = 0; i<3; i++){
-            Papagei papagei = new Papagei(nameGenerator.getNextName());
-            vogelgehege1.addAnimal(papagei);
-        }
-        Aviary vogelgehege2 = new Aviary("Vogelgehege 2", zoo);
-        for(int i = 0; i<2; i++){
-            Penguin penguin = new Penguin(nameGenerator.getNextName());
-            vogelgehege2.addAnimal(penguin);
-        }
-        Enclosure wüste = new Enclosure("Wüste", zoo);
-        for(int i = 0; i<17; i++){
-            Scorpion scorpion = new Scorpion(nameGenerator.getNextName());
-            wüste.addAnimal(scorpion);
-        }
-        Enclosure fluss = new Enclosure("Fluss", zoo);
-        for(int i = 0; i<2; i++){
-            Hippopotamus hippopotamus = new Hippopotamus(nameGenerator.getNextName());
-            fluss.addAnimal(hippopotamus);
-        }
-        Crocodile crocodile = new Crocodile(nameGenerator.getNextName());
-        fluss.addAnimal(crocodile);
-
-        Enclosure erde = new Enclosure("Erde", zoo);
-        for(int i = 0; i<212; i++) {
-            MoleRat moleRat = new MoleRat(nameGenerator.getNextName());
-            erde.addAnimal(moleRat);
-        }
-        Iterator<Enclosure> iterator = zoo.getEnclosureIterator();
-        while (iterator.hasNext()) {
-            Enclosure enclosure = iterator.next();
-            Log.writeln("Besucher besucht Gehege "+enclosure.getName() + ".");
-            Log.write("Er könnte sehen: ");
-            Iterator<Animal> animalIterator = enclosure.getAnimalIterator();
-            if(animalIterator.hasNext()) { //wenn Gehege leer wird nicht ausgegeben, welche Tiere zu sehen sind
-                while (animalIterator.hasNext()){
-                    Animal animal = animalIterator.next();
-                    Log.write(animal.getSpecies() + " " + animal.getName());
-                    if(animalIterator.hasNext()) Log.write(", ");
-                }
+        for (int index = 0; index < 2; index++) {
+            boolean useTree = (index==1);
+            Zoo zoo = new Zoo("zoo",useTree);
+            NameGenerator nameGenerator = new NameGenerator();
+            nameGenerator.cacheNames(237);
+            Aviary vogelgehege1 = new Aviary("Vogelgehege 1", zoo, useTree);
+            for (int i = 0; i < 3; i++) {
+                Papagei papagei = new Papagei(nameGenerator.getNextName());
+                vogelgehege1.addAnimal(papagei);
             }
-            Log.writeln("");
+            Aviary vogelgehege2 = new Aviary("Vogelgehege 2", zoo, useTree);
+            for (int i = 0; i < 2; i++) {
+                Penguin penguin = new Penguin(nameGenerator.getNextName());
+                vogelgehege2.addAnimal(penguin);
+            }
+            Enclosure wüste = new Enclosure("Wüste", zoo, useTree);
+            for (int i = 0; i < 17; i++) {
+                Scorpion scorpion = new Scorpion(nameGenerator.getNextName());
+                wüste.addAnimal(scorpion);
+            }
+            Enclosure fluss = new Enclosure("Fluss", zoo, useTree);
+            for (int i = 0; i < 2; i++) {
+                Hippopotamus hippopotamus = new Hippopotamus(nameGenerator.getNextName());
+                fluss.addAnimal(hippopotamus);
+            }
+            Crocodile crocodile = new Crocodile(nameGenerator.getNextName());
+            fluss.addAnimal(crocodile);
+
+            Enclosure erde = new Enclosure("Erde", zoo, useTree);
+            for (int i = 0; i < 212; i++) {
+                MoleRat moleRat = new MoleRat(nameGenerator.getNextName());
+                erde.addAnimal(moleRat);
+            }
+            Iterator<Enclosure> iterator = zoo.getEnclosureIterator();
+            while (iterator.hasNext()) {
+                Enclosure enclosure = iterator.next();
+                Log.writeln("Besucher besucht Gehege " + enclosure.getName() + ".");
+                Log.write("Er könnte sehen: ");
+                Iterator<Animal> animalIterator = enclosure.getAnimalIterator();
+                if (animalIterator.hasNext()) { //wenn Gehege leer wird nicht ausgegeben, welche Tiere zu sehen sind
+                    while (animalIterator.hasNext()) {
+                        Animal animal = animalIterator.next();
+                        Log.write(animal.getSpecies() + " " + animal.getName());
+                        if (animalIterator.hasNext()) Log.write(", ");
+                    }
+                }
+                Log.writeln("");
+            }
         }
     }
 

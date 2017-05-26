@@ -8,8 +8,8 @@ import assignmentDS.Zoo;
  * ein Landsäugetiergehege
  */
 public class LandMammalEnclosure extends Enclosure {
-    public LandMammalEnclosure(String name, Zoo zoo) {
-        super(name, zoo);
+    public LandMammalEnclosure(String name, Zoo zoo, boolean useTree) {
+        super(name, zoo ,useTree);
         Log.created("Landsäugetiergehege",this);
     }
 }

@@ -22,8 +22,12 @@ public class Enclosure implements NamedObject {
     private String name;
 
     //erzeugt leeres Gehege mit Namen
-    public Enclosure(String name,Zoo owner) {
-        animals = new MyLinkedList<>();
+    public Enclosure(String name,Zoo owner, boolean useTree) {
+        if(!useTree){
+            animals = new MyLinkedList<>();
+        } else {
+            animals = new MyBinTree<>();
+        }
         this.name = name;
         this.owner = owner;
         owner.addEnclosure(this);

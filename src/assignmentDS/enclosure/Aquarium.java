@@ -9,8 +9,8 @@ import assignmentDS.Zoo;
  */
 public class Aquarium extends Enclosure {
     //erzeugt ein Aquarium
-    public Aquarium(String name, Zoo zoo) {
-        super(name, zoo);
+    public Aquarium(String name, Zoo zoo, boolean useTree) {
+        super(name, zoo, useTree);
         Log.created("Aquarium",this); // gibt Erzeugen aus
     }
 }
