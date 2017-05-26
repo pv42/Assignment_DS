@@ -30,6 +30,19 @@ public class Zoo implements NamedObject{
         stuffList = new ArrayList<>();
         Log.created("Zoo", this);
     }
+    public Zoo(Zoo zoo, boolean useTree) {
+        this.stuffList = zoo.getStuffList();
+        this.name = zoo.getName();
+        if(!useTree) {
+            enclosures = new MyLinkedList<>();
+
+        } else {
+            enclosures = new MyBinTree<>();
+        }
+        for(Enclosure enclosure: zoo.getEnclosures()) {
+            enclosures.add(new Enclosure(enclosure,true));
+        }
+    }
 
     public List<Enclosure> getEnclosures() {
         return new ArrayList<>(enclosures);

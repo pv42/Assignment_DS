@@ -33,6 +33,17 @@ public class Enclosure implements NamedObject {
         owner.addEnclosure(this);
     }
 
+    public Enclosure(Enclosure enclosure, boolean useTree) {
+        this.owner = enclosure.getOwner();
+        if(!useTree){
+            animals = new MyLinkedList<>();
+        } else {
+            animals = new MyBinTree<>();
+        }
+        animals.addAll(enclosure.getAnimals());
+        this.name = enclosure.getName();
+    }
+
     // gibt dem Zoo, dem das Gehege zugeordnet ist zurück.
     public Zoo getOwner() {
         return owner;
