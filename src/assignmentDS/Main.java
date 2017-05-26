@@ -47,7 +47,7 @@ public class Main {
                 printHelp();
             }
         }
-        assignment1();
+        //assignment1();
         assignment2();
         //nameGT();
         //treetest();
@@ -171,7 +171,7 @@ public class Main {
     private static void assignment2() {
         for (int index = 0; index < 2; index++) {
             boolean useTree = (index==1);
-            Zoo zoo = new Zoo("zoo",useTree);
+            Zoo zoo = new Zoo("Zoo " + index,useTree);
             NameGenerator nameGenerator = new NameGenerator();
             nameGenerator.cacheNames(237);
             Aviary vogelgehege1 = new Aviary("Vogelgehege 1", zoo, useTree);
